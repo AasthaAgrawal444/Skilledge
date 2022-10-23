@@ -12,7 +12,10 @@ function Nav() {
              <img src={logo} className="logo-icon" alt="logo"/>
              <h1>Skill Edge</h1>
             </div>
-            <input type="text" placeholder="search"/>
+            <div className="search">
+             <img src="" alt=""/>
+             <input type="text" placeholder="search"/>
+            </div>
             <img src={cart} className="cart-icon" alt="icon"/>
             <button className="but1">Log in</button>
             <button className="but2">Sign in</button>
