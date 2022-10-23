@@ -125,7 +125,7 @@ order: 1;
 flex-grow: 0;
 }
 
-landing{
+.landing{
     position: absolute;
 width: 508px;
 height: 296px;

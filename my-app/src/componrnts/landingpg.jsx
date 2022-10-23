@@ -1,5 +1,5 @@
 import React from 'react';
-// import landingimg from './images/Landing image.png';
+import landingimg from './images/Landing image.png';
 import './landingpg.css';
 
 function Landingpg() {
@@ -15,7 +15,7 @@ function Landingpg() {
             <button className='but4'>Sign in as Mentor</button>
           </div>
       </div>
-      {/* <img src={landingimg} className="landing" alt='land'/> */}
+      <img src={landingimg} className="landing" alt='land'/>
     </div>
   )
 }
