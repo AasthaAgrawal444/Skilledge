@@ -1,0 +1,33 @@
+.Sign{
+    position: absolute;
+  width: 508px;
+  height: 696px;
+  left: 730px;
+  top: 65px;
+  background: #586AF5;
+}
+.frame15{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 24px;
+  position: absolute;
+  width: 351px;
+  height: 188px;
+  left: 79px;
+  top: 232px;
+}
+.frame14{
+    display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding: 0px;
+ gap: 8px;
+ width: 351px;
+ height: 96px;
+ flex: none;
+ order: 0;
+ flex-grow: 0;
+}

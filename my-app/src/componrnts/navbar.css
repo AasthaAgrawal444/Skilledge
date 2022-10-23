@@ -1,0 +1,93 @@
+.navbar{
+ height: 64px;
+ width: 1440px;
+ background: #FFFFFF;
+ box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
+ display: flex;
+}
+
+.logo{
+ position: absolute;
+ width: 153px;
+ height: 32px;
+ left: 96px;
+ top: 16px;
+
+}
+.logo img{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 0px;
+    top: 0px;
+} 
+ .logo h1{
+ position: absolute;
+ width: 105px;
+ height: 28px;
+ left: 48px;
+ top: 2px;
+ font-family: 'Roboto';
+ font-style: normal;
+ font-weight: 500;
+ font-size: 24px;
+ line-height: 28px;
+ text-align: center;
+ color: #000000;
+}
+
+input{
+    position: absolute;
+ width: 719px;
+ height: 40px;
+ left: 360px;
+ top: 12px;
+ background: #EEF0FD;
+ border-radius: 5px;
+}
+
+.but1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 8px;
+    gap: 8px;
+    color: #FFFFFF;
+    position: absolute;
+    width: 66px;
+    height: 29px;
+    left: 1157px;
+    top: 17px;
+    background: #292B2F;
+    border-radius: 6px;
+}
+.but2{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 8px;
+    gap: 8px;
+    
+    position: absolute;
+    width: 75px;
+    height: 29px;
+    left: 1247px;
+    top: 17px;
+    
+    border: 2px solid #000000;
+    border-radius: 6px;
+}
+
+.cart-icon{
+ position: absolute;
+ left: 76.67%;
+ right: 21.67%;
+ top: 31.25%;
+ bottom: 31.25%;
+ width: 24px;
+ height: 24px;
+ background: #FFFFFF;
+}
