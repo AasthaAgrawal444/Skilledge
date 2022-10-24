@@ -1,0 +1,14 @@
+.form3{
+    display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 24px;
+
+position: absolute;
+width: 403px;
+height: 343px;
+left: 519px;
+top: 156px;
+
+}

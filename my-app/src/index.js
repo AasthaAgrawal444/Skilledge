@@ -1,20 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+// import App from './App';
+// import './App.css'
 import './index.css';
-//import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Nav from './componrnts/navbar';
-import Landingpg from './componrnts/landingpg';
-import Footer from './componrnts/footer';
-
+ 
+ import Signin from './componrnts/signin.jsx';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Nav/>
-    <Landingpg/>
-    <Footer/>
+    
+    <Signin/>
+    {/* <Footer/> */}
   </React.StrictMode>
 );
 

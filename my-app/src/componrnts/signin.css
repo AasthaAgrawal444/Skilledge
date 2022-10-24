@@ -1,4 +1,4 @@
-.Sign{
+.signin{
     position: absolute;
   width: 508px;
   height: 696px;
@@ -6,11 +6,12 @@
   top: 65px;
   background: #586AF5;
 }
-.frame15{
+.content{
     display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+   color: #F2F2F2;
   padding: 0px;
   gap: 24px;
   position: absolute;
@@ -19,7 +20,7 @@
   left: 79px;
   top: 232px;
 }
-.frame14{
+.welcome{
     display: flex;
  flex-direction: column;
  align-items: center;
@@ -30,4 +31,18 @@
  flex: none;
  order: 0;
  flex-grow: 0;
+}
+
+.form{
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 27px;
+
+position: absolute;
+width: 403px;
+height: 405px;
+left: 202px;
+top: 233px;
 }
