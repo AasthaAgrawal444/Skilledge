@@ -1,11 +1,22 @@
 import react from 'react';
 import { Link } from 'react-router-dom';
 import './forgot.css';
+import Axios from 'axios';
 
 
 function Forgot(){
     const [Forgot,setForgot] = react.useState({
       emailed:"" })
+      async function submitapi4() {
+        const obje=
+        {
+          "email":Forgot.emailed
+        }
+      
+      const responds = await Axios.post("https://skilledge.herokuapp.com/api/reset_password/", obje);
+      console.log(responds);
+      }
+    
       const [errors,setErrors]=react.useState({});
       const[ , setIsSubmits]=react.useState(false);
       function handleInputt(e){
@@ -37,8 +48,8 @@ function Forgot(){
           value={Forgot.emailed}
           onChange={handleInputt}>
           </input>
-          <p id='error'>{errors.emailed}</p>
-        <Link to='/otpreset'><button type='submit' className='rese'>Reset Password</button></Link>
+          <p id='error19'>{errors.emailed}</p>
+        <Link to='/otpreset'><button type='button' className='rese' onClick={submitapi4}>Reset Password</button></Link>
         </div>
         </form>
        <Link to='/signin'><button type='submit' className='back' >Back to Login</button></Link>

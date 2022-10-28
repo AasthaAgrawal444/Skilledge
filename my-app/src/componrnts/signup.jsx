@@ -95,29 +95,29 @@ function Signup(){
              <input type='text' placeholder='First Name' name='firstname' id='firstname'
                value={userSignup.firstname}
                onChange={handleInputs}></input>
-               <p id='error'>{errors.firstname}</p>
+               <p id='error3'>{errors.firstname}</p>
                <input type='text' placeholder='Last Name' name='lastname' id='lastname'
                value={userSignup.lastname}
                onChange={handleInputs}></input>
-               <p id='error'>{errors.lastname}</p>
+               <p id='error4'>{errors.lastname}</p>
                <input type='text' placeholder='Username' name='Username' id='Username'
                value={userSignup.Username}
                onChange={handleInputs}></input>
-               <p id='error'>{errors.Username}</p>
+               <p id='error5'>{errors.Username}</p>
                <input type='email' placeholder='Email' name='Emails' id='Emails'
                value={userSignup.Emails}
                onChange={handleInputs}></input>
-               <p id='error'>{errors.Emailsls}</p>
+               <p id='error6'>{errors.Emailsls}</p>
                <input type='password' placeholder='Password' name='passwords' id='passwords'
                value={userSignup.passwords}
                onChange={handleInputs}></input>
-               <p id='error'>{errors.passwords}</p>
+               <p id='error7'>{errors.passwords}</p>
                <input type='password' placeholder='confirm Password' name='cpasswords' id='cpasswords'
                value={userSignup.cpasswords}
                onChange={handleInputs}></input>
                <p id='error'>{errors.cpasswords}</p>
-               <Link to= '/otpcreate'><button className='creates' onClick={submit}>Sign Up as Student</button></Link>
-               <Link to= '/otpcreate'><button className='createm' onClick={submit}>Sign Up as Mentor</button></Link>
+               <Link to= '/otpcreate'><button className='creates' type="button" onClick={submit}>Sign Up as Student</button></Link>
+               <Link to= '/otpcreate'><button className='createm' type="button" onClick={submit}>Sign Up as Mentor</button></Link>
               </form>
             </div>
        </div>

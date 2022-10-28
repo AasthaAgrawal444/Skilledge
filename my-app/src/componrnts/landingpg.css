@@ -69,6 +69,7 @@ flex-grow: 0;
 }
 
 .but3{
+    display: none;
     justify-content: center;
 align-items: center;
 padding: 2px 4px;
@@ -93,6 +94,7 @@ flex-grow: 0;
 }
 
 .but4{
+    display: none;
     box-sizing: border-box;
 
 /* Auto layout */

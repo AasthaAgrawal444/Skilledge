@@ -13,11 +13,12 @@ function Signin() {
       email: userSignin.email,
       password: userSignin.password,
     };
+    console.log(object);
     const response = await Axios.post(
       "https://skilledge.herokuapp.com/api/token/",
       object
     );
-    console.log(response.data.detail);
+    console.log(response);
   }
   const [records, setRecords] = react.useState([]);
 
@@ -27,6 +28,7 @@ function Signin() {
   function handleData(event) {
     const name = event.target.name;
     const value = event.target.value;
+    localStorage.setItem('password',userSignin.password);
     setuserSignin({ ...userSignin, [name]: value });
   }
   function handleSubmitted(e) {
@@ -79,7 +81,7 @@ function Signin() {
             value={userSignin.email}
             onChange={handleData}
           ></input>
-          <p id="error">{error.email}</p>
+          <p id="error1">{error.email}</p>
           <input
             type="password"
             placeholder="Password"
@@ -88,11 +90,11 @@ function Signin() {
             value={userSignin.password}
             onChange={handleData}
           ></input>
-          <p id="error">{error.password}</p>
+          <p id="error2">{error.password}</p>
           <Link to="/forgot" id="forgot">
             <p className="forg">Forgot Password?</p>
           </Link>
-          <button type="submit" className="loginbutt" onClick={submitt}>
+          <button type="button" className="loginbutt" onClick={submitt}>
             Login
           </button>
         </form>

@@ -10,23 +10,14 @@ function Otp() {
     col3: "",
     col4: ""
   });
-  async function sub() {
-    const obje=
-    {
-      "email":localStorage.getItem("mail"),
-      "otp":otp.col1+otp.col2+otp.col3+otp.col4
-      }
-  
-  const responds = await Axios.post("https://skilledge.herokuapp.com/api/enter_new_password/", obje);
-  console.log(responds);
-  }
+
   async function api6() {
     const obj=
     {
       "email":localStorage.getItem("mail")
       }
   
-  const response = await Axios.post("https://skilledge.herokuapp.com/api/resend_otp/", obj);
+  const response = await Axios.post("https://skilledge.herokuapp.com/api/reset_password/", obj);
   console.log(response);
   }
 
@@ -39,6 +30,7 @@ function Otp() {
   function handleInp(e) {
     const name = e.target.name;
     const value = e.target.value;
+    localStorage.setItem('otp',otp.col1+otp.col2+otp.col3+otp.col4)
     setOtp({ ...otp, [name]: value });
   }
 
@@ -75,8 +67,7 @@ function Otp() {
           <div className="chek">
             <h3 className="check">Check your Email</h3>
             <p className="cheque">
-              We have sent an OTP on the email to password reset
-              e*****e@g***l.com
+              We have sent an OTP on your registered mail!
             </p>
           </div>
           <div className="cols">
@@ -88,7 +79,7 @@ function Otp() {
               value={otp.col1}
               onChange={handleInp}
             ></input>
-            <p id="error">{prob.col1}</p>
+            <p id="error9">{prob.col1}</p>
             <input
               type="number"
               placeholder=" "
@@ -97,7 +88,7 @@ function Otp() {
               value={otp.col2}
               onChange={handleInp}
             ></input>
-            <p id="error">{prob.col2}</p>
+            <p id="error10">{prob.col2}</p>
             <input
               type="number"
               placeholder=" "
@@ -106,7 +97,7 @@ function Otp() {
               value={otp.col3}
               onChange={handleInp}
             ></input>
-            <p id="error">{prob.col3}</p>
+            <p id="error11">{prob.col3}</p>
             <input
               type="number"
               placeholder=" "
@@ -115,13 +106,13 @@ function Otp() {
               value={otp.col4}
               onChange={handleInp}
             ></input>
-            <p id="error">{prob.col4}</p>
+            <p id="error12">{prob.col4}</p>
           </div>
-          <Link to='/reset'><button className="con" type="submit" onClick={sub}>
+          <Link to='/reset'><button className="con" type="button">
             Continue
           </button></Link>
           <p className="dont">Don't get OTP? Resend OTP</p>
-          <button className="resen" type="submit" onClick={api6}>
+          <button className="resen" type="button" onClick={api6}>
             Resend OTP
           </button>
         </form>

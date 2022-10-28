@@ -192,6 +192,7 @@ h3 {
   border: 1px solid white;
 }
 
+
 @media (max-width:450px){
   .contents{
     display: none;

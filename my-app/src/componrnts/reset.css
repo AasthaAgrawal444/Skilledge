@@ -62,9 +62,21 @@ border-radius: 6px;
     }
     #repassword{
         position: relative;
+        top: 140px;
+        width: 330px;
     }
     #rpassword{
         position: relative;
+        top: 180px;
+        width: 330px;
+    }
+    .re{
+        position: relative;
+        top: 200px;
+        width: 335px;
+    }
+    .reset{
+        position: absolute;
     }
   
 }

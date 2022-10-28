@@ -11,17 +11,17 @@ function Otpc() {
     col4: "",
   });
   async function submits() {
-    
+   // console.log("here")
     const obje=
     {
-      "email":localStorage.getItem("mymails"),
+      "email":localStorage.getItem("mymail"),
       "otp":otp.col1+otp.col2+otp.col3+otp.col4
       }
       console.log(obje);
   
   const responds = await Axios.post("https://skilledge.herokuapp.com/api/otp_verify/", obje).then((responds)=> {console.log(responds)});
   console.log(responds);
-  }
+   }
   const [data, setData] = react.useState([]);
 
   const [prob, setProb] = react.useState({});
@@ -66,8 +66,7 @@ function Otpc() {
           <div className="chek">
             <h3 className="check">Check your Email</h3>
             <p className="cheque">
-              We have sent an OTP on the email to password reset
-              e*****e@g***l.com
+              We have sent an OTP on your registered mail
             </p>
           </div>
           <div className="cols">
@@ -79,7 +78,7 @@ function Otpc() {
               value={otp.col1}
               onChange={handleInp}
             ></input>
-            <p id="error">{prob.col1}</p>
+            <p id="error13">{prob.col1}</p>
             <input
               type="number"
               placeholder=" "
@@ -88,7 +87,7 @@ function Otpc() {
               value={otp.col2}
               onChange={handleInp}
             ></input>
-            <p id="error">{prob.col2}</p>
+            <p id="error14">{prob.col2}</p>
             <input
               type="number"
               placeholder=" "
@@ -97,7 +96,7 @@ function Otpc() {
               value={otp.col3}
               onChange={handleInp}
             ></input>
-            <p id="error">{prob.col3}</p>
+            <p id="error15">{prob.col3}</p>
             <input
               type="number"
               placeholder=" "
@@ -106,9 +105,9 @@ function Otpc() {
               value={otp.col4}
               onChange={handleInp}
             ></input>
-            <p id="error">{prob.col4}</p>
+            <p id="error16">{prob.col4}</p>
           </div>
-          <button className="con" type="submit" onClick={submits}>
+          <button className="con" type="button" onClick={submits}>
             Continue
           </button>
           <p className="dont">Don't get OTP? Resend OTP</p>

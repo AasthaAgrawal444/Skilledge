@@ -19,9 +19,10 @@ function Reset() {
       "confirm_password":userpass.rpassword
     }
   
-  const responds = await Axios.post("https://skilledge.herokuapp.com/api/reset_password/", obje);
-  console.log(responds);
+  const resetpass = await Axios.post("https://skilledge.herokuapp.com/api/enter_new_password/", obje);
+  console.log(resetpass);
   }
+
 
   const [newpass, setNewpass] = react.useState([]);
 
@@ -70,7 +71,7 @@ function Reset() {
             value={userpass.repassword}
             onChange={handleDat}
           ></input>
-          <p id="err">{err.repassword}</p>
+          <p id="err17">{err.repassword}</p>
           <p className="repp">Repeat Password</p>
           <input
             type="password"
@@ -80,8 +81,8 @@ function Reset() {
             value={userpass.rpassword}
             onChange={handleDat}
           ></input>
-          <p id="err">{err.rpassword}</p>
-          <Link to='/signin' onClick={submitapi4}><button type="submit" className="re">
+          <p id="err18">{err.rpassword}</p>
+          <Link to='/signin' ><button type="submit" className="re" onClick={submitapi4}>
             Reset Password
           </button></Link>
         </form>

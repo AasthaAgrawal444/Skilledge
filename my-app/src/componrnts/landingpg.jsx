@@ -15,8 +15,8 @@ function Landingpg() {
             <p>Start learning by registerning for free</p>
           </div>
           <div className='signin'>
-            <button className='but3'>Sign in as Student</button>
-            <button className='but4'>Sign in as Mentor</button>
+            {/* <p className='but3'>Sign in as Student</p>
+            <p className='but4'>Sign in as Mentor</p> */}
           </div>
       </div>
       <img src={landingimg} className="landing" alt='land'/>
