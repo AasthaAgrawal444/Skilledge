@@ -1,9 +1,10 @@
 import React from "react";
 import './navbar.css';
 import cart from './images/cart icon.png';
+import Search from './images/Search.png';
 import logo from './images/Skill edge logo-02.svg';
-//import {Link} from "react-router-dom";
 import {Link} from "react-router-dom";
+// import {Link} from "react-router-dom";
 
 function Nav() {
   return(
@@ -11,15 +12,15 @@ function Nav() {
         <div className = "navbar">
             <div className="logo">
              <img src={logo} className="logo-icon" alt="logo"/>
-             <h1>Skill Edge</h1>
+             <h1 className="skillhead">Skill Edge</h1>
             </div>
             <div className="search">
-             <img src="" alt=""/>
-             <input type="text" placeholder="search"/>
+             <img src={Search} className="searchicon" alt="search"/>
+             <input type="text" placeholder="search" id="searches"/>
             </div>
             <img src={cart} className="cart-icon" alt="icon"/>
             <Link to='/signin'><button className="but1">Log in</button></Link>
-            <button className="but2">Sign in</button>
+            <Link to='/signup'><button className="but2">Sign up</button></Link>
         </div>
     </nav>
   );

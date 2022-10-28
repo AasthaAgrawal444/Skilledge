@@ -4,7 +4,8 @@ footer{
  height: 400px;
  left: 0px;
  bottom: 0px;
- top: 892px;
+ /* top: 747px; */
+ top: 100vh;
  background: #141517;
 }
 
@@ -57,7 +58,7 @@ footer{
   left: 623px;
   top: 76px;
 }
-.category h1{
+.cat{
     width: 105px;
     height: 33px;
     font-family: 'Roboto';
@@ -81,10 +82,6 @@ footer{
     
     width: 309px;
     height: 148px;
-    
-    
-    /* Inside auto layout */
-    
     flex: none;
     order: 1;
     flex-grow: 0;
@@ -95,27 +92,19 @@ footer{
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
-    /* gap: px; */
-    
     width: 98px;
     height: 148px;
-    
-    
-    /* Inside auto layout */
-    
     flex: none;
     order: 0;
     flex-grow: 0;
 }
 
-.col1 p{
+.c1{
 font-family: 'Roboto';
 font-style: normal;
 font-weight: 400;
 font-size: 16px;
-line-height: 24px;
-/* or 150% */
-
+line-height: 10px;
 display: flex;
 align-items: flex-end;
 letter-spacing: 0.15px;
@@ -128,33 +117,22 @@ flex: none;
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
-    /* gap: 16px; */
-    
     width: 96px;
     height: 107px;
-    
-    
-    /* Inside auto layout */
-    
     flex: none;
     order: 1;
     flex-grow: 0;
 }
 
-.col2 p{
+.c2{
     font-family: 'Roboto';
 font-style: normal;
 font-weight: 400;
 font-size: 16px;
-line-height: 24px;
-/* or 150% */
-
+line-height: 10px;
 display: flex;
 align-items: flex-end;
 letter-spacing: 0.15px;
-
-/* Gray/100 */
-
 color: #CFD3D6;
 
 
@@ -175,7 +153,7 @@ height: 254px;
 left: 413px;
 top: 76px;
 }
-.explores h2{
+.exp{
     width: 88px;
 height: 33px;
 font-family: 'Roboto';
@@ -196,7 +174,6 @@ font-style: normal;
 font-weight: 400;
 font-size: 16px;
 line-height: 24px;
-/* or 150% */
 display: flex;
 align-items: flex-end;
 letter-spacing: 0.15px;
@@ -206,10 +183,10 @@ order: 1;
 flex-grow: 0;
 }
 
-h3{
+.cont{
     position: absolute;
-     left: 96px;
-top: 111px;
+     left: -140px;
+top: 70px;
 font-weight: 500;
 font-size: 24px;
 line-height: 28px;
@@ -218,7 +195,7 @@ align-items: flex-end;
 color: #FFFFFF;
 }
 
-p1{
+.contactid{
     position: absolute;
     left: 96px;
 top: 161px;
@@ -228,4 +205,21 @@ display: flex;
 align-items: flex-end;
 letter-spacing: 0.15px;
 color: #E7E9EB;
+}
+
+@media (max-width:450px){
+    .Logo{
+        position: absolute;
+        left: 70px;
+        top: 60px;
+    }
+    footer{position: absolute;
+    height: 730px;
+    width: 685px;
+    }
+    .contus{
+        position: absolute;
+        top: 140px;
+        left: 0;
+    }
 }

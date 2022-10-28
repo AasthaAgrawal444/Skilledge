@@ -1,14 +1,59 @@
-.form3{
-    display: flex;
-flex-direction: column;
-align-items: center;
-padding: 0px;
-gap: 24px;
+h5 {
+  font-size: 35px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.femail {
+  position: absolute;
+  left: 533px;
+  top: 202px;
+  font-size: 17px;
+}
+#emailed {
+  position: absolute;
+  top: 255px;
+  height: 40px;
+  width: 314px;
+  left: 530px;
+  padding: 4px 40px;
+  gap: 10px;
+}
 
-position: absolute;
-width: 403px;
-height: 343px;
-left: 519px;
-top: 156px;
+.rese {
+  position: absolute;
+  top: 330px;
+  height: 55px;
+  width: 400px;
+  left: 530px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 17px;
+  background: #293593;
+  box-shadow: 0px 30px 60px rgba(79, 70, 229, 0.15);
+  border-radius: 6px;
+  color: #fff;
+}
+.back {
+  position: absolute;
+  top: 400px;
+  height: 50px;
+  width: 400px;
+  left: 530px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  color: #293593;
+  border: 1px solid #293593;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  gap: 14px;
+}
+
+@media(max-width:450px){
+  .form3{
+    position: relative;
+    left: -510px;
+    top: -100px;
+  }
 
 }

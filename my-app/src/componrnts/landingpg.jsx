@@ -1,10 +1,14 @@
 import React from 'react';
 import landingimg from './images/Landing image.png';
 import './landingpg.css';
+import Footer from './footer';
+//  import Nav from './navbar';
+
 
 function Landingpg() {
   return (
     <div>
+    {/* <Nav/> */}
       <div className='head'>
           <div className='quote'>
             <h1>Join World's largest learning platform today</h1>
@@ -16,6 +20,7 @@ function Landingpg() {
           </div>
       </div>
       <img src={landingimg} className="landing" alt='land'/>
+      <Footer/>
     </div>
   )
 }

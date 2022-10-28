@@ -1,0 +1,250 @@
+.Signup {
+  overflow: hidden;
+}
+.form0 {
+  padding: 0px;
+  gap: 40px;
+  position: absolute;
+  width: 509px;
+  height: 784px;
+  left: 836px;
+  top: 100px;
+}
+
+h3 {
+  width: 241px;
+  height: 39px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 39px;
+  color: #141517;
+  top: 0;
+  left: 0;
+}
+
+#firstname {
+  position: absolute;
+  border: 1px solid #292b2f;
+  padding: 20px 20px;
+  gap: 10px;
+  width: 200px;
+  height: 10px;
+  border-radius: 5px;
+  top: 88px;
+  left: 0;
+}
+#lastname {
+  padding: 20px 20px;
+  gap: 10px;
+  width: 239.5px;
+  height: 10px;
+  border: 1px solid #292b2f;
+  border-radius: 5px;
+  top: 88px;
+  left: 270px;
+}
+#Username {
+  position: absolute;
+  left: 0;
+  top: 380px;
+  padding: 20px 20px;
+  gap: 10px;
+  width: 509px;
+  height: 10px;
+  border: 1px solid #292b2f;
+  border-radius: 5px;
+  top: 158px;
+}
+#Emails {
+  position: absolute;
+  left: 0;
+  top: 440px;
+  padding: 20px 20px;
+  gap: 10px;
+  width: 509px;
+  height: 10px;
+  border: 1px solid #292b2f;
+  border-radius: 5px;
+  top: 227px;
+}
+#passwords {
+  position: absolute;
+  left: 0;
+  padding: 20px 20px;
+  gap: 10px;
+  width: 509px;
+  height: 10px;
+  border: 1px solid #292b2f;
+  border-radius: 5px;
+  top: 301px;
+}
+#cpasswords {
+  position: absolute;
+  left: 0;
+  padding: 20px 20px;
+  gap: 10px;
+  width: 509px;
+  height: 10px;
+  border: 1px solid #292b2f;
+  border-radius: 5px;
+  top: 381px;
+}
+
+.creates {
+  position: absolute;
+  padding: 15px 20px;
+  gap: 10px;
+  width: 556px;
+  height: 60px;
+  background: #293593;
+  border-radius: 5px;
+  top: 458px;
+  left: 0;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.createm {
+  position: absolute;
+  padding: 15px 20px;
+  gap: 10px;
+  width: 556px;
+  height: 60px;
+  background: #fff;
+  border-radius: 5px;
+  top: 538px;
+  left: 0;
+  color: #293593;
+  border-radius: 5px;
+  font-size: 20px;
+  border-color: #293593;
+}
+
+.contents {
+  position: absolute;
+  width: 508px;
+  height: 748px;
+  left: 202px;
+  top: 65px;
+  background: #586af5;
+}
+
+.welcomed {
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  color: #fff;
+  position: absolute;
+  width: 351px;
+  height: 188px;
+  left: 79px;
+  top: 200px;
+}
+.welcom {
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: 0.25px;
+}
+.please {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.15px;
+}
+
+.loginbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  top: 418px;
+  width: 337px;
+  height: 68px;
+  top: 120px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.but5 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  left: 86px;
+  width: 337px;
+  height: 87px;
+  color: #fff;
+  background-color: #586af5;
+  border: 1px solid white;
+}
+.lo {
+  width: 332px;
+  height: 37px;
+  color: #fff;
+  background-color: #586af5;
+  border: 1px solid white;
+}
+
+@media (max-width:450px){
+  .contents{
+    display: none;
+  }
+  .accoun{
+    position: absolute;
+    left: -810px;
+    top: -45px;
+  }
+  #form2{
+    position: absolute;
+    left: -790px;
+    top: -50px;
+  }
+  #firstname{
+    position: absolute;
+    height: 5px;
+    width: 120px;
+  }
+  #lastname{
+    position: absolute;
+    height: 5px;
+    width: 120px;
+    left: 170px;
+  }
+  #Username{
+    position: absolute;
+    width: 290px;
+    height: 5px;
+  }
+  #Emails{
+    position: absolute;
+    width: 290px;
+    height: 5px;
+  }
+  #passwords{
+    position: absolute;
+    width: 290px;
+    height: 5px;
+  }
+  #cpasswords{
+    position: absolute;
+    width: 290px;
+    height: 5px;
+  }
+  .creates{
+    position: relative;
+    top: 440px;
+    width: 335px;
+  }
+  .createm{
+    position: relative;
+    top: 520px;
+    width: 335px;
+    left: -335px;
+  }
+}
