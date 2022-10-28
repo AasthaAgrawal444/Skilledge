@@ -50,10 +50,37 @@ h5 {
 }
 
 @media(max-width:450px){
-  .form3{
+  .forms{
     position: relative;
     left: -510px;
-    top: -100px;
+    top: -190px;
+  }
+  .fpassd{
+    position: relative;
+    top: 60px;
+    left: -30px;
+  }
+  #emailed{
+    position: relative;
+    width: 210px;
+    left: 500px;
+  }
+  .rese{
+    position: relative;
+    width: 300px;
+    left: 500px;
+    top: 260px;
+  }
+  .back{
+    position: relative;
+    left: -10px;
+    top: 100px;
+    width: 300px;
+  }
+  .femail{
+    position: relative;
+    left: 380px;
+    top: 255px;
   }
 
 }

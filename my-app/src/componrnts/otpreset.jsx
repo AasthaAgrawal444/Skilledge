@@ -13,13 +13,24 @@ function Otp() {
   async function sub() {
     const obje=
     {
-      "email":"",
+      "email":localStorage.getItem("mail"),
       "otp":otp.col1+otp.col2+otp.col3+otp.col4
       }
   
   const responds = await Axios.post("https://skilledge.herokuapp.com/api/enter_new_password/", obje);
   console.log(responds);
   }
+  async function api6() {
+    const obj=
+    {
+      "email":localStorage.getItem("mail")
+      }
+  
+  const response = await Axios.post("https://skilledge.herokuapp.com/api/resend_otp/", obj);
+  console.log(response);
+  }
+
+  
   const [data, setData] = react.useState([]);
 
   const [prob, setProb] = react.useState({});
@@ -110,7 +121,7 @@ function Otp() {
             Continue
           </button></Link>
           <p className="dont">Don't get OTP? Resend OTP</p>
-          <button className="resen" type="submit">
+          <button className="resen" type="submit" onClick={api6}>
             Resend OTP
           </button>
         </form>

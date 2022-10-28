@@ -54,3 +54,17 @@ color: #fff;
 box-shadow: 0px 30px 60px rgba(79, 70, 229, 0.15);
 border-radius: 6px;
 }
+
+@media(max-width:450px){
+    #form5{
+        position: relative;
+        left: -500px;
+    }
+    #repassword{
+        position: relative;
+    }
+    #rpassword{
+        position: relative;
+    }
+  
+}

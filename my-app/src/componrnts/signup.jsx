@@ -33,6 +33,7 @@ function Signup(){
     function handleInputs(e){
       const name=e.target.name;
       const value=e.target.value;
+      localStorage.setItem('mymail',userSignup.Emails);
       setuserSignup({...userSignup,[name]:value});
     }
   

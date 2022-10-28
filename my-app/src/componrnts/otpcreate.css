@@ -108,3 +108,56 @@
     top: 480px;
     border-radius: 6px;
     }
+
+    @media(max-width:450px){
+    .chek{
+        position: relative;
+        left: 50px;
+        top: 30px;
+    }
+    .cheque{
+        width: 300px;
+    }
+    .cols{
+        display: flex;
+        left: 0;
+        padding: 0 40px;
+        gap: 12px;
+    }
+    #col1{
+     height: 50px;
+     width: 50px;
+     left: 30px;
+    }
+       #col2{
+        height: 50px;
+        width: 50px;
+        
+       }
+       #col3{
+        height: 50px;
+        width: 50px;
+       }
+       #col4{
+        height: 50px;
+        width: 50px;
+       }
+
+       .con{
+        position: relative;
+        left: 5px;
+        top: 135px;
+        width: 325px;
+       }
+    .dont{
+        position: absolute;
+        left: 37px;
+        top: 420px;
+    }
+    .resen{
+        position: relative;
+        top: 190px;
+        left: 7px;
+        width: 325px;
+    }
+}

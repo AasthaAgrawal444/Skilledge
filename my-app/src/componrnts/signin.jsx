@@ -13,11 +13,11 @@ function Signin() {
       email: userSignin.email,
       password: userSignin.password,
     };
-    const respon = await Axios.post(
+    const response = await Axios.post(
       "https://skilledge.herokuapp.com/api/token/",
       object
     );
-    console.log(respon);
+    console.log(response.data.detail);
   }
   const [records, setRecords] = react.useState([]);
 
@@ -92,7 +92,7 @@ function Signin() {
           <Link to="/forgot" id="forgot">
             <p className="forg">Forgot Password?</p>
           </Link>
-          <button type="submit" className="logi" onClick={submitt}>
+          <button type="submit" className="loginbutt" onClick={submitt}>
             Login
           </button>
         </form>

@@ -14,11 +14,12 @@ function Otpc() {
     
     const obje=
     {
-      "email":localStorage.getItem("Email"),
+      "email":localStorage.getItem("mymails"),
       "otp":otp.col1+otp.col2+otp.col3+otp.col4
       }
+      console.log(obje);
   
-  const responds = await Axios.post("https://skilledge.herokuapp.com/api/otp_verify/", obje);
+  const responds = await Axios.post("https://skilledge.herokuapp.com/api/otp_verify/", obje).then((responds)=> {console.log(responds)});
   console.log(responds);
   }
   const [data, setData] = react.useState([]);
@@ -107,11 +108,11 @@ function Otpc() {
             ></input>
             <p id="error">{prob.col4}</p>
           </div>
-          <button className="con" type="submit">
+          <button className="con" type="submit" onClick={submits}>
             Continue
           </button>
           <p className="dont">Don't get OTP? Resend OTP</p>
-          <button className="resen" type="submit"  onClick={submits}>
+          <button className="resen" type="submit">
             Resend OTP
           </button>
         </form>

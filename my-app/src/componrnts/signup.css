@@ -35,6 +35,7 @@ h3 {
   left: 0;
 }
 #lastname {
+  position: absolute;
   padding: 20px 20px;
   gap: 10px;
   width: 239.5px;
@@ -197,54 +198,54 @@ h3 {
   }
   .accoun{
     position: absolute;
-    left: -810px;
+    left: -830px;
     top: -45px;
   }
   #form2{
     position: absolute;
-    left: -790px;
+    left: -820px;
     top: -50px;
   }
   #firstname{
     position: absolute;
     height: 5px;
-    width: 120px;
+    width: 110px;
   }
   #lastname{
     position: absolute;
     height: 5px;
-    width: 120px;
-    left: 170px;
+    width: 110px;
+    left: 165px;
   }
   #Username{
     position: absolute;
-    width: 290px;
+    width: 275px;
     height: 5px;
   }
   #Emails{
     position: absolute;
-    width: 290px;
+    width: 275px;
     height: 5px;
   }
   #passwords{
     position: absolute;
-    width: 290px;
+    width: 275px;
     height: 5px;
   }
   #cpasswords{
     position: absolute;
-    width: 290px;
+    width: 275px;
     height: 5px;
   }
   .creates{
     position: relative;
     top: 440px;
-    width: 335px;
+    width: 320px;
   }
   .createm{
     position: relative;
     top: 520px;
-    width: 335px;
-    left: -335px;
+    width: 320px;
+    left: -320px;
   }
 }
