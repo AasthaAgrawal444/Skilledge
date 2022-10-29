@@ -2,6 +2,7 @@ import react from 'react';
 import { Link } from 'react-router-dom';
 import './forgot.css';
 import Axios from 'axios';
+import Email from './images/email.png';
 
 
 function Forgot(){
@@ -43,6 +44,7 @@ function Forgot(){
           <h5 className='fpassd'>Forgot Password</h5>
           <div className='forms'>
           <p className='femail'>Email</p>
+          <img src={Email} className="email-icon2" alt="lock"/>
           <input type='email' placeholder="example@gmail.com"
           id='emailed' name='emailed'
           value={Forgot.emailed}

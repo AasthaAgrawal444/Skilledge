@@ -82,7 +82,7 @@ function Reset() {
             onChange={handleDat}
           ></input>
           <p id="err18">{err.rpassword}</p>
-          <Link to='/signin' ><button type="submit" className="re" onClick={submitapi4}>
+          <Link to='/signin' ><button type="button" className="re" onClick={submitapi4}>
             Reset Password
           </button></Link>
         </form>

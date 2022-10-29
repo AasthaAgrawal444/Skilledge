@@ -48,6 +48,14 @@ h5 {
   padding: 15px;
   gap: 14px;
 }
+.email-icon2{
+  position: absolute;
+  z-index: 2;
+  height: 23px;
+  width: 23px;
+  left: 538px;
+  top: 269px;
+}
 
 @media(max-width:450px){
   .forms{

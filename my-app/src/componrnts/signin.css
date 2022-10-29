@@ -119,19 +119,47 @@ left: 0;
   border-radius: 5px;
   top: 300px;
 }
+.forg{
+  position: absolute;
+top: 247px;}
  #error1{
-  position: relative;
+  position: absolute;
   left: 0;
-  top: -510px;
+  top: 140px;
+  font-size: 15px;
   color: red;
   z-index: 2;
 }
 #error2{
   position: absolute;
   left: 0;
-  top: 100px;
+  font-size: 15px;
+top: 220px;
   color: red;
 } 
+.email-icon{
+position: absolute;
+height: 20px;
+width: 20px;
+left: 10px;
+top: 117px;
+z-index: 2;
+}
+.lock-icon{
+  position: absolute;
+height: 23px;
+width: 23px;
+left: 10px;
+top: 195px;
+z-index: 2;
+}
+.backendmsg{
+  position: absolute;
+  font-size: 20px;
+  color: red;
+  top: 350px;
+  left: 40px;
+}
 
 @media(max-width:450px){
   .content{

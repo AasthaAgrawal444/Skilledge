@@ -191,7 +191,58 @@ h3 {
   background-color: #586af5;
   border: 1px solid white;
 }
-
+#error3{
+  position: absolute;
+  left: 0;
+  top: 140px;
+  font-size: 100px;
+  color: red;
+  z-index: 2;
+}
+#error4{
+  position: absolute;
+  left: 100px;
+  font-size: 15px;
+top: 140px;
+  color: red;
+} 
+#error5{
+  position: absolute;
+  left: 0;
+  top: 220px;
+  font-size: 15px;
+  color: red;
+  z-index: 2;
+}
+#error6{
+  position: absolute;
+  left: 0;
+  font-size: 15px;
+top: 300px;
+  color: red;
+} 
+#error7{
+  position: absolute;
+  left: 0;
+  top: 380px;
+  font-size: 15px;
+  color: red;
+  z-index: 2;
+}
+#error8{
+  position: absolute;
+  left: 0;
+  font-size: 15px;
+top: 450px;
+  color: red;
+} 
+.backmsg{
+  position: absolute;
+  font-size: 20px;
+  color: red;
+  top: 350px;
+  left: 40px;
+}
 
 @media (max-width:450px){
   .contents{

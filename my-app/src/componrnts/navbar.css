@@ -74,6 +74,7 @@
     left: 360px;
     top: 12px;
     background: #EEF0FD;
+    border: 2px solid #EEF0FD;
     border-radius: 5px;
     padding: 0 40px;
 }
@@ -103,7 +104,8 @@
 
 @media (max-width:450px){
     .navbar{
-        height: 80px;
+        height: 10vh;
+        width: 100vw;
     }
     .skillhead{display: none;}
     #searches{display: none;}
@@ -111,8 +113,10 @@
     .cart-icon{display: none;}
     .logo{
         position: absolute;
-        left: 50px;
-        top: 25px;
+        left: 8vw;
+        top: 3.5vh;
+        height: 10vh;
+        width: 10vw;
     }
     .but1{position: absolute;
         padding: 4px 8px;

@@ -1,25 +1,58 @@
-import react from "react";
+import react,{useState} from "react";
 import "./signin.css";
 import Axios from "axios";
 import { Link } from "react-router-dom";
+import Lock from './images/lock.png';
+import Email from './images/email.png';
+var er;
 
 function Signin() {
-  const [userSignin, setuserSignin] = react.useState({
+  const [userSignin, setuserSignin] = useState({
     email: "",
     password: "",
   });
+  const [value, isValue] = useState(false);
+  const [resmsg, setMsg] =useState(null);
+
+   function validate(value) {
+    const x = {};
+    if (!value.email) {
+      x.email = "Email is required!";
+    }
+    if (!value.password) {
+      x.password = "Password is required!";
+    } else if (value.password.length < 4) {
+      x.password = "Password must be more than 5 characters!";
+    } else if (value.password.length > 8) {
+      x.password = "Password cannot exceed 8 characters!";
+    }
+    er=Object.keys(x).length;
+    // console.log(x);
+    console.log(er);
+    (er!==0)?isValue(false):isValue(true);
+    return x;
+  }
   async function submitt() {
     const object = {
       email: userSignin.email,
       password: userSignin.password,
     };
-    console.log(object);
-    const response = await Axios.post(
-      "https://skilledge.herokuapp.com/api/token/",
-      object
-    );
-    console.log(response);
+    // console.log(object);
+    console.log(value);
+    if(value){
+    await Axios.post(
+      "https://skilledge.herokuapp.com/api/login/",object)
+      .then(response=>{
+        setMsg(response.data.msg);
+        console.log(response);
+    })
+    .catch(err => {
+      console.log(err);
+      console.log(err.response.data.msg);
+      setMsg(err.response.data.msg)
+    });
   }
+}
   const [records, setRecords] = react.useState([]);
 
   const [error, setError] = react.useState({});
@@ -29,6 +62,7 @@ function Signin() {
     const name = event.target.name;
     const value = event.target.value;
     localStorage.setItem('password',userSignin.password);
+    setError(validate(userSignin));
     setuserSignin({ ...userSignin, [name]: value });
   }
   function handleSubmitted(e) {
@@ -39,20 +73,7 @@ function Signin() {
     setError(validate(userSignin));
     setIsSet(true);
   }
-  function validate(value) {
-    const error = {};
-    if (!value.email) {
-      error.email = "Email is required!";
-    }
-    if (!value.password) {
-      error.password = "Password is required!";
-    } else if (value.password.length < 4) {
-      error.password = "Password must be more than 5 characters!";
-    } else if (value.password.length > 8) {
-      error.password = "Password cannot exceed 8 characters!";
-    }
-    return error;
-  }
+  
 
   return (
     <div className="Signin">
@@ -73,6 +94,8 @@ function Signin() {
       <div id="sign">
         <form id="form1" onSubmit={handleSubmitted}>
           <h1 className="Log">Log in account</h1>
+          <p className="backendmsg">{resmsg}</p>
+          <img src={Email} className="email-icon" alt="mail"/>
           <input
             type="email"
             placeholder="example@gmail.com"
@@ -82,6 +105,7 @@ function Signin() {
             onChange={handleData}
           ></input>
           <p id="error1">{error.email}</p>
+          <img src={Lock} className="lock-icon" alt="lock"/>
           <input
             type="password"
             placeholder="Password"
@@ -94,7 +118,7 @@ function Signin() {
           <Link to="/forgot" id="forgot">
             <p className="forg">Forgot Password?</p>
           </Link>
-          <button type="button" className="loginbutt" onClick={submitt}>
+          <button type="submit" className="loginbutt" onClick={submitt}>
             Login
           </button>
         </form>

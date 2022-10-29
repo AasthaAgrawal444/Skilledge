@@ -1,7 +1,8 @@
 import react from 'react';
 import './signup.css';
 import Axios from 'axios';
-import {Link} from "react-router-dom";
+import {Link,useNavigate}from "react-router-dom";
+var er;
 
 function Signup(){
     const [userSignup,setuserSignup] = react.useState({
@@ -12,6 +13,33 @@ function Signup(){
       passwords:"",
       cpasswords:""
     })
+    const Navigate=useNavigate();
+    function validated(values){
+      const x={};
+      if(!values.firstname){
+        x.firstname ='First name is necessary';
+      }
+      if(!values.lastname){
+        x.lastname = 'Last Name is a necessary';
+      }
+      if(!values.Username){
+        x.Username ='Username is necessary';
+      }
+      if(!values.Emails){
+        x.Emails = 'Enter an email';
+      }
+      if(!values.passwords){
+        x.passwords = 'Password is necessary';
+      }
+      else if(values.passwords.length<8){
+        x.passwords ='Password must be more than 8 characters!';
+      }
+      er=Object.keys(x).length;
+    console.log(x);
+    (er!==0)?isValue(false):isValue(true);
+      return x;
+    }
+
     async function submit(){
       const obj=
       {
@@ -21,22 +49,44 @@ function Signup(){
         "password":userSignup.passwords, 
         "confirm_password":userSignup.passwords
         }
+
+        console.log(obj);
+        console.log(value);
+        if(value){
+        await Axios.post(
+          "https://skilledge.herokuapp.com/api/new_user_registration/",obj)
+          .then(response=>{
+            setMsg(response.data.msg);
+            console.log(response);
+            if(response.status===200){
+            Navigate("/otpcreate");}
+            // setRequest(response.status);
+            console.log(response.status);
+        })
+        .catch(err1 => {
+          console.log(err1);
+          console.log(err1.response.data.msg);
+          setMsg(err1.response.data.msg)
+        });
+      }
     
-    const response = await Axios.post("https://skilledge.herokuapp.com/api/new_user_registration/", obj);
-    console.log(response);
+   
     }
     const [record , setRecord]= react.useState([]);
-
     const [errors, setErrors]= react.useState({});
+    const [request, setRequest]= react.useState(0);
+    const [resmsg, setMsg]= react.useState(null);
+    const [value, isValue] = react.useState(false);
 
     const[ , setIsSigned]=react.useState(false);
     function handleInputs(e){
       const name=e.target.name;
       const value=e.target.value;
       localStorage.setItem('mymail',userSignup.Emails);
+      setErrors(validated(userSignup));
       setuserSignup({...userSignup,[name]:value});
     }
-  
+
     
    
     function handleSubmits(e){
@@ -46,32 +96,6 @@ function Signup(){
       console.log(record);
       setErrors(validated(userSignup));
       setIsSigned(true);
-    }
-
-    function validated(values){
-      const errors={};
-      if(!values.firstname){
-        errors.firstname ='First name is necessary';
-      }
-      if(!values.lastname){
-        errors.lastname = 'Last Name is a necessary';
-      }
-      if(!values.Username){
-        errors.Username ='Username is necessary';
-      }
-      if(!values.Emails){
-        errors.Emails = 'Enter an email';
-      }
-      if(!values.passwords){
-        errors.passwords = 'Password is necessary';
-      }
-      else if(values.passwords.length<5){
-        errors.passwords ='Password must be more than 5 characters!';
-      }
-      else if(values.passwords.length>8){
-        errors.passwords ='Password must be less than 8 characters!';
-      }
-      return errors;
     }
 
       return(
@@ -91,6 +115,7 @@ function Signup(){
 
            <div className="form0">
              <h3 className='accoun'>Create account</h3>
+             <p className='backmsg'>{resmsg}</p>
              <form id='form2' onSubmit={handleSubmits}>
              <input type='text' placeholder='First Name' name='firstname' id='firstname'
                value={userSignup.firstname}
@@ -115,9 +140,12 @@ function Signup(){
                <input type='password' placeholder='confirm Password' name='cpasswords' id='cpasswords'
                value={userSignup.cpasswords}
                onChange={handleInputs}></input>
-               <p id='error'>{errors.cpasswords}</p>
-               <Link to= '/otpcreate'><button className='creates' type="button" onClick={submit}>Sign Up as Student</button></Link>
-               <Link to= '/otpcreate'><button className='createm' type="button" onClick={submit}>Sign Up as Mentor</button></Link>
+               <p id='error8'>{errors.cpasswords}</p>
+               {request?
+               (<Link to= '/otpcreate'><button className='creates' type="submit" onClick={submit}>Sign Up as Student</button></Link>)
+               :(<button className='creates' type="submit" onClick={submit}>Sign Up as Student</button>)
+               }
+               <Link to= '/otpcreate'><button className='createm' type="submit">Sign Up as Mentor</button></Link>
               </form>
             </div>
        </div>
