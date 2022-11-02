@@ -1,7 +1,8 @@
-import react from "react";
+import react,{useState} from "react";
 import "./otpreset.css";
 import Axios from 'axios';
 //  import { Link } from 'react-router-dom';
+var er;
 
 function Otpc() {
   const [otp, setOtp] = react.useState({
@@ -10,18 +11,51 @@ function Otpc() {
     col3: "",
     col4: "",
   });
+  const [value, isValue] = useState(false);
+  const [resmsg, setMsg] =useState(null);
+
+  function valid(valuee) {
+    const x = {};
+    if (!valuee.col1) {
+      x.col1 = "Enter an Otp";
+    }
+    if (!valuee.col2) {
+      x.col2 = "Enter an Otp";
+    }
+    if (!valuee.col3) {
+      x.col3 = "Enter an Otp";
+    }
+    if (!valuee.col4) {
+      x.col4 = "Enter an Otp";
+    }
+    er=Object.keys(x).length;
+    // console.log(x);
+    console.log(er);
+    (er!==0)?isValue(false):isValue(true);
+    return x;
+  }
+
   async function submits() {
-   // console.log("here")
     const obje=
     {
       "email":localStorage.getItem("mymail"),
       "otp":otp.col1+otp.col2+otp.col3+otp.col4
       }
       console.log(obje);
-  
-  const responds = await Axios.post("https://skilledge.herokuapp.com/api/otp_verify/", obje).then((responds)=> {console.log(responds)});
-  console.log(responds);
-   }
+      console.log(value);
+      if(value){
+  await Axios.post("https://skilledge.herokuapp.com/api/otp_verify/", obje).then(response=>{
+    setMsg(response.data.msg);
+    console.log(response);  
+  })
+  .catch(err => {
+  console.log(err);
+  console.log(err.response.data.msg);
+  setMsg(err.response.data.msg)
+  });
+ }
+ }
+   
   const [data, setData] = react.useState([]);
 
   const [prob, setProb] = react.useState({});
@@ -30,6 +64,7 @@ function Otpc() {
   function handleInp(e) {
     const name = e.target.name;
     const value = e.target.value;
+    setProb(valid(otp));
     setOtp({ ...otp, [name]: value });
   }
 
@@ -42,26 +77,10 @@ function Otpc() {
     setVar(true);
   }
 
-  function valid(valuee) {
-    const prob = {};
-    if (!valuee.col1) {
-      prob.col1 = "Enter an Otp";
-    }
-    if (!valuee.col2) {
-      prob.col2 = "Enter an Otp";
-    }
-    if (!valuee.col3) {
-      prob.col3 = "Enter an Otp";
-    }
-    if (!valuee.col4) {
-      prob.col4 = "Enter an Otp";
-    }
-    return prob;
-  }
-
   return (
     <>
       <div>
+      <p className="backend">{resmsg}</p>
         <form id="form4" onSubmit={handleSub}>
           <div className="chek">
             <h3 className="check">Check your Email</h3>
@@ -119,5 +138,6 @@ function Otpc() {
     </>
   );
 }
+
 
 export default Otpc;

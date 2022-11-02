@@ -1,28 +1,64 @@
-import react from "react";
+import react,{useState} from "react";
 import "./reset.css";
- import Axios from 'axios';
-import {
-    Link
-  } from "react-router-dom";
+import Axios from "axios";
+import { useNavigate } from "react-router-dom";
+var er;
 
 function Reset() {
   const [userpass, setuserpass] = react.useState({
     repassword: "",
     rpassword: "",
   });
-  async function submitapi4() {
-    const obje=
-    {
-      "email":localStorage.getItem("email"),
-      "otp":localStorage.getItem("otp"),
-      "password":userpass.repassword,
-      "confirm_password":userpass.rpassword
+  const Navigate=useNavigate();
+  const [value, isValue] = useState(false);
+  const [resmsg, setMsg] =useState(null);
+  function validation(value) {
+    const z = {};
+    if (!value.repassword) {
+      z.repassword = "Password is required!";
+    } else if (value.repassword.length < 5) {
+      z.repassword = "Password must be more than 5 characters!";
+    } else if (value.repassword.length > 8) {
+      z.repassword = "Password cannot exceed 8 characters!";
     }
-  
-  const resetpass = await Axios.post("https://skilledge.herokuapp.com/api/enter_new_password/", obje);
-  console.log(resetpass);
+    if (!value.rpassword) {
+      z.rpassword = "Repeat Password to confirm!";
+    }
+    er = Object.keys(z).length;
+    // console.log(z);
+    console.log(er);
+    er !== 0 ? isValue(false) : isValue(true);
+    return z;
   }
 
+  async function submitapi4() {
+    const obje = {
+      email: localStorage.getItem("email"),
+      otp: localStorage.getItem("otp"),
+      password: userpass.repassword,
+      confirm_password: userpass.rpassword,
+    };
+
+    console.log(value);
+    if (value) {
+      await Axios.post(
+        "https://skilledge.herokuapp.com/api/enter_new_password/",
+        obje
+      )
+        .then((response) => {
+          setMsg(response.data.msg);
+          console.log(response);
+          if(response.status===200){
+            Navigate("/otpcreate");}
+            console.log(response.status);
+        })
+        .catch((err) => {
+          console.log(err);
+          console.log(err.response.data.msg);
+          setMsg(err.response.data.msg);
+        });
+    }
+  }
 
   const [newpass, setNewpass] = react.useState([]);
 
@@ -32,6 +68,7 @@ function Reset() {
   function handleDat(eve) {
     const name = eve.target.name;
     const value = eve.target.value;
+    setErr(validation(userpass));
     setuserpass({ ...userpass, [name]: value });
   }
   function handleSubt(eve) {
@@ -42,25 +79,12 @@ function Reset() {
     setErr(validation(userpass));
     setIsreset(true);
   }
-  function validation(value) {
-    const err = {};
-    if (!value.repassword) {
-      err.repassword = "Password is required!";
-    } else if (value.repassword.length < 5) {
-      err.repassword = "Password must be more than 5 characters!";
-    } else if (value.repassword.length > 8) {
-      err.repassword = "Password cannot exceed 8 characters!";
-    }
-    if (!value.rpassword) {
-      err.rpassword = "Repeat Password to confirm!";
-    }
-    return err;
-  }
 
   return (
     <div>
       <div id="passd">
         <form id="form5" onSubmit={handleSubt}>
+        <p className="backendmsg">{resmsg}</p>
           <h1 className="rest">Reset Password</h1>
           <p className="newp">New Password</p>
           <input
@@ -82,9 +106,9 @@ function Reset() {
             onChange={handleDat}
           ></input>
           <p id="err18">{err.rpassword}</p>
-          <Link to='/signin' ><button type="button" className="re" onClick={submitapi4}>
-            Reset Password
-          </button></Link>
+            <button type="button" className="re" onClick={submitapi4}>
+              Reset Password
+            </button>
         </form>
       </div>
     </div>

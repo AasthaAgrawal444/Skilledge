@@ -5,8 +5,8 @@ footer{
  left: 0px;
  bottom: 0px;
  /* top: 747px; */
- top: 100vh;
  background: #141517;
+ top: 300vh;
 }
 
 .Logo{
@@ -183,10 +183,10 @@ order: 1;
 flex-grow: 0;
 }
 
-.cont{
+.conthead{
     position: absolute;
-     left: -140px;
-top: 70px;
+     left: 95px;
+top: 100px;
 font-weight: 500;
 font-size: 24px;
 line-height: 28px;

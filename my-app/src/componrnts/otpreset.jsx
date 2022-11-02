@@ -1,7 +1,8 @@
 import react from "react";
 import "./otpreset.css";
- import { Link } from 'react-router-dom';
+ import { useNavigate } from 'react-router-dom';
  import Axios from 'axios';
+ var err;
 
 function Otp() {
   const [otp, setOtp] = react.useState({
@@ -10,27 +11,63 @@ function Otp() {
     col3: "",
     col4: ""
   });
+  const [resmsg, setMsg]= react.useState(null);
+  const [value, isValue] = react.useState(false);
+  const Navigate=useNavigate();
+  function valid(valuee) {
+    const y = {};
+    if (!valuee.col1) {
+      y.col1 = "Enter an Otp";
+    }
+    if (!valuee.col2) {
+      y.col2 = "Enter an Otp";
+    }
+    if (!valuee.col3) {
+      y.col3 = "Enter an Otp";
+    }
+    if (!valuee.col4) {
+      y.col4 = "Enter an Otp";
+    }
+    err=Object.keys(y).length;
+    console.log(y);
+    (err!==0)?isValue(false):isValue(true);
+    return y;
+
+  }
 
   async function api6() {
     const obj=
     {
       "email":localStorage.getItem("mail")
       }
-  
-  const response = await Axios.post("https://skilledge.herokuapp.com/api/reset_password/", obj);
-  console.log(response);
-  }
-
-  
+      if(value){
+    await Axios.post("https://skilledge.herokuapp.com/api/reset_password/", obj)
+    .then(response=>{
+      setMsg(response.data.msg);
+      console.log(response);
+      if(response.status===200){
+      Navigate("/otpcreate");}
+      // setRequest(response.status);
+      console.log(response.status);
+  })
+  .catch(err1 => {
+    console.log(err1);
+    console.log(err1.response.data.msg);
+    setMsg(err1.response.data.msg);
+  });
+}
+}    
   const [data, setData] = react.useState([]);
 
   const [prob, setProb] = react.useState({});
 
   const [, setVar] = react.useState(false);
+  
   function handleInp(e) {
     const name = e.target.name;
     const value = e.target.value;
-    localStorage.setItem('otp',otp.col1+otp.col2+otp.col3+otp.col4)
+    localStorage.setItem('otp',otp.col1+otp.col2+otp.col3+otp.col4);
+    setProb(valid(otp));
     setOtp({ ...otp, [name]: value });
   }
 
@@ -43,28 +80,12 @@ function Otp() {
     setVar(true);
   }
 
-  function valid(valuee) {
-    const prob = {};
-    if (!valuee.col1) {
-      prob.col1 = "Enter an Otp";
-    }
-    if (!valuee.col2) {
-      prob.col2 = "Enter an Otp";
-    }
-    if (!valuee.col3) {
-      prob.col3 = "Enter an Otp";
-    }
-    if (!valuee.col4) {
-      prob.col4 = "Enter an Otp";
-    }
-    return prob;
-  }
-
-  return (
+    return (
     <>
       <div>
         <form id="form4" onSubmit={handleSub}>
           <div className="chek">
+          <p className='backmsg'>{resmsg}</p>
             <h3 className="check">Check your Email</h3>
             <p className="cheque">
               We have sent an OTP on your registered mail!
@@ -73,6 +94,8 @@ function Otp() {
           <div className="cols">
             <input
               type="number"
+              min="0"
+              max="9"
               placeholder=" "
               name="col1"
               id="col1"
@@ -82,6 +105,8 @@ function Otp() {
             <p id="error9">{prob.col1}</p>
             <input
               type="number"
+              min="0"
+              max="9"
               placeholder=" "
               name="col2"
               id="col2"
@@ -91,6 +116,8 @@ function Otp() {
             <p id="error10">{prob.col2}</p>
             <input
               type="number"
+              min="0"
+              max="9"
               placeholder=" "
               name="col3"
               id="col3"
@@ -100,6 +127,8 @@ function Otp() {
             <p id="error11">{prob.col3}</p>
             <input
               type="number"
+              min="0"
+              max="9"
               placeholder=" "
               name="col4"
               id="col4"
@@ -108,11 +137,11 @@ function Otp() {
             ></input>
             <p id="error12">{prob.col4}</p>
           </div>
-          <Link to='/reset'><button className="con" type="button">
+          <button className="con" type="submit">
             Continue
-          </button></Link>
+          </button>
           <p className="dont">Don't get OTP? Resend OTP</p>
-          <button className="resen" type="button" onClick={api6}>
+          <button className="resen" type="submit" onClick={api6}>
             Resend OTP
           </button>
         </form>

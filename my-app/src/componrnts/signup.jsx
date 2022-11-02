@@ -74,7 +74,6 @@ function Signup(){
     }
     const [record , setRecord]= react.useState([]);
     const [errors, setErrors]= react.useState({});
-    const [request, setRequest]= react.useState(0);
     const [resmsg, setMsg]= react.useState(null);
     const [value, isValue] = react.useState(false);
 
@@ -141,10 +140,8 @@ function Signup(){
                value={userSignup.cpasswords}
                onChange={handleInputs}></input>
                <p id='error8'>{errors.cpasswords}</p>
-               {request?
-               (<Link to= '/otpcreate'><button className='creates' type="submit" onClick={submit}>Sign Up as Student</button></Link>)
-               :(<button className='creates' type="submit" onClick={submit}>Sign Up as Student</button>)
-               }
+               <button className='creates' type="submit" onClick={submit}>Sign Up as Student</button>
+               
                <Link to= '/otpcreate'><button className='createm' type="submit">Sign Up as Mentor</button></Link>
               </form>
             </div>

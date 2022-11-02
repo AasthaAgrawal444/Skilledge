@@ -11,6 +11,8 @@ import Otp from "./componrnts/otpreset";
 import Reset from "./componrnts/reset";
 import Footer from "./componrnts/footer";
 import Otpc from "./componrnts/otpcreate";
+import Profile from "./componrnts/student/profile";
+
 
 
 function App() {
@@ -29,6 +31,7 @@ function App() {
             <Route path="/signin" exact element={<Signin />}></Route>
             <Route path="/forgot" exact element={<Forgot />}></Route>
             <Route path="/otpreset" exact element={<Otp />}></Route>
+            <Route path="/profile" exact element={<Profile />}></Route>
           </Routes>
           <Footer/>
         </Router>

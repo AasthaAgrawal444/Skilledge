@@ -61,7 +61,6 @@ border-radius: 4px;
  text-align: center;
  height: 65px;
  border: 2px solid #E1E1E2;
-
 }
 #col4{
 width: 70px;
@@ -116,6 +115,37 @@ left: 537px;
 top: 480px;
 border-radius: 6px;
 }
+#error9{
+    position: absolute;
+    left: 0;
+    top: 60px;
+    font-size: 13px;
+    color: red;
+    z-index: 2;
+  }
+  #error10{
+    position: absolute;
+    left: 60px;
+    font-size: 13px;
+  top: 125px;
+    color: red;
+  } 
+  #error11{
+    position: absolute;
+    left: 0;
+    top: 60px;
+    font-size: 13px;
+    color: red;
+  }
+  #error12{
+    position: absolute;
+    left: 0;
+    font-size: 15px;
+  top: 6px;
+    color: red;
+    z-index: 2;
+  } 
+  
 
 @media(max-width:450px){
     .chek{

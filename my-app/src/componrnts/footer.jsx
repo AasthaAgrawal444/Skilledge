@@ -36,8 +36,8 @@ function Footer() {
         </div>
       </div>
       <div className="contus">
-      <h3 className="cont">Contact Us</h3>
-      <p className="contactid">Email:abc@gmail.com</p>
+      <h3 className="conthead">Contact Us</h3>
+      <p className="contactid">Email: skilledge.contactus@gmail.com</p>
       </div>
     </footer>
   );
