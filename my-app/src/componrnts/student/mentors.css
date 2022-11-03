@@ -1,0 +1,23 @@
+.mentordata{
+    display: flex;
+    flex-direction: column;
+    background: #EEF0FD;
+    border-radius: 12px;
+    gap: 2vh;
+}
+.mentor{
+    width: 16vw;
+    height: 27vh;
+}
+.mentitle{
+    margin-top: -15px;
+    font-weight: 500;
+    font-size: 17px;
+    margin-left: -10vw;
+}
+.mensubhead{
+    margin-top: -30px;
+    font-weight: 300;
+    font-size: 14px;
+    margin-left: -9vw;
+}

@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './mentors.css'
 
 function Mentors(props) {
   return (
@@ -16,4 +17,4 @@ function Mentors(props) {
   )
 }
 
-export default Mentors
+export default Mentors;

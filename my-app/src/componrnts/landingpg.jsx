@@ -2,7 +2,11 @@ import React from 'react';
 import landingimg from './images/Landing image.png';
 import './landingpg.css';
 import arrow from './images/Arrow.png';
-import Mentors from './mentors';
+import mentorimg from './images/mentorimg.png';
+import Mentors from './student/mentors';
+import courseimage from './images/courseimg.png';
+import Coursecard from './student/coursecard';
+import starimg from './images/star.png';
 // import Footer from './footer';
 //  import Nav from './navbar';
 
@@ -61,37 +65,95 @@ function Landingpg() {
 
       <div className='popular'>
           <h3 className='pop'>Popular Courses</h3>
+          <div className='coursecard'>
+            <Coursecard 
+              img={courseimage}
+              image={starimg}
+              rating="4.5"
+              name="Become a Certified HTML, CSS, JavaScript Web Developer"
+              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
+              price="499 $"
+              explore="Explore"
+            />
+            <Coursecard 
+              img={courseimage}
+              image={starimg}
+              rating="4.5"
+              name="Become a Certified HTML, CSS, JavaScript Web Developer"
+              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
+              price="499 $"
+              explore="Explore"
+            />
+            <Coursecard 
+              img={courseimage}
+              image={starimg}
+              rating="4.5"
+              name="Become a Certified HTML, CSS, JavaScript Web Developer"
+              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
+              price="499 $"
+              explore="Explore"
+            />
+            <Coursecard 
+              img={courseimage}
+              image={starimg}
+              rating="4.5"
+              name="Become a Certified HTML, CSS, JavaScript Web Developer"
+              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
+              price="499 $"
+              explore="Explore"
+            />
+            <Coursecard 
+              img={courseimage}
+              image={starimg}
+              rating="4.5"
+              name="Become a Certified HTML, CSS, JavaScript Web Developer"
+              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
+              price="499 $"
+              explore="Explore"
+            />
+            <Coursecard 
+              img={courseimage}
+              image={starimg}
+              rating="4.5"
+              name="Become a Certified HTML, CSS, JavaScript Web Developer"
+              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
+              price="499 $"
+              explore="Explore"
+            />
+          </div>
       </div>
 
       <div className='mentor'>
       <div className='mentors'>
           <h3 className='mentorhead'>Courses Taught by Real Mentors</h3>
           <p className='instruct'>Instructors from around the world teach millions of Students</p>
+          <div className='mencards'>
           <Mentors
-            img=""
+            img={mentorimg}
             title="Title"
             subhead="Subhead"
           />
            <Mentors
-            img=""
+            img={mentorimg}
             title="Title"
             subhead="Subhead"
           />
            <Mentors
-            img=""
+            img={mentorimg}
             title="Title"
             subhead="Subhead"
           />
            <Mentors
-            img=""
+            img={mentorimg}
             title="Title"
             subhead="Subhead"
           />
         <Mentors
-            img=""
+            img={mentorimg}
             title="Title"
             subhead="Subhead"
           />
+          </div>
       </div>
       </div>
 

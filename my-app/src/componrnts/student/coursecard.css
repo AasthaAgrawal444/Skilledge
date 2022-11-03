@@ -1,0 +1,60 @@
+.coursedata{
+    display: flex;
+    flex-direction: column;
+    filter: drop-shadow(0px 10px 60px rgba(38, 45, 118, 0.08));
+border-radius: 8px;
+}
+.courseimg{
+    /* height: 25vh;
+    width: 20vw;
+} */
+width: 16vw;
+    height: 27vh;
+}
+.star{
+    height: 2.3vh;
+    width: 1.1vw;
+    margin-left: -14vw;
+}
+.rate{
+    font-size: 17px;
+    margin-top: -3vh;
+    margin-left: -10vw;
+}
+.coursename{
+    width: 18vw;
+    /* margin-left: 20.5vw; */
+    margin-top: -2vh;
+    color: #182062;
+    font-weight: 600;
+font-size: 17px;
+line-height: 23px;
+}
+.coursedes{
+    font-size: 13px;
+    color: #5E5F61;
+    width: 19vw;
+    /* margin-left: 2vw; */
+    margin-top: -1vh;
+}
+.price{
+    color: #F48C06;
+    margin-left: -14vw;
+    margin-top: -1vh;
+font-size: 17px;
+font-weight: 500;
+}
+.expbut{
+    box-sizing: border-box;
+    padding: 2px 16px;
+    gap: 8px;
+    border: 2px solid #293593;
+    border-radius: 6px;
+    width: 6vw;
+    height: 4vh;
+    color: #293593;  
+    font-weight: 500;
+font-size: 14px;
+line-height: 21px;
+margin-left: 10vw;  
+}

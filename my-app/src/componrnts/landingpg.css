@@ -146,7 +146,7 @@ border-radius: 8px;
 .over1{
     display: flex;
     padding: 0 15px;
-    width: 200px;
+    width: 190px;
     margin-left: 120px;
     font-size: 15px;
     font-weight: 400;
@@ -294,10 +294,22 @@ border-radius: 8px;
 position: absolute;
 width: 40vw;
 height: 15vh;
-margin: 150vh 43vw;
+margin: 180vh 43vw;
 }
 .instruct{
     margin-left: -23vw;
     margin-top: 6vh;
     
+}
+.mencards{
+    margin-top: 8vh;
+    margin-left: -35vw;
+    display: flex;
+    gap: 5vw;
+}
+
+.coursecard{
+    display: flex;
+    margin-left: 5vw;
+    gap: 2.5vw;
 }
