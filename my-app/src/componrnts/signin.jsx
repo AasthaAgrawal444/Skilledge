@@ -35,6 +35,7 @@ function Signin() {
       email: userSignin.email,
       password: userSignin.password,
     };
+
     // console.log(object);
     console.log(value);
     if(value){
@@ -42,7 +43,9 @@ function Signin() {
       "https://skilledge.herokuapp.com/api/login/",object)
       .then(response=>{
         localStorage.setItem('jwtToken',response.data.token.access);
-        localStorage.setItem('jwtToken',response.data.token.refresh);
+        console.log(localStorage);
+        localStorage.setItem('Token',response.data.token.refresh);
+        
         setMsg(response.data.msg);
         console.log(response);
     })
