@@ -21,10 +21,8 @@ function Signin() {
     }
     if (!value.password) {
       x.password = "Password is required!";
-    } else if (value.password.length < 4) {
-      x.password = "Password must be more than 5 characters!";
-    } else if (value.password.length > 8) {
-      x.password = "Password cannot exceed 8 characters!";
+    } else if (value.password.length < 8) {
+      x.password = "Password must be more than 8 characters!";
     }
     er=Object.keys(x).length;
     // console.log(x);
@@ -43,6 +41,8 @@ function Signin() {
     await Axios.post(
       "https://skilledge.herokuapp.com/api/login/",object)
       .then(response=>{
+        localStorage.setItem('jwtToken',response.data.token.access);
+        localStorage.setItem('jwtToken',response.data.token.refresh);
         setMsg(response.data.msg);
         console.log(response);
     })

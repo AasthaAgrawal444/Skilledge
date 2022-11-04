@@ -9,9 +9,10 @@ import Signup from "./componrnts/signup.jsx";
 import Forgot from "./componrnts/forgot.jsx";
 import Otp from "./componrnts/otpreset";
 import Reset from "./componrnts/reset";
-import Footer from "./componrnts/footer";
+// import Footer from "./componrnts/footer";
 import Otpc from "./componrnts/otpcreate";
 import Profile from "./componrnts/student/profile";
+import Home from "./componrnts/student/home";
 
 
 
@@ -32,8 +33,9 @@ function App() {
             <Route path="/forgot" exact element={<Forgot />}></Route>
             <Route path="/otpreset" exact element={<Otp />}></Route>
             <Route path="/profile" exact element={<Profile />}></Route>
+            <Route path="/home" exact element={<Home />}></Route>
           </Routes>
-          <Footer/>
+          {/* <Footer/> */}
         </Router>
       }
     </div>

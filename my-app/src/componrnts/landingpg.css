@@ -7,11 +7,11 @@ flex-direction: column;
 align-items: flex-start;
 padding: 0px;
 gap: 34px;
-position: absolute;
+position: relative;
 width: 534px;
 height: 231px;
 left: 96px;
-top: 116px;
+top: 0;
 }
 
 .quote{
@@ -112,11 +112,11 @@ border-radius: 8px;
 }
 
 .landing{
-    position: absolute;
+    position: relative;
 width: 508px;
 height: 296px;
-left: 836px;
-top: 114px;
+left: 350px;
+top: -24vh;
 border-radius: 8px;
 }
 
@@ -127,10 +127,10 @@ span{
 .bar{
     display: flex;
     gap: 150px;
-    position: absolute;
+    position: relative;
     height: 80px;
     background: #9BA6F9;
-    top: 60vh;
+    top: -12.5vh;
     width: 100vw;
 }
 .bararr{
@@ -191,10 +191,10 @@ border-radius: 8px;
 flex-direction: column;
 align-items: center;
 gap: 30px;
-position: absolute;
+position: relative;
 width: 85vw;
 height: 20vh;
-margin: 32vw 8vw;
+margin: 0 8vw;
 }
 
 .cat1{
@@ -281,20 +281,20 @@ border-radius: 8px;
 }
 
 .popular{
-    position: absolute;
-    margin: 54vw 0;
+    position: relative;
+    margin: 30vh 0;
 }
 .pop{
     margin-left: 43vw;
 }
 
 .mentors{
-    gap: 2vh;
+    /* gap: 2vh; */
 
-position: absolute;
+position: relative;
 width: 40vw;
 height: 15vh;
-margin: 180vh 43vw;
+margin: -15vh 40vw;
 }
 .instruct{
     margin-left: -23vw;
@@ -312,4 +312,5 @@ margin: 180vh 43vw;
     display: flex;
     margin-left: 5vw;
     gap: 2.5vw;
+    margin-top: 9vh;
 }

@@ -5,6 +5,7 @@ import "./footer.css";
 function Footer() {
   return (
     <footer>
+    <div className="foot">
       <div className="Logo">
         <img src={logo} className="logo-icon" alt="logo" />
         <h1 className="edgehead">Skill Edge</h1>
@@ -39,6 +40,7 @@ function Footer() {
       <h3 className="conthead">Contact Us</h3>
       <p className="contactid">Email: skilledge.contactus@gmail.com</p>
       </div>
+    </div>
     </footer>
   );
 }

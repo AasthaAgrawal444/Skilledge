@@ -7,7 +7,7 @@ import Mentors from './student/mentors';
 import courseimage from './images/courseimg.png';
 import Coursecard from './student/coursecard';
 import starimg from './images/star.png';
-// import Footer from './footer';
+import Footer from './footer';
 //  import Nav from './navbar';
 
 
@@ -157,7 +157,7 @@ function Landingpg() {
       </div>
       </div>
 
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   )
 }
