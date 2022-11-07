@@ -1,0 +1,42 @@
+.courseimag{
+    position: relative;
+    height: 22vh;
+    width: 12vw;
+    right: 13vw;
+}
+.stars{
+    position: relative;
+    height: 2.5vh;
+    width: 1.2vw;
+    top: -22vh;
+    left: -3.5vw;
+}
+.rating{
+    position: relative;
+margin-top: -25.2vh;
+right: 1.2vw;
+font-size: 18px;
+}
+.coursescontent{
+display: flex;
+flex-direction: column;
+margin-left: 14vw;
+margin-top: -5vh;
+}
+.coursedatas{
+    margin: 6vh;
+}
+.coursesnames{
+    color: #182062;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 23px;
+    letter-spacing: 0.15px;
+}
+.coursesdescript{
+    font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+letter-spacing: 0.4px;
+margin-top: -1vh;
+}

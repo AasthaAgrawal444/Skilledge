@@ -1,0 +1,52 @@
+.mycourseshead{
+    gap: 0;
+width: 100vw;
+height: 38vh;
+background: #0A0E31;
+margin-top: -5vh;
+}
+.mycourseshdng{
+    position: relative;
+    color: #EEF0FD;
+    letter-spacing: -0.5px;
+    font-weight: 400;
+font-size: 53px;
+right: 35vw;
+top: 12vh;
+}
+.mycourseheadng{
+    display: flex;
+}
+.allcourses{
+    position: relative;
+    color: #EEF0FD;
+    font-size: 3.5vh;
+    left: 8vw;
+    top: 10vh;
+}
+.ongoing{
+    position: relative;
+    color: #EEF0FD;
+    font-size: 3.5vh;
+    left: 22vw;
+    top: 10vh;
+}
+.completed{
+    position: relative;
+    color: #EEF0FD;
+    font-size: 3.5vh;
+    left: 37vw;
+    top: 10vh;
+}
+.coursecard{
+    margin: 10vh ;
+}
+.card1{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card2{
+    display: flex;
+    flex-wrap: wrap;
+}
+

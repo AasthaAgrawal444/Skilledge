@@ -8,7 +8,7 @@ import courseimage from './images/courseimg.png';
 import Coursecard from './student/coursecard';
 import starimg from './images/star.png';
 import Footer from './footer';
-//  import Nav from './navbar';
+ import Nav from './navbar';
 
 
 function Landingpg() {
@@ -17,7 +17,7 @@ function Landingpg() {
   // }
   return (
     <div>
-    {/* <Nav/> */}
+    <Nav/>
       <div className='head'>
           <div className='quote'>
             <h1 className='joinhead'>Join<span style={{color : "#586AF5", fontWeight : "600", fontSize : "40px"}}>World's largest</span>learning platform today</h1>
@@ -156,8 +156,9 @@ function Landingpg() {
           </div>
       </div>
       </div>
-
+      <div className='landingfooter'>
       <Footer/>
+      </div>
     </div>
   )
 }

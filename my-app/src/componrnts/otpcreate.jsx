@@ -1,11 +1,11 @@
-import react,{useState} from "react";
+import React,{useState} from "react";
 import "./otpreset.css";
 import Axios from 'axios';
 //  import { Link } from 'react-router-dom';
 var er;
 
 function Otpc() {
-  const [otp, setOtp] = react.useState({
+  const [otp, setOtp] = useState({
     col1: "",
     col2: "",
     col3: "",
@@ -56,11 +56,11 @@ function Otpc() {
  }
  }
    
-  const [data, setData] = react.useState([]);
+  const [data, setData] = useState([]);
 
-  const [prob, setProb] = react.useState({});
+  const [prob, setProb] = useState({});
 
-  const [ , setVar] = react.useState(false);
+  const [ , setVar] = useState(false);
   function handleInp(e) {
     const name = e.target.name;
     const value = e.target.value;

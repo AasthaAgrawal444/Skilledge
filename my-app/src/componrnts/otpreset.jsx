@@ -1,18 +1,18 @@
-import react from "react";
+import React,{useState} from "react";
 import "./otpreset.css";
  import { useNavigate } from 'react-router-dom';
  import Axios from 'axios';
  var err;
 
 function Otp() {
-  const [otp, setOtp] = react.useState({
+  const [otp, setOtp] = useState({
     col1: "",
     col2: "",
     col3: "",
     col4: ""
   });
-  const [resmsg, setMsg]= react.useState(null);
-  const [value, isValue] = react.useState(false);
+  const [resmsg, setMsg]= useState(null);
+  const [value, isValue] = useState(false);
   const Navigate=useNavigate();
   function valid(valuee) {
     const y = {};
@@ -57,11 +57,11 @@ function Otp() {
   });
 }
 }    
-  const [data, setData] = react.useState([]);
+  const [data, setData] = useState([]);
 
-  const [prob, setProb] = react.useState({});
+  const [prob, setProb] = useState({});
 
-  const [, setVar] = react.useState(false);
+  const [, setVar] = useState(false);
   
   function handleInp(e) {
     const name = e.target.name;

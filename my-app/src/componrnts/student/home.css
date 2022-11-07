@@ -1,4 +1,77 @@
 .coursecards{
     position: relative;
-    top: 100vh;
+    top: 6vh;
+}
+#startlearn{
+    position: relative;
+    right: 31vw;
+    top: 6vh;
+    font-size: 48px;
+    font-weight: 500;
+
+}
+.newskill{
+    position: relative;
+    right: 34vw;
+    font-size: 48px;
+    font-weight: 500;
+    color: #586AF5;
+    top: -6vh;
+}
+.barr{
+    position: relative;
+display: flex;
+gap: 150px;
+position: relative;
+height: 80px;
+background: #9BA6F9;
+top: -45.5vh;
+width: 100vw;}
+.skillcon{
+    position: relative;
+right: 32vw; 
+   top: -10vh;
+    font-size: 20px;
+}
+.skillcon2{
+    position: relative;
+    right: 34.1vw;
+    top: -12vh;
+    font-size: 17px;
+}
+.recent{
+    margin-left: 0;
+}
+.courseheading{
+position: relative;
+margin-left: 0;
+margin-top: 8vh;
+font-size: 35px;
+height: 30px;
+}
+.landingimage{
+    position: relative;
+    width: 508px;
+    height: 296px;
+    left: 350px;
+    border-radius: 8px;
+    top: -50vh;
+    margin:2rem 0 ;
+}
+.homefooter{
+    position: relative;
+    top: 18vh;
+}
+.coursesview{
+    margin-top: -35vh;
+}
+@media(max-width:450){
+    #startlearn{
+        position: relative;
+        left: 31vw;
+        top: 6vh;
+        font-size: 38px;
+        font-weight: 500;
+    
+    }
 }

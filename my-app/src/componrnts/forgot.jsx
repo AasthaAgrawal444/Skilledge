@@ -1,4 +1,4 @@
-import react ,{useState}from 'react';
+import React ,{useState}from 'react';
 import { Link } from 'react-router-dom';
 import './forgot.css';
 import Axios from 'axios';
@@ -7,7 +7,7 @@ import {useNavigate}from "react-router-dom";
 var er;
 
 function Forgot(){
-    const [Forgot,setForgot] = react.useState({
+    const [Forgot,setForgot] = useState({
       emailed:"" })
       const Navigate=useNavigate();
       const [value, isValue] = useState(false);
@@ -49,9 +49,9 @@ function Forgot(){
   
   }  
     
-  const [records, setRecords] = react.useState([]);
-      const [errors,setErrors]=react.useState({});
-      const[ , setIsSubmits]=react.useState(false);
+  const [records, setRecords] = useState([]);
+      const [errors,setErrors]=useState({});
+      const[ , setIsSubmits]=useState(false);
 
       function handleInputt(e){
         const name=e.target.name;

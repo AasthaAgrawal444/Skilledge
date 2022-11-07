@@ -1,11 +1,11 @@
-import react,{useState} from "react";
+import React,{useState} from "react";
 import "./reset.css";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
 var er;
 
 function Reset() {
-  const [userpass, setuserpass] = react.useState({
+  const [userpass, setuserpass] = useState({
     repassword: "",
     rpassword: "",
   });
@@ -60,11 +60,11 @@ function Reset() {
     }
   }
 
-  const [newpass, setNewpass] = react.useState([]);
+  const [newpass, setNewpass] = useState([]);
 
-  const [err, setErr] = react.useState({});
+  const [err, setErr] = useState({});
 
-  const [, setIsreset] = react.useState(false);
+  const [, setIsreset] = useState(false);
   function handleDat(eve) {
     const name = eve.target.name;
     const value = eve.target.value;

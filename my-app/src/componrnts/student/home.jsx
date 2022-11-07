@@ -1,21 +1,25 @@
 import React from 'react';
 // import './landingpg.css';
+import './home.css';
 import Landingimg from '../images/Landing image.png';
 import arrow from '../images/Arrow.png';
 import courseimage from '../images/courseimg.png';
 import Coursecard from './coursecard';
 import starimg from '../images/star.png';
+import Footer from '../footer';
+import Loginnav from './loginnavbar';
 
 function Home() {
   return (
     <div>
+    <Loginnav/>
       <div className='homehead'>
-          <h1 className='startlearn'>Start Learning</h1>
-          <h1 className='newskills'>New Skills</h1>
-          <p className='skillcon'>Learn almost any skill a comfort to your home with SkillEdge</p>
+          <h5 id='startlearn'>Start Learning</h5>
+          <h1 className='newskill'>New Skills</h1>
+          <p className='skillcon'>Learn almost any skill a comfort</p> <p className='skillcon2'>to your home with SkillEdge</p>
       </div>
-      <img src={Landingimg} className="landing" alt='land'/>
-      <div className='bar'>
+      <img src={Landingimg} className="landingimage" alt='land'/>
+      <div className='barr'>
         <div className='over1'>
           <p className='over50'>Over 50 Courses</p>
           <img src={arrow} className='bararr' alt='arrow'/>
@@ -25,8 +29,9 @@ function Home() {
         <div className='over3'><p className='over500'>Over 500 Mentors</p>
           <img src={arrow} className='bararr' alt='arrow'/></div>
       </div>
+      <div className='coursesview'>
         <div className='recentcourses'>
-          <h3 className='recent'>Recently Added Courses</h3>
+          <h1 className='recent'>Recently Added Courses</h1>
           <div className='coursecard'>
              <Coursecard 
               img={courseimage}
@@ -87,7 +92,7 @@ function Home() {
 
       <div className='popularcourses'>
       <div className='popcourse'>
-          <h3 className='courseheading'>Most Popular Courses</h3>
+          <h1 className='courseheading'>Most Popular Courses</h1>
           <div className='coursecards'>
           <div className='coursecard'>
            <Coursecard 
@@ -146,6 +151,10 @@ function Home() {
           </div>
           </div>
       </div>
+      </div>
+      </div>
+      <div className='homefooter'>
+      <Footer/>
       </div>
     </div>
   )

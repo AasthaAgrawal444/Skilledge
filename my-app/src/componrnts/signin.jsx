@@ -1,9 +1,10 @@
-import react,{useState} from "react";
+import React,{useState} from "react";
 import "./signin.css";
 import Axios from "axios";
-import { Link } from "react-router-dom";
+import { Link ,useNavigate} from "react-router-dom";
 import Lock from './images/lock.png';
 import Email from './images/email.png';
+import Home from "./student/home";
 var er;
 
 function Signin() {
@@ -11,6 +12,7 @@ function Signin() {
     email: "",
     password: "",
   });
+  const Navigate=useNavigate();
   const [value, isValue] = useState(false);
   const [resmsg, setMsg] =useState(null);
 
@@ -44,8 +46,8 @@ function Signin() {
       .then(response=>{
         localStorage.setItem('jwtToken',response.data.token.access);
         console.log(localStorage);
-        localStorage.setItem('Token',response.data.token.refresh);
-        
+        if(response.status===200){
+          Navigate("/home");}
         setMsg(response.data.msg);
         console.log(response);
     })
@@ -56,11 +58,13 @@ function Signin() {
     });
   }
 }
-  const [records, setRecords] = react.useState([]);
+ 
 
-  const [error, setError] = react.useState({});
+  const [records, setRecords] = useState([]);
 
-  const [, setIsSet] = react.useState(false);
+  const [error, setError] = useState({});
+
+  const [, setIsSet] = useState(false);
   function handleData(event) {
     const name = event.target.name;
     const value = event.target.value;

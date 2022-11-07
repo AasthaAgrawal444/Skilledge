@@ -1,0 +1,206 @@
+.loginnavbar{
+    height: 8vh;
+    width: 100vw;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
+    display: flex;
+}
+#loginsearches{
+    position: relative;
+    width: 24vw;
+    height: 34px;
+    left: 20vw;
+    top: 12px;
+    background: #EEF0FD;
+    border: 2px solid #EEF0FD;
+    border-radius: 5px;
+    padding: 0 40px;
+}
+
+.logo{
+    position: relative;
+    width: 1vw;
+    height: 5vh;
+    left: 5vw;
+    top: 2.5vh;
+   
+   }
+   .logo img{
+       position: relative;
+       width: 3.3vw;
+       height: 3.5vh;
+   } 
+   .skillhead{
+    position: relative;
+    width: 8vw;
+ height: 28px;
+ left: 3.5vw;
+ top: -6.7vh;
+ font-family: 'Roboto';
+ font-style: normal;
+ font-weight: 500;
+ font-size: 25px;
+ line-height: 28px;
+ text-align: center;
+ color: #000000;
+}
+
+.searchingicon{
+        position: relative;
+        left: 330px;
+        height: 20px;
+        width: 20px;
+         z-index:2;
+        top: 19px;
+    
+}
+.carticon{
+    position: relative;
+    height: 3.7vh;
+    width: 1.8vw;
+    margin-top: 2vh;
+    margin-left: 22vw;
+    background: #FFFFFF;
+   }
+.homepg{  
+ padding: 4px 8px;
+gap: 8px;
+width: 102px;
+height: 32px;
+border: 2px solid #141517;
+margin-top: 2vh;
+margin-left: 4vw;
+background-color: #FFFFFF;
+border-radius: 6px;
+cursor: pointer;
+}
+.mycoursespg{
+    padding: 4px 8px;
+gap: 8px;
+width: 102px;
+height: 32px;
+border: 2px solid #141517;
+margin-top: 2vh;
+margin-left: 4vw;
+background-color: #FFFFFF;
+border-radius: 6px;
+cursor: pointer;
+}
+#profilefornav{
+    position: relative;
+       width: 2.4vw;
+       height: 4.9vh;
+       top: 2vh;
+       left: 7vw;
+       cursor: pointer;
+}
+#dropdown{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4vh;
+    background: #F6FAFA;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 4px;
+margin-left: 10vw;
+
+}
+.profiledropdownimage{
+    height: 50px;
+    width: 50px;
+}
+#drop_content{
+    line-height: 5vh;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 7px 10px;
+}
+@media(max-width:1000px){
+    .searchbar{
+        display: none;
+    }
+    .skillhead{
+        width: 30vw;
+        margin-left: -6vw;
+        margin-top: 20px;
+    }
+    .homepg{
+        position: relative;
+        left: 15vw;
+    }
+    .mycoursespg{
+        position: relative;
+        left: 18vw;
+    }
+    .carticon{
+        position: relative;
+        height: 4vh;
+        left: 55vw;
+    }
+    #profilefornav{
+        left: 30vw;
+    }
+}
+@media(max-width:800px){
+    .carticon{
+        display: none;
+    }
+    .homepg{
+        position: relative;
+        left: 40vw;
+    }
+    .mycoursespg{
+        position: relative;
+        left: 40vw;
+    }
+    #profilefornav{
+position: relative;
+margin-left: 20vw;  
+}
+.skillhead{
+    font-size: 16px;
+}
+}
+@media(max-width:450px){
+    .loginnavbar{
+        height: 10vh;
+        width: 100vw;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
+        display: flex;
+    }
+    .searchbar{
+        display: none;
+    }
+    .homepg{
+        display: none;
+    }
+    .mycoursespg{ display: none;}
+    .carticon{ display: none;}
+    .logo img{
+        position: relative;
+        height: 6vh;
+        width: 6vw;
+        left: 5vw;
+    }
+    .skillhead{
+        position: relative;
+left: 0;  
+margin-top: 1vh; 
+font-size: 20px;
+width: 55vw;
+}
+#profilefornav{
+    position: relative;
+    height: 6vh;
+    width: 6vw;
+    left: 75vw;
+    top: 2.5vh;
+}
+}
+@media(max-width:350px ){
+    .skillhead{
+        font-size: 13px;
+    }
+}

@@ -1,14 +1,16 @@
 import React,{useState} from 'react';
 import './profile.css';
+import courseimage from '../images/courseimg.png';
+import Dropdown from './profiledropdwons/gender';
 
 function Profile() {
     const [data,setData] = useState({
         firstname:"",
         lastname:"",
-        Username:"",
-        Emails: "",
-        passwords:"",
-        cpasswords:""
+        Emails:"",
+        Countrycode: "",
+        Phoneno:"",
+        Gender:""
       })
       function validated(values){
         const x={};
@@ -18,17 +20,17 @@ function Profile() {
         if(!values.lastname){
           x.lastname = 'Last Name is a necessary';
         }
-        if(!values.Username){
-          x.Username ='Enter an email';
-        }
         if(!values.Emails){
-          x.Emails = 'Enter country code';
+          x.Emails ='Enter an email';
         }
-        if(!values.passwords){
-          x.passwords = 'Phone no. is necessary';
+        if(!values.Countrycode){
+          x.Countrycode = 'Enter country code';
         }
-        else if(values.passwords.length<8){
-          x.passwords ='Password must be more than 8 characters!';
+        if(!values.Phoneno){
+          x.Phoneno = 'Phone no. is necessary';
+        }
+        if(!values.Gender){
+          x.Gender = 'Gender is necessary';
         }
         return x;
       }
@@ -58,8 +60,7 @@ function Profile() {
     
   return (
     <div>
-      <h5 className='profilepg'>Profile</h5>
-      <img src='' className='proimg' alt='profile-img'/>
+      <img src={courseimage} className='proimg' alt='profile-img'/>
       <form id='form2' onSubmit={handleSubmits}>
              <input type='text' placeholder='First Name' name='fname' id='fname'
                value={data.fname}
@@ -70,22 +71,23 @@ function Profile() {
                onChange={handleInputs}></input>
                <p id='error4'>{errors.lname}</p>
                <input type='email' placeholder='Email' name='emails' id='emails'
-               value={data.emails}
+               value={data.Emails}
                onChange={handleInputs}></input>
                <p id='error6'>{errors.emails}</p>
-               <input type='text' placeholder='Username' name='Uname' id='Uname'
-               value={data.Uname}
+               <input type='text' placeholder=' ' name='code' id='code'
+               value={data.code}
                onChange={handleInputs}></input>               
-               <p id='error5'>{errors.Uname}</p>
-               <input type='password' placeholder='Password' name='pwd' id='pwd'
-               value={data.pwd}
+               <p id='error5'>{errors.code}</p>
+               <input type='text' placeholder='Phone number' name='phno' id='phno'
+               value={data.phno}
                onChange={handleInputs}></input>
-               <p id='error7'>{errors.pwd}</p>
-               <input type='password' placeholder='confirm Password' name='cpwd' id='cpwd'
-               value={data.cpwd}
+               <p id='error7'>{errors.phno}</p>
+               <input type='gender' placeholder='Gender' name='gender' id='gender'
+               value={data.Gender}
                onChange={handleInputs}></input>
-               <p id='error8'>{errors.cpwd}</p>
+               <p id='error8'>{errors.gender}</p>
                </form>
+               <button type='submit' className='continuebutton' >Continue</button>
     </div>
   )
 }

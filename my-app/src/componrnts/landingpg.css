@@ -314,3 +314,7 @@ margin: -15vh 40vw;
     gap: 2.5vw;
     margin-top: 9vh;
 }
+.landingfooter{
+    position: relative;
+    top: 40vh;
+}

@@ -1,11 +1,11 @@
-import react from 'react';
+import React,{useState} from 'react';
 import './signup.css';
 import Axios from 'axios';
 import {Link,useNavigate}from "react-router-dom";
 var er;
 
 function Signup(){
-    const [userSignup,setuserSignup] = react.useState({
+    const [userSignup,setuserSignup] = useState({
       firstname:"",
       lastname:"",
       Username:"",
@@ -72,12 +72,12 @@ function Signup(){
     
    
     }
-    const [record , setRecord]= react.useState([]);
-    const [errors, setErrors]= react.useState({});
-    const [resmsg, setMsg]= react.useState(null);
-    const [value, isValue] = react.useState(false);
+    const [record , setRecord]= useState([]);
+    const [errors, setErrors]= useState({});
+    const [resmsg, setMsg]= useState(null);
+    const [value, isValue] = useState(false);
 
-    const[ , setIsSigned]=react.useState(false);
+    const[ , setIsSigned]= useState(false);
     function handleInputs(e){
       const name=e.target.name;
       const value=e.target.value;
