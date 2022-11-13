@@ -1,0 +1,33 @@
+/* .homepg{ */
+    /* margin-left: 60vw; */
+/* } */
+.mycoursepg{
+    margin-left: 60vw;
+}
+/* #profilefornav{
+
+} */
+ .buttonsbar{
+    position: absolute;
+    margin-left: 55vw;
+}
+/* #profilefornav{ */
+    /* position: absolute; */
+    /* top: -5vh; */
+    /* left: -79vw; */
+/* } */
+#profilefornav{
+    position: absolute;
+    /* margin-left: 100vw; */
+}
+#dropdown{
+    position: relative;
+    left: 14.3vw;
+    top: 5vh; 
+    margin-left: 17vw;
+    margin-top: -4vh; 
+}  
+.profiledropimage{
+    position: absolute;
+    left: -300vw;
+}

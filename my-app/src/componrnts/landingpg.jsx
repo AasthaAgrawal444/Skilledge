@@ -1,4 +1,4 @@
-import React from 'react';
+import React , {useState , useEffect} from 'react';
 import landingimg from './images/Landing image.png';
 import './landingpg.css';
 import arrow from './images/Arrow.png';
@@ -9,19 +9,72 @@ import Coursecard from './student/coursecard';
 import starimg from './images/star.png';
 import Footer from './footer';
  import Nav from './navbar';
+ import carddata from './student/carddata';
+ import mentors from './student/mentor';
+ import axios from 'axios';
+
+//  function mentored(mentors){
+//   return(
+//   <Mentors
+//             key={mentors.id}
+//             img={mentors.img}
+//             title={mentors.title}
+//             subhead={mentors.subhead}
+//           />
+//   );
+//  }
+
+
+function popularcourse(popular){
+  return(
+    <Coursecard 
+    key={popular.id}
+    thumbnail={popular.thumbnail}
+    rating={popular.rating}
+    topic={popular.topic}
+    short_description={popular.short_description}
+    price={popular.price}
+  />
+  );
+}
 
 
 function Landingpg() {
   // const join = {
   //   color : "#586AF5",
   // }
-  return (
+
+ 
+  const [popular,setPopular] = useState([
+  
+  ]);
+  
+  const [resmsg, setMsg] =useState(null);
+    const token = localStorage.getItem("jwtToken");
+    console.log("token");
+    const config = {
+      headers:{
+        Authorization: `Bearer ${token}`
+      }
+    }
+  
+    useEffect(()=>{
+      axios.get("https://skilledge.herokuapp.com/courses/view_filtered_courses/",config).then((response)=>{
+       console.log(response);
+       setPopular(response.data.results);
+    //    setLoading(true);
+      }).catch(err=>{
+          console.log(err);
+      })
+    },[]);
+  return(
+    <>
     <div>
     <Nav/>
       <div className='head'>
           <div className='quote'>
-            <h1 className='joinhead'>Join<span style={{color : "#586AF5", fontWeight : "600", fontSize : "40px"}}>World's largest</span>learning platform today</h1>
-            <p>Start learning by registerning for free</p>
+            <h1 className='joinhead'>Join</h1><span style={{color : "#586AF5", fontWeight : "600", fontSize : "40px"}}>World's largest</span><h1 className='platform'>learning platform today</h1>
+            <p className='registering'>Start learning by registerning for free</p>
           </div>
           <div className='signin'>
              <p className='sign3'>Sign in as Student</p>
@@ -66,7 +119,9 @@ function Landingpg() {
       <div className='popular'>
           <h3 className='pop'>Popular Courses</h3>
           <div className='coursecard'>
-            <Coursecard 
+          {popular.map(popularcourse)}; 
+          {/* {carddata.map(popularcourse)}; */}
+            {/* <Coursecard 
               img={courseimage}
               image={starimg}
               rating="4.5"
@@ -92,8 +147,8 @@ function Landingpg() {
               description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
               price="499 $"
               explore="Explore"
-            />
-            <Coursecard 
+            /> */}
+            {/* <Coursecard 
               img={courseimage}
               image={starimg}
               rating="4.5"
@@ -119,16 +174,18 @@ function Landingpg() {
               description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
               price="499 $"
               explore="Explore"
-            />
+            /> */}
           </div>
       </div>
 
-      <div className='mentor'>
+      {/* <div className='mentor'>
       <div className='mentors'>
           <h3 className='mentorhead'>Courses Taught by Real Mentors</h3>
           <p className='instruct'>Instructors from around the world teach millions of Students</p>
-          <div className='mencards'>
-          <Mentors
+          <div className='mencards'> */}
+          {/* {mentors.map(mentored)}; */}
+
+          {/* <Mentors
             img={mentorimg}
             title="Title"
             subhead="Subhead"
@@ -152,15 +209,16 @@ function Landingpg() {
             img={mentorimg}
             title="Title"
             subhead="Subhead"
-          />
-          </div>
+          /> */}
+          {/* </div>
       </div>
-      </div>
+      </div> */}
       <div className='landingfooter'>
       <Footer/>
       </div>
     </div>
-  )
+    </>
+  );
 }
 
 export default Landingpg;

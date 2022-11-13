@@ -9,9 +9,14 @@ import briefcase from "../images/Briefcase.png";
 import camera from "../images/Camera.png";
 import graph from "../images/Graph.png";
 import arrows from "../images/Arrows.png";
+import Nav from "../navbar";
+import Footer from "../footer";
 import Axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Interest() {
+  const Navigate=useNavigate();
+
   const [mark1, setMark1] = useState(false);
   const [mark2, setMark2] = useState(false);
   const [mark3, setMark3] = useState(false);
@@ -159,13 +164,16 @@ function Interest() {
      };
      console.log(object);
      await Axios.put(
-      "https://skilledge.herokuapp.com/courses/add_category/",JSON.stringify(object),configure)
+      "https://skilledge.herokuapp.com/courses/category/",JSON.stringify(object),configure)
       .then(response=>{
         // setRequest(response.status);
         
         console.log(response);
         setMsg(response.data.msg)
         console.log(response.status);
+        if(response.status===200){
+          Navigate("/home")
+        }
     })
     .catch(e => {
       console.log(e);
@@ -193,6 +201,7 @@ function Interest() {
   // }
   return (
     <div>
+    <Nav/>
       <h3 className="chooseint">Choose Your Interest</h3>
       <img src={courseimage} alt="profile img" className="profileimage" />
       {/* <p className="backendinterestmsg">{resmsg}</p> */}
@@ -255,6 +264,7 @@ function Interest() {
         <button className="intback">Back</button>
       </div>
       <p className="backendinterestmsg">{resmsg}</p>
+      <Footer/>
     </div>
   );
 }

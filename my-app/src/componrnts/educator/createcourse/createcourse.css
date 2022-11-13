@@ -1,0 +1,70 @@
+.lessons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+}
+.createlesson{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vh;
+
+}
+.createlessontext{
+    
+
+font-weight: 400;
+font-size: 48px;
+line-height: 56px;
+color: #293593;
+}
+
+.lesson{
+width: 700px;
+height: 44px;
+border: 1px solid #586AF5;
+border-radius: 8px;
+}
+
+.duration{
+    width: 700px;
+height: 44px;
+border: 1px solid #586AF5;
+border-radius: 8px;
+}
+
+.add{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.addlessons{
+    font-size: 19px;
+    color: #586AF5;
+    font-weight: 500;
+}
+
+.hostbutton{
+    padding: 16px 0px;
+    width: 40vw;
+    background: #293593;
+    height: 7vh;
+    color: #fff;
+    border: 2px solid #293593;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 17vh;
+    /* margin-left: -15vw; */
+}
+
+.upload{
+    display: flex;
+    flex-direction: column;
+}

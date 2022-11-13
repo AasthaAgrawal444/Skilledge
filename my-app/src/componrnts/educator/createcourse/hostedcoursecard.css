@@ -1,0 +1,15 @@
+.buttondet{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.coursedata{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.course{
+    height: 30vh;
+    width: 20vw;
+}

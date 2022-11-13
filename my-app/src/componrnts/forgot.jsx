@@ -56,7 +56,8 @@ function Forgot(){
       function handleInputt(e){
         const name=e.target.name;
         const value=e.target.value;
-        localStorage.setItem('mail',Forgot.emailed);
+        localStorage.setItem('mail', Forgot.emailed);
+        console.log(localStorage);
         setErrors(validates(Forgot));
         setForgot({...Forgot,[name]:value});  
         }
@@ -79,7 +80,7 @@ function Forgot(){
           <p className='femail'>Email</p>
           <img src={Email} className="email-icon2" alt="lock"/>
           <input type='email' placeholder="example@gmail.com"
-          id='emailed' name='emailed'
+          id='email' name='emailed'
           value={Forgot.emailed}
           onChange={handleInputt}>
           </input>

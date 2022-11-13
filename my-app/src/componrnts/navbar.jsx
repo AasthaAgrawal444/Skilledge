@@ -16,7 +16,7 @@ function Nav() {
             </div>
             <div className="search">
              <img src={Search} className="searchicon" alt="search"/>
-             <input type="text" placeholder="search" id="searches"/>
+             <input type="text" placeholder="Search" id="searches"/>
             </div>
             <img src={cart} className="cart-icon" alt="icon"/>
             <Link to='/signin'><button className="but1">Log in</button></Link>

@@ -1,0 +1,43 @@
+.buyremovebuttons{
+    margin-left: -50vw;
+    /* display: flex; */
+    /* gap: 2vw; */
+    /* width: vw; */
+    /* background-color: blue; */
+
+}
+.coursedatas{
+    margin-left: 10vw;
+}
+.stars{
+    margin-left: -65vw;
+    margin-top: -10vh;
+    /* position: relative; */
+     /* left: 100vw; */
+}
+.rating{
+    margin-left: -65vw;
+}
+.coursesnames{
+    margin-top: -5vh;
+    margin-left: -3vw;
+}
+.coursesdescript{
+    margin-top: 5vh;
+}
+.butbutton1{
+    color: #fff;
+    background-color: blue;
+    border: 2px solid blue;
+}
+.remove{
+    color: blue;
+    background-color: #fff;
+    border: 2px solid blue;
+}
+.course{
+    margin-top: 10vh;
+}
+.courseimag{
+    margin-top: 3vh;
+}

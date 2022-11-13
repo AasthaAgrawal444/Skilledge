@@ -1,0 +1,141 @@
+.courseinfohead{
+    width: 100vw;
+
+}
+#infoimage{
+    width: 500vw;
+border-radius: 0%;
+width: 10vw;
+}
+.courseinfo{
+    width: 100vw;
+    height: 20vh;
+    background-color: blue;
+}
+.desc{
+    display: flex;
+    font-size: 25px;
+    color: #293593;
+    gap: 14vw;
+    margin-left: 6vw;
+    margin-top: 12vh;
+}
+#info1{
+    margin-top: 23px;
+}
+#display1{
+    /* position: absolute; */
+    display: block;
+    margin-left: -80vw;
+}
+#display2{
+    /* position: absolute; */
+    display: none;
+    margin-left: 5vw;
+
+}
+#display3{
+    /* position: absolute; */
+    display: none;
+    margin-left: -80vw;
+}
+.courseinfoimg{
+    height: 30vh;
+    width: 100vw;
+}
+.coursedescriptioninfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    margin-left: 10vw;
+    margin-top: -25vh;
+    color: #F2F2F2;
+}
+.topicname{
+     font-size: 30px;
+     font-weight: 450;  
+}
+.descriptofcourse{
+    margin-top: -5vh;
+    font-size: 20px;
+}
+.rated{
+    display: flex;
+align-items: flex-start;
+justify-content: flex-start;
+gap: 20px;
+}
+.ratestar{
+    height: 20px;
+    width: 20px;
+}
+.ratingtag{
+    margin-top: -0.1vh;
+}
+.buycoursecard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #F2F2F2;
+
+    padding: 4px;
+border-radius: 4px;
+margin-left: 70vw;
+margin-top: -20vh;
+height: 50vh;
+width: 20vw;
+}
+.pricetag{
+    margin-left: -15vw;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: -0.1vh;
+}
+.buttontobuynaddtocart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+.buybutton{
+    background: #293593;
+border-radius: 6px;
+height: 6vh;
+color: #F2F2F2;
+width: 7vw;
+border: 2px solid #293593;
+}
+.cartbutton{
+    background:  #fff;
+    color: #293593;
+    border-radius: 6px;
+    height: 6vh;
+    width: 7vw;
+    border: 2px solid #293593;
+
+}
+
+.know{
+    display:flex;
+     flex-direction:column;
+      justify-content:flex-start;
+       align-items:flex-start; 
+       gap:-0.8vh;
+}
+.review{
+background: #EEF0FD;
+border-radius: 4px;
+height: 20vh;
+width: 20vw;
+}
+.less{
+    display:"flex";
+     flex-direction:column;
+      justify-content:"flex-start";
+       align-items:"flex-start";
+}
+.infofooter{
+    margin-top: 40vh;
+}

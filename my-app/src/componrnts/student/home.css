@@ -60,10 +60,13 @@ height: 30px;
 }
 .homefooter{
     position: relative;
-    top: 18vh;
+    top: 38vh;
 }
 .coursesview{
     margin-top: -35vh;
+}
+.popularcourses{
+    margin-top: 40vh;
 }
 @media(max-width:450){
     #startlearn{

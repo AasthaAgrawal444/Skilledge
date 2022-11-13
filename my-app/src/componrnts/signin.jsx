@@ -4,7 +4,8 @@ import Axios from "axios";
 import { Link ,useNavigate} from "react-router-dom";
 import Lock from './images/lock.png';
 import Email from './images/email.png';
-import Home from "./student/home";
+import Nav from "./navbar";
+// import Home from "./student/home";
 var er;
 
 function Signin() {
@@ -23,7 +24,7 @@ function Signin() {
     }
     if (!value.password) {
       x.password = "Password is required!";
-    } else if (value.password.length < 8) {
+    } else if (value.password.length < 4) {
       x.password = "Password must be more than 8 characters!";
     }
     er=Object.keys(x).length;
@@ -84,6 +85,7 @@ function Signin() {
 
   return (
     <div className="Signin">
+    <Nav/>
       <div className="content">
       <div className="cont">
         <div className="welcome">

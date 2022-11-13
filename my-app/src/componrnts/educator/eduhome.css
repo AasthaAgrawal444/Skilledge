@@ -1,0 +1,24 @@
+.homeimg{
+    height: 50vh;
+    width: 20vw;
+}
+.educatorhome{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 8vw;
+}
+.hostmap{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 60vw;
+}
+/* .hostmap{
+    flex-basis: 60vw;
+
+}
+.fleximg{
+    flex-basis: 30vw;
+} */

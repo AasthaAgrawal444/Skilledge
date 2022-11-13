@@ -1,0 +1,126 @@
+.hostcoursespg{
+    display: flex;
+}
+.hostcourseimg{
+    position: relative;
+    top: 19vh;
+    left: 6vw;
+    height: 60vh;
+    width: 40vw;
+}
+.host{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-left: 15vw;
+    margin-top: 2.5vh;
+}
+.thumbnailbox{
+    border: 2px solid #3F4EC4;
+border-radius: 8px;
+width: 23vw;
+height: 24vh;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+.thumbbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.Addsign{
+    padding: 8px 10px;
+    background: #DEE1FD;
+    border-radius: 8px;
+    height: 3vh;
+width: 1vw;  
+font-weight: 500;
+font-size: 24px;
+line-height: 19px;
+color: #141517;  
+}
+.addtext{
+    padding: 8px;
+width: 15vw;
+height: 4vh;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+letter-spacing: 0.15px;
+color: #000000;
+}
+.createcoursetopic{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+#createtopic{
+    padding: 8px 2px;
+width: 23vw;
+font-weight: 400;
+font-size: 18px;
+height: 3vh;
+background: #EEF0FD;
+border: 2px solid #3F4EC4;
+border-radius: 8px;
+}
+.topicdescription{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+box-sizing: border-box;
+}
+#topicdes{
+    padding: 24px 0px;
+width: 23vw;
+font-weight: 400;
+font-size: 20px;
+line-height: 16px;
+letter-spacing: 0.15px;
+height: 8vh;
+background: #EEF0FD;
+border: 2px solid #3F4EC4;
+border-radius: 8px;
+}
+#coursecateg{
+    /* padding: 8px 2px; */
+    width: 24vw;
+    font-weight: 400;
+    font-size: 14px;
+    color: #141517;
+    height: 6vh;
+    background: #EEF0FD;
+    border: 2px solid #3F4EC4;
+    border-radius: 8px;
+}
+#addprice{
+    padding: 8px 2px;
+    width: 23vw;
+    font-weight: 400;
+    font-size: 14px;
+    color: #141517;
+    height: 3vh;
+    background: #EEF0FD;
+    border: 2px solid #3F4EC4;
+    border-radius: 8px;
+}
+.coursecontinue{
+    padding: 16px 0px;
+    background: #293593;
+    border-radius: 5px;
+    width: 23.7vw;
+    height: 8vh;
+    border: 2px solid #3F4EC4;
+    color: #EEF0FD;
+    font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+}

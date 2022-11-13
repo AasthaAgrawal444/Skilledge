@@ -1,11 +1,11 @@
 import React from 'react';
-import Profile from '../profile';
+import Studprofile from './studprofile';
 
 function Editstudprofile() {
   return (
     <div>
         <h5 className='editstudprofilepg'>Edit Your Profile</h5>
-        <Profile/>
+        <Studprofile/>
     </div>
   )
 }

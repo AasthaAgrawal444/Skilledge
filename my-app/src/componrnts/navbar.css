@@ -48,8 +48,8 @@
     position: relative;
     width: 5vw;
     height: 3.8vh;
-    left: 10vw;
-    top: 17px;
+    left: 15vw;
+    top: 18px;
     
     border: 2px solid #000000;
     border-radius: 6px;
@@ -60,15 +60,15 @@
  height: 3.7vh;
  width: 1.8vw;
  margin-top: 2vh;
- margin-left: 28vw;
+ margin-left: 58vw;
  background: #FFFFFF;
 }
 #searches{
     position: relative;
     width: 39vw;
     height: 34px;
-    left: 22.5vw;
-    top: 12px;
+    left: 50vw;
+    top: 48px;
     background: #EEF0FD;
     border: 2px solid #EEF0FD;
     border-radius: 5px;
@@ -91,11 +91,11 @@
 
 .searchicon{
     position: relative;
-    left: 370px;
+    /* left: 370px; */
     height: 20px;
     width: 20px;
      z-index:2;
-    top: 19px;
+    /* top: 19px; */
 }
 
 @media (max-width:450px){

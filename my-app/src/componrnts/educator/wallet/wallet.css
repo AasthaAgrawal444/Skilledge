@@ -1,0 +1,72 @@
+.walletedu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
+    margin-left: -15vw;
+margin-top: 16vh;
+}
+.wallethistory{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #EEF0FD;
+    width: 30vw;
+    height: 50vh;
+    border-radius: 8px;
+}
+.wallettext{
+    display: flex;
+    gap: 10px;
+    width: 25vw;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 34px;
+line-height: 0.1px;
+letter-spacing: 0.25px;
+}
+.balance{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#baltext{
+    margin-top: -2vh;
+}
+.redeembut{
+    height: 7vh;
+    width: 20vw;
+    color: #fff;
+    font-family: 'Roboto';
+    background: #3F4EC4;
+    font-weight: 500;
+font-size: 18px;
+line-height: 2px;
+border: 2px solid #3F4EC4;
+border-radius: 4px;
+margin-top: 2vh;
+}
+#amount{
+ color: #3F4EC4;
+ font-weight: 400;
+ font-size: 46px;
+ line-height: 0.1px;
+
+}
+#tranhist{
+    font-weight: 400;
+font-size: 39px;
+}
+.transactionhistory{
+display: flex;
+flex-direction: column;
+justify-content: start;
+margin-top: -52vh;
+}
+.search{
+    margin-left: -33vw;
+    margin-top: -5vh;
+}

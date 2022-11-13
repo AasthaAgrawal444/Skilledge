@@ -2,6 +2,8 @@ import React,{useState} from 'react';
 import './signup.css';
 import Axios from 'axios';
 import {Link,useNavigate}from "react-router-dom";
+import Signuptoken from './signuptoken';
+import Nav from './navbar';
 var er;
 
 function Signup(){
@@ -47,26 +49,28 @@ function Signup(){
         "user_name":userSignup.Username, 
         "email":userSignup.Emails ,
         "password":userSignup.passwords, 
-        "confirm_password":userSignup.passwords
+        "confirm_password":userSignup.cpasswords
         }
 
         console.log(obj);
         console.log(value);
         if(value){
-        await Axios.post(
-          "https://skilledge.herokuapp.com/api/new_user_registration/",obj)
+        await Axios.post('https://skilledge.herokuapp.com/api/new_user_registration/',obj)
           .then(response=>{
+            localStorage.setItem("jwtToken",response.data.token.access);
+            console.log(localStorage);
             setMsg(response.data.msg);
             console.log(response);
             if(response.status===200){
             Navigate("/otpcreate");}
             // setRequest(response.status);
             console.log(response.status);
+
         })
         .catch(err1 => {
           console.log(err1);
-          console.log(err1.response.data.msg);
-          setMsg(err1.response.data.msg)
+          // console.log(err1.response.data.msg);
+          // setMsg(err1.response.data.msg)
         });
       }
     
@@ -81,7 +85,8 @@ function Signup(){
     function handleInputs(e){
       const name=e.target.name;
       const value=e.target.value;
-      localStorage.setItem('mymail',userSignup.Emails);
+      localStorage.setItem('mymail', userSignup.Emails);
+      localStorage.setItem('username',userSignup.Username);
       setErrors(validated(userSignup));
       setuserSignup({...userSignup,[name]:value});
     }
@@ -91,6 +96,7 @@ function Signup(){
     function handleSubmits(e){
       e.preventDefault();
       const newRecord ={userSignup};
+      console.log(newRecord);
       setRecord([...record, newRecord]);
       console.log(record);
       setErrors(validated(userSignup));
@@ -99,6 +105,7 @@ function Signup(){
 
       return(
         <div className="Signup">
+        <Nav/>
            <div className="contents">
               <div className="welcomed">
                 <div>
@@ -140,9 +147,9 @@ function Signup(){
                value={userSignup.cpasswords}
                onChange={handleInputs}></input>
                <p id='error8'>{errors.cpasswords}</p>
-               <button className='creates' type="submit" onClick={submit}>Sign Up as Student</button>
+               <button className='creates' type="submit" onClick={submit}>Sign Up</button>
                
-               <Link to= '/otpcreate'><button className='createm' type="submit">Sign Up as Mentor</button></Link>
+               {/* <Link to= '/otpcreate'><button className='createm' type="submit">Sign Up as Mentor</button></Link> */}
               </form>
             </div>
        </div>

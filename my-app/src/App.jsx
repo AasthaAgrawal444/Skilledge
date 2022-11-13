@@ -14,11 +14,24 @@ import Otpc from "./componrnts/otpcreate";
 import Profile from "./componrnts/student/profile";
 import Home from "./componrnts/student/home";
 import Loginnav from "./componrnts/student/loginnavbar";
-import Mycourses from "./componrnts/student/mycourses";
+import Allcourses from "./componrnts/student/allcourses";
+import Nocourse from "./componrnts/student/nocourse";
 import Editeduprofile from "./componrnts/educator/editeduprofile";
 import Createprofile from "./componrnts/student/profiledropdwons/createprofile";
 import Editstudprofile from "./componrnts/student/profiledropdwons/editstudprofile";
 import Courseinfo from "./componrnts/courses/courseinfo";
+import Hostcourse from "./componrnts/educator/hostcourse";
+import Emptycart from "./componrnts/student/cart/emptycart";
+import Fullcart from "./componrnts/student/cart/fullcart";
+import Wallet from "./componrnts/educator/wallet/wallet";
+import Confirmation from "./componrnts/courses/confirmation";
+import Createcourse from "./componrnts/educator/createcourse/createcourse";
+import Mycourses from "./componrnts/student/mycourses";
+import Eduhome from "./componrnts/educator/eduhome";
+import Studprofile from "./componrnts/student/profiledropdwons/studprofile";
+import Educatorhome from "./componrnts/educator/educatorhome";
+import Hostedcourseinfo from "./componrnts/educator/hostedcourseinfo";
+import Mycourseinfo from "./componrnts/student/mycourseinfo";
 
 function App() {
   return (
@@ -38,13 +51,27 @@ function App() {
             <Route path="/otpreset" exact element={<Otp />}></Route>
             <Route path="/profile" exact element={<Profile />}></Route>
             <Route path="/home" exact element={<Home />}></Route>
-            <Route path="/mycourses" exact element={<Mycourses/>}></Route>
+            <Route path="/allcourses" exact element={<Allcourses/>}></Route>
+            <Route path="/nocourse" exact element={<Nocourse/>}></Route>
             <Route path="/loginnavbar" exact element={<Loginnav/>}></Route>
             <Route path="/interest" exact element={<Interest/>}></Route>
             <Route path="/editeduprofile" exact element={<Editeduprofile/>}></Route>
             <Route path="/createprofile" exact element={<Createprofile/>}></Route>
             <Route path="/editstudprofile" exact element={<Editstudprofile/>}></Route>
             <Route path="/courseinfo" exact element={<Courseinfo/>}></Route>
+            <Route path="/hostcourse" exact element={<Hostcourse/>}></Route>
+            <Route path="/mycourses" exact element={<Mycourses/>}></Route>
+            <Route path="/emptycart" exact element={<Emptycart/>}></Route>
+            <Route path="/fullcart" exact element={<Fullcart/>}></Route>
+            <Route path="/wallet" exact element={<Wallet/>}></Route>
+            <Route path="/confirmation" exact element={<Confirmation/>}></Route>
+            <Route path="/createcourse" exact element={<Createcourse/>}></Route>
+            <Route path="/studprofile" exact element={<Studprofile/>}></Route>
+            <Route path="/eduhome" exact element={<Eduhome/>}></Route>
+            <Route path="/educatorhome" exact element={<Educatorhome/>}></Route>
+            <Route path="/hostedcourseinfo" exact element={<Hostedcourseinfo/>}></Route>
+            <Route path="/mycourseinfo" exact element={<Mycourseinfo/>}></Route>
+
           </Routes>
           {/* <Footer/> */}
         </Router>

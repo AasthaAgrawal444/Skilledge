@@ -33,10 +33,10 @@ function Reset() {
 
   async function submitapi4() {
     const obje = {
-      email: localStorage.getItem("email"),
+      email: localStorage.getItem("mail"),
       otp: localStorage.getItem("otp"),
-      password: userpass.repassword,
-      confirm_password: userpass.rpassword,
+      passwordd: userpass.repassword,
+      confirm_passwordd: userpass.rpassword,
     };
 
     console.log(value);
@@ -46,7 +46,7 @@ function Reset() {
         obje
       )
         .then((response) => {
-          setMsg(response.data.msg);
+          setMsg(response.data);
           console.log(response);
           if(response.status===200){
             Navigate("/otpcreate");}
@@ -54,8 +54,8 @@ function Reset() {
         })
         .catch((err) => {
           console.log(err);
-          console.log(err.response.data.msg);
-          setMsg(err.response.data.msg);
+          console.log(err.response.data);
+          setMsg(err.response.data);
         });
     }
   }

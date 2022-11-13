@@ -1,6 +1,7 @@
 import React,{useState} from "react";
 import "./otpreset.css";
- import { useNavigate } from 'react-router-dom';
+import Signuptoken from "./signuptoken";
+ import { useNavigate, Link } from 'react-router-dom';
  import Axios from 'axios';
  var err;
 
@@ -32,8 +33,15 @@ function Otp() {
     console.log(y);
     (err!==0)?isValue(false):isValue(true);
     return y;
-
   }
+
+  // const token = localStorage.getItem("jwtToken");
+  // console.log("token");
+  // const config = {
+  //   headers:{
+  //     Authorization: `Bearer ${token}`
+  //   }
+  // }  
 
   async function api6() {
     const obj=
@@ -46,7 +54,7 @@ function Otp() {
       setMsg(response.data.msg);
       console.log(response);
       if(response.status===200){
-      Navigate("/otpcreate");}
+      Navigate("/otpreset");}
       // setRequest(response.status);
       console.log(response.status);
   })
@@ -137,9 +145,9 @@ function Otp() {
             ></input>
             <p id="error12">{prob.col4}</p>
           </div>
-          <button className="con" type="submit">
+         <Link to='/reset'> <button className="con" type="submit" >
             Continue
-          </button>
+          </button></Link>
           <p className="dont">Don't get OTP? Resend OTP</p>
           <button className="resen" type="submit" onClick={api6}>
             Resend OTP
