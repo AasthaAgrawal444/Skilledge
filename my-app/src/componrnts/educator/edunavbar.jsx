@@ -5,6 +5,7 @@ import './edunavbar.css';
 import { useState } from "react";
 import Profile from '../images/profile.png';
 
+
 function Edunavbar() {
     const [visdropdown, setVisdropdown] =useState(false);
     function dropdown(){
@@ -25,19 +26,19 @@ function Edunavbar() {
              <img src={logo} className="logo-icon" alt="logo"/>
              <h1 className="skillhead">Skill Edge</h1>
             </div>
-            {/* <div className="searchbar">
-             <img src={Search} className="searchingicon" alt="search"/>
+            <div className="searchbar">
+             {/* <img src={Search} className="searchingicon" alt="search"/> */}
              <input type="text" placeholder="search" id="loginsearches"/>
-            </div> */}
+            </div>
             <div className='buttonsbar'>
-            <Link to='/home'><button className="homepg" >Home</button></Link>
-            <Link to='/hostcourse'><button className="mycoursespg" >Hostcourse</button></Link>
+            <Link to='/home'><button className="homepg">Home</button></Link>
+            <Link to='/mycourses'><button className="mycoursespg">Hostcourse</button></Link>
             <div className="studentprofile">
             <img src={Profile} id="profilefornav" alt="profilefornav" onClick={dropdown}/>
-            <div id="dropdown">
+            <div id="dropdown" style={{display:"none"}}>
               <div className="profiledropimage" id="drop_content"><img src={Profile} alt="" className="profiledropdownimage"/></div>
               <div className="editprofiledrop" id="drop_content">Edit Profile</div>
-              <Link to='/home'> <div className="switchtoedudrop" id="drop_content">Switch to Student</div></Link>
+              <div className="switchtoedudrop" id="drop_content">Switch to Student</div>
               <div className="walletdrop" id="drop_content">Wallet</div>
               <div className="privacydrop" id="drop_content"> Privacy</div>
               <div className="helpdrop" id="drop_content">Help</div>

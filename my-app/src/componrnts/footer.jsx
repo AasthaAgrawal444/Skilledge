@@ -14,7 +14,7 @@ function Footer() {
         <h1 className="cat">Category</h1>
         <div className="categories">
           <div className="col1">
-            <p className="c1">Dsign</p>
+            <p className="c1">Design</p>
             <p className="c1">Development</p>
             <p className="c1">Marketing</p>
             <p className="c1">Music</p>

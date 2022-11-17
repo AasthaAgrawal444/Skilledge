@@ -127,7 +127,7 @@ console.log(response.data)
     
   return (
     <div>
-    <Loginnav/>
+    {/* <Loginnav/> */}
       <form id='form2'>
       <input type='file' className='proiimg' name='image' onChange={handleInput8}></input>
             <img src={Edit} alt='' className='editimg' style={{height:"30px", width:"30px"}} />
@@ -168,7 +168,7 @@ console.log(response.data)
                
                </form>
                <button type='submit' className='continuebutton' onClick={handlecontinue}>Continue</button>
-               <div className='editfooter'>
+               <div className='editfooter' style={{marginTop:"20vh"}}>
             <Footer/> 
             </div> 
     </div>

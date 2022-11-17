@@ -87,16 +87,16 @@ const [is_educator, setIs_educator] = useState("");
              <img src={logo} className="logo-icon" alt="logo"/>
              <h1 className="skillhead">Skill Edge</h1>
             </div>
-            {/* <div className="searchbar">
+            <div className="searchbar">
              <img src={Search} className="searchingicon" alt="search"/>
              <input type="text" placeholder="search" id="loginsearches"/>
-            </div> */}
+            </div>
             <Link to='/fullcart'><img src={cart} className="carticon" alt="icon"/></Link>
             <Link to='/home'><button className="homepg">Home</button></Link>
             <Link to='/allcourses'><button className="mycoursespg">My courses</button></Link>
             <div className="studentprofile">
             <img src={Profile} id="profilefornav" alt="profilefornav" onClick={dropdown}/>
-            <div id="dropdown">
+            <div id="dropdown" style={{display:"none"}}>
               <div className="profiledropimage" id="drop_content"><img src={Profile} alt="" className="profiledropdownimage"/></div>
             <Link to='/studprofile'>  <div className="editprofiledrop" id="drop_content">Edit Profile</div></Link>
              {/* <Link to='/hostcourse'>  */}

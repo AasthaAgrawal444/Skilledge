@@ -1,33 +1,28 @@
-/* .homepg{ */
-    /* margin-left: 60vw; */
-/* } */
+/* .homepg{
+    margin-left: 60vw;
+}
 .mycoursepg{
     margin-left: 60vw;
 }
 /* #profilefornav{
 
 } */
- .buttonsbar{
+/* .buttonsbar{
     position: absolute;
     margin-left: 55vw;
 }
-/* #profilefornav{ */
-    /* position: absolute; */
-    /* top: -5vh; */
-    /* left: -79vw; */
-/* } */
 #profilefornav{
     position: absolute;
-    /* margin-left: 100vw; */
+    top: -5vh;
+    left: 28vw;
 }
 #dropdown{
     position: relative;
     left: 14.3vw;
-    top: 5vh; 
-    margin-left: 17vw;
+    top: -2vh; 
+    margin-left: 28vw;
     margin-top: -4vh; 
-}  
-.profiledropimage{
-    position: absolute;
-    left: -300vw;
-}
+}  */ 
+/* .searchbar{
+    display: none;
+} */

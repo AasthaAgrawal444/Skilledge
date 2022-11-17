@@ -14,6 +14,7 @@ function Otpc() {
     col4: "",
   });
 
+ 
   const Navigate=useNavigate();
 
   const [value, isValue] = useState(false);
@@ -72,6 +73,28 @@ function Otpc() {
   setMsg(err.response.data.msg)
   });
  }
+ }
+
+ async function resend(){
+  var email=localStorage.getItem('mymail');
+  console.log(email);
+  const obje=
+  {
+    "email":email,
+    }
+    console.log(obje);
+    await Axios.post("https://skilledge.herokuapp.com/api/resend_otp/", obje).then(response=>{
+    
+      if(response.status===200){
+        Navigate("/profile");}
+        // setMsg(response.data.msg);
+        console.log(response); 
+        })
+    .catch(err => {
+    console.log(err);
+    console.log(err.response.data.msg);
+    setMsg(err.response.data.msg)
+    });
  }
    
   const [data, setData] = useState([]);
@@ -145,13 +168,12 @@ function Otpc() {
             ></input>
             {/* <p id="error16">{prob.col4}</p> */}
           </div>
+          <div className="otpbuttons">
           <button className="con" type="button" onClick={submits}>
             Continue
           </button>
-          <p className="dont">Don't get OTP? Resend OTP</p>
-          <button className="resen" type="submit">
-            Resend OTP
-          </button>
+          <div className="dont" onClick={resend}>Don't get OTP? Resend OTP</div>
+          </div>
         </form>
       </div>
     </>

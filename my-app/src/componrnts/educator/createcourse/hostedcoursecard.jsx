@@ -45,7 +45,7 @@ const navigate = useNavigate();
             {/* <p className='price'>{props.price}</p> */}
           {/* <Link to='/courseinfo'> */}
           <button className='expbut' onClick={Opencourseinfo}>View Course</button>
-          <button className='expbut'>Edit</button>
+         <Link to='/editcourse'> <button className='expbut'>Edit</button></Link>
           {/* </Link> */}
             </div>
         </div>

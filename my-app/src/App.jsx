@@ -32,6 +32,8 @@ import Studprofile from "./componrnts/student/profiledropdwons/studprofile";
 import Educatorhome from "./componrnts/educator/educatorhome";
 import Hostedcourseinfo from "./componrnts/educator/hostedcourseinfo";
 import Mycourseinfo from "./componrnts/student/mycourseinfo";
+import Editcourse from "./componrnts/educator/createcourse/editcourse";
+import Viewcourse from "./componrnts/courses/viewcourse";
 
 function App() {
   return (
@@ -71,6 +73,8 @@ function App() {
             <Route path="/educatorhome" exact element={<Educatorhome/>}></Route>
             <Route path="/hostedcourseinfo" exact element={<Hostedcourseinfo/>}></Route>
             <Route path="/mycourseinfo" exact element={<Mycourseinfo/>}></Route>
+            <Route path="/editcourse" exact element={<Editcourse/>}></Route>
+            <Route path="/viewcourse" exact element={<Viewcourse/>}></Route>
 
           </Routes>
           {/* <Footer/> */}

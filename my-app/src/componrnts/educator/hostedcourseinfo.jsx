@@ -4,13 +4,15 @@ import React, { useState, useEffect } from 'react';
 import Hostcoursecard from './createcourse/hostedcoursecard';
 // import './courseinfo.css';
 import Courseimage from '../images/courseimg.png';
+import './hostedcourseinfo.css';
 import starimg from "../images/star.png";
 import axios from 'axios';
 // import Buycoursecard from './buycoursecard';
 import { useLocation , useNavigate} from "react-router-dom";
 import Loginnav from '../student/loginnavbar';
 import Hostedlessoncard from './hostedlessoncard';
-
+import Lessoncard from '../courses/lessoncard';
+import Feedbackcard from '../courses/feedbackcard';
 
  function Hostedcourseinfo() {
  function Hostedinfo(hosts){
@@ -27,6 +29,20 @@ import Hostedlessoncard from './hostedlessoncard';
   )
 }
 
+function lesson(view){
+  return(
+    <Lessoncard
+      key={view.id}
+      id={view.id}
+      lessonName={view.lessonName}
+      topic={view.topic}
+      length={view.length}
+      file={view.file}
+    />
+  )
+}
+
+
 function hosted(hosteddata){
   return(
     <Hostedlessoncard
@@ -37,6 +53,23 @@ function hosted(hosteddata){
   )
 }
 
+function userreview(views){
+  return(
+    <Feedbackcard
+      key={views.course}
+      course={views.course}
+      latest_review={views.latest_review}
+      comment={views.comment}
+      user={views.user}
+      sender={views.sender}
+    />
+  )
+  
+}
+
+const [views, setViews] = useState([]);
+
+    const [view, setView] = useState([]);
     const [hosteddata, setHosteddata] = useState([])
     const [hosts, setHosts] = useState("");
     const [id, setId] = useState("");
@@ -65,14 +98,40 @@ function hosted(hosteddata){
     setTopic(history.state.topic);
     // setPrice(history.state.price);
     // setRating(history.state.rating);
-    // setId(history.state.id);
+    setId(history.state.id);
      localStorage.setItem('courseid', history.state.id);
     setShort_descripttion(history.state.short_description);
     },[])
 
+    var hostid = localStorage.getItem('courseid');
+
     useEffect(()=>{
-      axios.get()
-    })
+      axios.post("https://skilledge.herokuapp.com/courses/view_specific_lesson/",{
+      "topic":hostid
+    },config).then((response)=>{
+      // console.log(response);
+      setView(response.data);
+      console.log(view);
+      console.log(hostid);
+      // setLessonName(response.data.results.lessonName)
+  })
+  .catch(err=>{
+    console.log(err);
+  })
+  },[])
+
+  useEffect(()=>{
+    console.log("hello");
+    axios.get(`https://skilledge.herokuapp.com/courses/course_feedback/${hostid}/`,config).then((response)=>{
+      console.log(response);
+      setViews(response.data);
+      console.log(views);
+  })
+  .catch(err=>{
+    console.log(err);
+  })
+},[])
+  
 
   return (
     <>
@@ -86,19 +145,19 @@ function hosted(hosteddata){
           </div>
           </div>
          </div>
-         <div className=''>
+         <div className='hostedcoursesinfo'>
             <div>
                 <h2 className='hostcourseinfo'>Info</h2>
-                <p>Description</p>
-                <p>{short_description}</p>
+                <h2 style={{marginLeft:"-78vw"}}>Description</h2>
+                <p style={{marginLeft:"-80vw"}}>{short_description}</p>
+            </div>
+            <div className='hostedlsn' style={{marginLeft:"10vw"}}>
+                <h2 style={{marginLeft:"-78vw",  color: "#293593", marginTop:"8vh"}}>Catalog</h2>
+                {view.map(lesson)}
             </div>
             <div>
-                <p>Catalog</p>
-                {hosteddata.map(hosted)}
-            </div>
-            <div>
-                <p>Student Feedback</p>
-
+                <h2 style={{marginLeft:"-78vw",  color: "#293593", marginTop:"8vh"}}>Student Feedback</h2>
+                {views.map(userreview)}
             </div>
          </div>
     </div>

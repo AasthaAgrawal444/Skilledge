@@ -11,6 +11,9 @@ import axios from 'axios';
 function Allcourse(course){
     return(
         <Mycoursecard 
+        id={course.id}
+        price={course.price}
+        educator_name={course.educator_name}
         thumbnail={course.thumbnail}
         rating={course.rating}
         topic={course.topic}
@@ -45,21 +48,22 @@ function Allcourses(){
       axios.get("https://skilledge.herokuapp.com/courses/purchased_courses/",config).then((response)=>{
        console.log(response);
        setCourse(response.data);
-       setId(response.data.id);
-       setCat(response.data.category);
-       setTop(response.data.topic);
-       setEducator_mail(response.data.educator_mail);
-       setDesc(response.data.short_description);
-       setImg(response.data.thumbnail);
-       setPrice(response.data.price);
-       setRating(response.data.rating);
-       setEduname(response.data.educator_name);
+      //  setId(course.id);
+      //  setCat(response.data.category);
+      //  setTop(response.data.topic);
+      //  setEducator_mail(response.data.educator_mail);
+      //  setDesc(response.data.short_description);
+      //  setImg(response.data.thumbnail);
+      //  setPrice(response.data.price);
+      //  setRating(response.data.rating);
+      //  setEduname(response.data.educator_name);
 
       }).catch(err=>{
           console.log(err);
       })
     },[])
-
+    
+   
     return(
         <>
         {/* <Loginnav/> */}
@@ -72,6 +76,7 @@ function Allcourses(){
       <div className='mycoursesfooter' style={{marginTop:"70vh"}}>
       <div>
       <Footer/>
+      { console.log(id)}
       </div>
       </div>
       </>

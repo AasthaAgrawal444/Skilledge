@@ -62,22 +62,13 @@ const config = {
     event.preventDefault();
     fd.append("thumbnail",image);
      fd.append("topic",createtopic);
-    //  fd.append("lname",lname);
      fd.append("category",coursecateg);
      fd.append("price",price);
      fd.append("short_description",topicdes);
      var object = {};
      fd.forEach((value,key)=> (object[key]=value));
      console.log(object);
-    //  console.log(fd);
-
    
-    //  console.log(fd);
-    //  console.log(coursecateg);
-    // setCreatetopic("")
-    // setTopicdes("")
-    // setPrice("")
-    // setCoursecateg("")
    axios.post(
     "https://skilledge.herokuapp.com/courses/course/",fd,config)
     .then(response=>{

@@ -3,9 +3,9 @@ import React, { useState, useEffect } from 'react';
 import './home.css';
 import Landingimg from '../images/Landing image.png';
 import arrow from '../images/Arrow.png';
-// import courseimage from '../images/courseimg.png';
+import fwd from '../images/fwd.png';
 import Coursecard from './coursecard';
-// import starimg from '../images/star.png';
+import  bwd from '../images/bwd.png';
 import Footer from '../footer';
 import Loginnav from './loginnavbar';
 // import carddata from './carddata';
@@ -53,6 +53,36 @@ const [popular,setPopular] = useState([
 // const [loading, setLoading] = useState(false);
 
 const navigate = useNavigate();
+
+const [i, setI]= useState(0);
+const [j, setJ]= useState(4);
+function increase(){
+    setI(i+1);
+    setJ(j+1);
+}
+function decrease(){
+  if(i>0&&j>4){
+    console.log(i,j);
+
+  setI(i-1);
+  setJ(j-1);
+  }
+}
+
+const [x, setX]= useState(0);
+const [y, setY]= useState(4);
+function inc(){
+    setX(x+1);
+    setY(y+1);
+}
+function dec(){
+  if(x>0&&y>4){
+    console.log(x,y);
+
+  setX(x-1);
+  setY(y-1);
+  }
+}
 
 
 const [resmsg, setMsg] =useState(null);
@@ -107,9 +137,11 @@ const [resmsg, setMsg] =useState(null);
       <div className='coursesview'>
         <div className='recentcourses'>
           <h1 className='recent'>Recently Added Courses</h1>
+          <img src={fwd} alt='' style={{height:"7vh", width:"3vw"}} onClick={increase}/>
+          <img src={bwd} alt='' style={{height:"7vh", width:"3vw", marginTop:"-60vh"}} onClick={decrease}/>
           <div className='coursecard'>
 
-          {reccourse.map((recentcourse))};
+          {reccourse.slice(i,j).map((recentcourse))};
 
           </div>
       </div>
@@ -180,9 +212,11 @@ const [resmsg, setMsg] =useState(null);
        <div className='popularcourses'>
       <div className='popcourse'>
           <h1 className='courseheading'>Most Popular Courses</h1>
+          <img src={fwd} alt='' style={{height:"7vh", width:"3vw"}} onClick={inc}/>
+          <img src={bwd} alt='' style={{height:"7vh", width:"3vw", marginTop:"-60vh"}} onClick={dec}/>
           <div className='coursecards'>
           <div className='coursecard'>  
-          {popular.map((popularcourse))};
+          {popular.slice(x,y).map((popularcourse))};
 
            {/* <Coursecard 
               img={courseimage}

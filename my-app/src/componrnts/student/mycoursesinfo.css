@@ -1,0 +1,107 @@
+.allcontents{
+    display: flex;
+    font-size: 25px;
+    color: #293593;
+    gap: 18vw;
+    margin-left: 6vw;
+    margin-top: 12vh;
+}
+.alllcntent{
+    display: flex;
+    font-size: 25px;
+    color: #293593;
+    gap: 14vw;
+    margin-left: 59vw;
+    margin-top: -10vh;
+}
+
+.revcontent{
+    position: absolute;
+    z-index: 999;
+}
+
+#info0{
+    width: 48vw;
+    margin-left: 5vw;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; */
+}
+#info00{
+    /* z-index: ; */
+    display: none;
+    margin-left: 7vw;
+    width: 30vw;
+}
+.rev{
+    height: 36vh;
+    width: 32vw;
+    position: absolute;
+    background-color: #EEF0FD;
+    border-radius: 4px;
+    margin-left: 59vw;
+}
+
+#giverev{
+    border: 1px solid #586AF5;
+    background-color: #EEF0FD;
+
+    height: 10vh;
+    width: 25vw;
+}
+.aboutuser{
+    margin-left: -11vw;
+    margin-top: 2vh;
+}
+.ratin{
+     margin-left: -23vw;
+     font-size: 2.5vh;
+     font-weight: 500;
+     color: #586AF5;
+}
+.giverev{
+    font-size: 2.5vh;
+    margin-left: -19.2vw;
+    font-weight: 500;
+}
+.rates{
+    position: absolute;
+    left: 9vw;
+    top: 8vh;
+    display: flex;
+    height: 2vh;
+    width: 1vw;
+}
+.rates1{
+    position: absolute;
+    left: 9vw;
+    top: 8vh;
+    display: flex;
+    height: 2vh;
+    width: 1vw;
+
+}
+/* .raters{
+    position: absolute;
+    left: 9vw;
+    top: 8vh;
+    display: flex;
+    height: 2vh;
+    width: 1vw;  
+} */
+#rate01{
+    display: none;
+}
+#rate03{
+    display: none;
+}
+#rate05{
+    display: none;
+}
+#rate07{
+    display: none;
+}
+#rate09{
+    display: none;
+}

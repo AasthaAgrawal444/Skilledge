@@ -16,7 +16,7 @@
   height: 10px;
   border-radius: 5px;
   top: 13vh;
-  left: -1.2vw;
+  /* left: -0.6vw; */
 }
 #lname{
     position: relative;
@@ -29,17 +29,17 @@
     height: 10px;
     border-radius: 5px;
     top: 13vh;
-    left: 2.0vw;
+    left: 1.5vw;
 }
 #emails{
     position: relative;
     background: #EEF0FD;
     color: #979898;
     top: 15vh;
-    left: 30.5vw;
+    left: 30.7vw;
     padding: 20px 20px;
     gap: 10px;
-    width: 33.2vw;
+    width: 32vw;
     height: 10px;
     border: 1px solid #EEF0FD;
     border-radius: 5px;
@@ -49,7 +49,7 @@
     background: #EEF0FD;
     color: #979898;
     top: 24vh;
-    right: 48.3vw;
+    right: 45.0vw;
     padding: 20px 20px;
     gap: 10px;
     width: 3vw;
@@ -62,10 +62,10 @@
     background: #EEF0FD;
     color: #979898;
     top: 24vh;
-    left: -11vw;
+    left: -10vw;
     padding: 20px 20px;
     gap: 10px;
-    width: 32.8vw;
+    width: 32vw;
     height: 10px;
     border: 1px solid #EEF0FD;
     border-radius: 5px;
@@ -74,11 +74,11 @@
   position: relative;
   background: #EEF0FD;
   color: #979898;
-  top: 25vh;
+  top: 26vh;
   left: 27.5vw;
   padding: 20px 20px;
   gap: 10px;
-  width: 33.2vw;
+  width: 32vw;
   height: 10px;
   border: 1px solid #EEF0FD;
   border-radius: 5px;
@@ -88,11 +88,11 @@
     background: #EEF0FD;
     color: #979898;
     top: 35vh;
-    right: 8vw;
+    right: 7vw;
     /* padding: 20px 20px; */
     /* gap: 10px; */
-    width: 35.3vw;
-    height: 50px;
+    width: 34.8vw;
+    height: 55px;
     border: 1px solid #EEF0FD;
     border-radius: 5px;
 }

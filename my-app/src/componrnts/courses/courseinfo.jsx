@@ -11,6 +11,7 @@ import Loginnav from '../student/loginnavbar';
 import Lessoncard from './lessoncard';
 import Feedbackcard from './feedbackcard';
 import Footer from '../footer';
+import Viewcourse from './viewcourse';
 
 function explore(explored){
   return(
@@ -45,6 +46,8 @@ function userreview(views){
       course={views.course}
       latest_review={views.latest_review}
       comment={views.comment}
+      user={views.user}
+      sender={views.sender}
     />
   )
   
@@ -54,7 +57,8 @@ function Courseinfo() {
 
   const Navigate= useNavigate();
   const [view, setView] = useState([]);
-  const [views, setViews] = useState([]);
+  const [views, setViews] = useState([
+  ]);
 
 const [lessonName, setLessonName] = useState("")
   const [buy, setBuy] = useState([]);
@@ -92,19 +96,6 @@ function handleinfo3(){
   document.getElementById('display2').style.display='none';
   document.getElementById('display1').style.display='none';
 }
-
-// if(show1==true){
-
-// }
-
-// if(show2==true){
- 
-// }
-
-// if(show3==true){
- 
-// }
-
 
 const [resmsg, setMsg] =useState(null);
   const token = localStorage.getItem("jwtToken");
@@ -144,6 +135,7 @@ const [resmsg, setMsg] =useState(null);
   },[])
 
   useEffect(()=>{
+    console.log("hello");
     axios.get(`https://skilledge.herokuapp.com/courses/course_feedback/${ide}/`,config).then((response)=>{
       console.log(response);
       setViews(response.data);
@@ -159,6 +151,7 @@ const [resmsg, setMsg] =useState(null);
   // const obj= {
   //   "topic":ide
   // }
+  useEffect(() =>{
   axios.post("https://skilledge.herokuapp.com/courses/view_specific_lesson/",{
     "topic":ide
   },config).then((response)=>{
@@ -170,7 +163,7 @@ const [resmsg, setMsg] =useState(null);
 .catch(err=>{
   console.log(err);
 })
-// }
+ },[])
 
 
 
@@ -178,18 +171,18 @@ const [resmsg, setMsg] =useState(null);
 
   // var id2 = ide.replaceAll('"' , '');
 
-  const buytoken = localStorage.getItem("jwtToken");
-  console.log("buytoken");
-  const configuration = {
-    headers:{
-      Authorization: `Bearer ${token}`
-    }
-  }
+  // const buytoken = localStorage.getItem("jwtToken");
+  // console.log("buytoken");
+  // const configuration = {
+  //   headers:{
+  //     Authorization: `Bearer ${token}`
+  //   }
+  // }
 
   function buyapi(){
     // event.preventdefault();
     axios.put(
-      `https://skilledge.herokuapp.com/wallet/buy_course/${ide}/`,{},configuration)
+      `https://skilledge.herokuapp.com/wallet/buy_course/${ide}/`,{},config)
       .then(response=>{
         console.log(response);
         if(response.status===200){
@@ -201,21 +194,24 @@ const [resmsg, setMsg] =useState(null);
       });
   }
 
-  const tokeens = localStorage.getItem("jwtToken");
-  console.log("tokens");
-  const configure = {
-    headers:{
-      Authorization: `Bearer ${token}`
-    }
-  }
+  // const tokeens = localStorage.getItem("jwtToken");
+  // console.log("tokens");
+  // const configure = {
+  //   headers:{
+  //     Authorization: `Bearer ${token}`
+  //   }
+  // }
 
   function cartapi(){
     const obj = {
       "course": id1
     }
-    axios.put("https://skilledge.herokuapp.com/cart/cart/",obj,configure)
+    axios.put("https://skilledge.herokuapp.com/cart/cart/",obj,config)
     .then(response=>{
       console.log(response);
+      if(response.status===200){
+        Navigate("/fullcart");
+      }
      
     })
     .catch(err => {
@@ -267,12 +263,14 @@ const [resmsg, setMsg] =useState(null);
                <p style={{marginLeft:"83vw", width: "60vw"}}>{short_description}</p>
             </div>
             <div id='display2' className='less' >
+            {/* style={{display:"flex", flexDirection:"column", gap:"2vh"}}> */}
               {view.map(lesson)}
             </div>
             <div id='display3'>
               <div className='reviewbox'>
                 <h2>Students Feedback</h2>
                 {views.map(userreview)}
+               
               </div>
             </div>
 

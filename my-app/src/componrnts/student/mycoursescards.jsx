@@ -38,11 +38,16 @@ educator_name:props.educator_name} });
                 className='stars'
                 alt='stars'
             />
-            <p className='rating'>{props.rating}</p>
+            <div id='minecourserate'>
+            <p id='rating'>{props.rating}</p>
+            <p>{props.educator_name}</p>
+
         <div className='coursescontent'>
             <h2 className='coursesnames'>{props.topic}</h2>
             <p className='coursesdescript'>{props.short_description}</p>
-            
+            <p style={{display:"none"}}>{props.id}</p>
+            <p style={{display:"none"}}>{props.price}</p>
+         </div>
       </div>
     </div>
     </>

@@ -4,7 +4,7 @@ import courseimage from '../images/courseimg.png';
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom'
 // import CustomSelect from './dropdown';
-import Nav from '../navbar';
+// import Nav from '../navbar';
 import Footer from '../footer';
 
 function Profile() {
@@ -93,6 +93,7 @@ useEffect(()=> {
      fd.forEach((value,key)=> (object[key]=value));
      console.log(object);
     //  console.log(fd);
+    localStorage.setItem("userimg",proimg);
      event.preventDefault();
 
      
@@ -172,7 +173,7 @@ useEffect(()=> {
     
   return (
     <div>
-    <Nav/>
+    
       <form id='form2'>
       <input type='file' className='proiimg' name='image' onChange={handleInput8}></input>
 

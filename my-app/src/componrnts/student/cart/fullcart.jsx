@@ -7,6 +7,7 @@ import { Navigate, useNavigate } from 'react-router-dom';
 // import Emptycart from './emptycart';
 import Loginnav from '../loginnavbar';
 import Footer from '../../footer';
+import "./mycart.css";
 
 function cart(addcart){
 
@@ -16,6 +17,7 @@ function cart(addcart){
         rating={addcart.rating}
         topic={addcart.topic}
         short_description={addcart.short_description}
+        id={addcart.id}
 />
 );
 }
@@ -67,6 +69,24 @@ function Fullcart() {
               
           })
         },[])
+
+        function buyapi(){
+          // event.preventdefault();
+          axios.put(
+            `https://skilledge.herokuapp.com/wallet/buy_allcourses/`,{},config)
+            .then(response=>{
+              console.log(response);
+              if(response.status===200){
+                Navigate("/confirmation");}
+                else if(response.status===400){
+                  Navigate("/emptycart"); 
+                }
+            })
+            .catch(err => {
+              console.log(err);
+              // console.log(err.response.data.msg);
+            });
+        }
     
 
     const [addcart, setAddcart] = useState([ ]);
@@ -76,6 +96,7 @@ function Fullcart() {
     <Loginnav/>
       <Mycart/>
        {addcart.map(cart)}
+       <button className='checkoutbut' onClick={buyapi}>Checkout</button>
        <div>
         <Footer/>
        </div>

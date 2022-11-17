@@ -32,6 +32,15 @@ width: 10vw;
     /* position: absolute; */
     display: none;
     margin-left: 5vw;
+    /* margin-bottom: 2vh; */
+/* display: flex; */
+/* flex-direction: column; */
+/* gap: 2vh; */
+/* display:"flex";
+     flex-direction:column; */
+      /* justify-content:"flex-start"; */
+       /* align-items:"flex-start"; */
+       /* padding: 5vh; */
 
 }
 #display3{
@@ -124,18 +133,28 @@ border: 2px solid #293593;
        align-items:flex-start; 
        gap:-0.8vh;
 }
-.review{
+.reviewss{
+    position: fixed;
 background: #EEF0FD;
 border-radius: 4px;
-height: 20vh;
-width: 20vw;
+height: 40vh;
+width: 30vw;
 }
 .less{
     display:"flex";
      flex-direction:column;
       justify-content:"flex-start";
        align-items:"flex-start";
+       gap: 10vh;
+       padding: 5vh;
 }
 .infofooter{
     margin-top: 40vh;
 }
+
+
+/* .reviewbox{
+    height: 60vh;
+    width: 70vw;
+    background-color: #EEF0FD;
+} */
