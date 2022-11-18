@@ -8,6 +8,7 @@ import Edit from '../../images/edit.png';
 import Nav from '../../navbar';
 import Loginnav from '../loginnavbar';
 import Footer from '../../footer';
+import Profile from '../../images/profile.png'
 
 function Studprofile() {
   const fd= new FormData;
@@ -129,6 +130,7 @@ console.log(response.data)
     <div>
     {/* <Loginnav/> */}
       <form id='form2'>
+      <img src={Profile} className='' style={{height:"10vh", marginLeft:"80vw"}} />
       <input type='file' className='proiimg' name='image' onChange={handleInput8}></input>
             <img src={Edit} alt='' className='editimg' style={{height:"30px", width:"30px"}} />
 

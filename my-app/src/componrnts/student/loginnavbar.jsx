@@ -98,13 +98,13 @@ const [is_educator, setIs_educator] = useState("");
             <img src={Profile} id="profilefornav" alt="profilefornav" onClick={dropdown}/>
             <div id="dropdown" style={{display:"none"}}>
               <div className="profiledropimage" id="drop_content"><img src={Profile} alt="" className="profiledropdownimage"/></div>
-            <Link to='/studprofile'>  <div className="editprofiledrop" id="drop_content">Edit Profile</div></Link>
+            <Link to='/editstudprofile'>  <div className="editprofiledrop" id="drop_content">Edit Profile</div></Link>
              {/* <Link to='/hostcourse'>  */}
              <p className="switchtoedudrop" id="drop_content" onClick={handleinterestapi}>Switch to Educator</p>
              {/* </Link> */}
               <div className="walletdrop" id="drop_content">Wallet</div>
               <div className="privacydrop" id="drop_content"> Privacy</div>
-              <div className="helpdrop" id="drop_content">Help</div>
+              {/* <div className="helpdrop" id="drop_content">Help</div> */}
               <div className="logoutdrop" id="drop_content">Logout</div>
             </div>
             </div>

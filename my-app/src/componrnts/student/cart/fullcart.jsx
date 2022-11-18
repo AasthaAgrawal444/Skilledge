@@ -18,6 +18,7 @@ function cart(addcart){
         topic={addcart.topic}
         short_description={addcart.short_description}
         id={addcart.id}
+        price={addcart.price}
 />
 );
 }
@@ -78,7 +79,7 @@ function Fullcart() {
               console.log(response);
               if(response.status===200){
                 Navigate("/confirmation");}
-                else if(response.status===400){
+              if(response.status===400){
                   Navigate("/emptycart"); 
                 }
             })
@@ -95,7 +96,9 @@ function Fullcart() {
     <div>
     <Loginnav/>
       <Mycart/>
+      <div className='cartmap'>
        {addcart.map(cart)}
+       </div>
        <button className='checkoutbut' onClick={buyapi}>Checkout</button>
        <div>
         <Footer/>

@@ -3,7 +3,7 @@ import React from 'react'
 function Feedbackcard(props) {
   return (
     <div>
-      <div style={{background:"blue", color:"#fff", height: "10vh", width:"15vw"}}>
+      <div style={{background:"blue", color:"#fff", height: "10vh", width:"15vw", borderRadius:"6px", marginLeft:"10vw"}}>
     {/* <img 
         src={props.thumbnail}
         alt=''

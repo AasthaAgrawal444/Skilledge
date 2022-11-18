@@ -38,9 +38,9 @@ top: 12vh;
     left: 37vw;
     top: 10vh;
 }
-.coursecard{
+/* .coursecard{
     margin: 10vh ;
-}
+} */
 .card1{
     display: flex;
     flex-wrap: wrap;
@@ -49,4 +49,19 @@ top: 12vh;
     display: flex;
     flex-wrap: wrap;
 }
-
+#commentrate{
+    height: 4vh;
+    width: 6vh;
+    border: 2px solid #EEF0FD ;
+    background-color: #EEF0FD;
+    margin-left: 10vw;
+}
+#commentrates{
+    height: 4vh;
+    width: 6vh;
+    border: 2px solid #EEF0FD ;
+    background-color: #EEF0FD;
+    display: none;
+    margin-left: 30vw;
+    margin-top: -3vh;
+}

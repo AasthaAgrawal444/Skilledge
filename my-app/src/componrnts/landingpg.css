@@ -93,10 +93,10 @@ flex-grow: 0;
 .sign3{
     justify-content: center;
 align-items: center;
-padding: 2px 4px;
-width: 191px;
-height: 33px;
-margin-left: -500px;
+padding: 0px 4px;
+width: 200px;
+height: 55px;
+margin-left: -1270px;
 font-style: normal;
 padding-top: 10px;
 font-size: 18px;
@@ -105,6 +105,7 @@ font-family: 'Roboto';
 color: #F2F2F2;
 letter-spacing: 0.1px;
 background: #3F4EC4;
+border: 2px solid #3F4EC4;
 border-radius: 8px;
 }
 
@@ -227,6 +228,7 @@ margin: 0 8vw;
     gap: 4vw;
 }
 .category1{
+    display: flex;
     padding: 8px 16px;
     gap: 8px;
     height: 5vh;
@@ -236,6 +238,8 @@ box-shadow: 0px 3px 12px rgba(75, 75, 75, 0.08);
 border-radius: 8px;
 }
 .category2{
+    display: flex;
+
     padding: 8px 16px;
     gap: 8px;
     height: 5vh;
@@ -245,6 +249,8 @@ box-shadow: 0px 3px 12px rgba(75, 75, 75, 0.08);
 border-radius: 8px;
 }
 .category3{
+    display: flex;
+
     padding: 8px 16px;
     gap: 8px;
     height: 5vh;
@@ -254,6 +260,8 @@ box-shadow: 0px 3px 12px rgba(75, 75, 75, 0.08);
 border-radius: 8px;
 }
 .category4{
+    display: flex;
+
     padding: 8px 16px;
     gap: 8px;
     height: 5vh;
@@ -263,6 +271,8 @@ box-shadow: 0px 3px 12px rgba(75, 75, 75, 0.08);
 border-radius: 8px;
 }
 .category5{
+    display: flex;
+
     padding: 8px 16px;
     gap: 8px;
     height: 5vh;
@@ -272,6 +282,8 @@ box-shadow: 0px 3px 12px rgba(75, 75, 75, 0.08);
 border-radius: 8px;
 }
 .category6{
+    display: flex;
+
     padding: 8px 16px;
     gap: 8px;
     height: 5vh;
@@ -281,6 +293,8 @@ box-shadow: 0px 3px 12px rgba(75, 75, 75, 0.08);
 border-radius: 8px;
 }
 .category7{
+    display: flex;
+
     padding: 8px 16px;
     gap: 8px;
     height: 5vh;
@@ -290,6 +304,8 @@ box-shadow: 0px 3px 12px rgba(75, 75, 75, 0.08);
 border-radius: 8px;
 }
 .category8{
+    display: flex;
+
     padding: 8px 16px;
     gap: 8px;
     height: 5vh;
@@ -335,5 +351,5 @@ margin: -15vh 40vw;
 }
 .landingfooter{
     position: relative;
-    top: 0;
+    top: 10vh;
 }

@@ -24,8 +24,8 @@ const navigate = useNavigate();
   
   return (
     <>
-    <div className='coursedata'>
-      <div className='course'>
+    <div className='coursedatass'>
+      <div className='cours'>
         <img 
             src={props.thumbnail}
             className='courseimg'
@@ -39,13 +39,13 @@ const navigate = useNavigate();
             /> */}
             <p style={{display:"none"}}>{props.id}</p>
             {/* <p className='rate'>{props.rating}</p> */}
-            <h2 className='coursename'>{props.topic}</h2>
-            <p className='coursedes'>{props.short_description}</p>
+            <h2 className='coursenamed'>{props.topic}</h2>
+            <p className='coursedesc'>{props.short_description}</p>
             <div className='buttondet'>
             {/* <p className='price'>{props.price}</p> */}
           {/* <Link to='/courseinfo'> */}
-          <button className='expbut' onClick={Opencourseinfo}>View Course</button>
-         <Link to='/editcourse'> <button className='expbut'>Edit</button></Link>
+          <button className='expbutt' onClick={Opencourseinfo}>View Course</button>
+         <Link to='/editcourse'> <button className='expbutton'>Edit</button></Link>
           {/* </Link> */}
             </div>
         </div>

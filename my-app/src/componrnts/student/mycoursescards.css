@@ -3,20 +3,21 @@
     height: 22vh;
     width: 12vw;
     right: 7vw;
+    top: -20vh;
 }
-.stars{
+/* .stars{
     position: relative;
     height: 2.5vh;
     width: 1.2vw;
-    top: -22vh;
-    left: 1.5vw;
-}
-.rating{
+    /* top: -41vh; */
+    /* left: 28vw; */
+/* } */ */
+/* #rating{
     position: relative;
-margin-top: -25.2vh;
+margin-top: -9vh;
 right: -3.2vw;
 font-size: 18px;
-}
+} */
 .coursescontent{
 display: flex;
 flex-direction: column;
@@ -27,8 +28,10 @@ margin-top: -5vh;
 }
 .coursedatas{
     margin: 6vh;
+    display: flex;
+    width: 20vw;
 }
-.coursesnames{
+.coursesnamed{
     /* position: relative; */
     /* left: -4vw; */
     color: #182062;
@@ -39,12 +42,13 @@ margin-top: -5vh;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-left: 4vw;
+    margin-left: -4.9vw;
+    margin-top: -1vh;
 }
-.coursesdescript{
+.coursesdescriptionn{
     position: relative;
-    left: -4vw;
-    width: 20vw;
+    left: -6vw;
+    width: 25vw;
     font-weight: 400;
 font-size: 14px;
 line-height: 21px;
@@ -52,6 +56,26 @@ letter-spacing: 0.4px;
 margin-top: -1vh;
 /* margin-left: 5vw; */
 }
-#minecourserate{
-    margin-top: -32vh;
+/* #minecourserate{
+display: flex;
+
+}
+.rateyourcourse{
+    margin-top: 10vh;
+} */
+.starss{
+    height: 2.8vh;
+    width: 1.2vw;
+    /* margin-left: 20vw; */
+}
+
+#mystarss{
+    display: flex;
+    flex-direction: row;
+    gap: 0.7vw;
+    margin-top: -6vh;
+    margin-left: -5vw;
+}
+.ratingofcourse{
+    margin-top: -0.1vh;
 }

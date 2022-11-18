@@ -1,6 +1,7 @@
 .homeimg{
     height: 50vh;
     width: 20vw;
+    margin-top: 20vh;
 }
 .educatorhome{
     display: flex;
@@ -10,10 +11,13 @@
 }
 .hostmap{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    gap: 10vw;
     justify-content: flex-start;
     align-items: flex-start;
     width: 60vw;
+    margin-top: 10vh;
 }
 /* .hostmap{
     flex-basis: 60vw;

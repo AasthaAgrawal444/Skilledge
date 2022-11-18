@@ -7,11 +7,27 @@ import Mentors from './student/mentors';
 import courseimage from './images/courseimg.png';
 import Coursecard from './student/coursecard';
 import starimg from './images/star.png';
+import Nib from './images/PenNib.png';
+import Arro from './images/Arrows.png';
+import Brief from './images/Briefcase.png';
+import Cam from './images/Camera.png';
+import File from './images/FileHtml.png';
+import Graph from './images/Graph.png';
+import Mike from './images/mike.png';
+import Music from './images/music.png';
+// import Nib from './images/PenNib.png';
+// import Nib from './images/PenNib.png';
+// import Nib from './images/PenNib.png';
+// import Nib from './images/PenNib.png';
+// import Nib from './images/PenNib.png';
+
+
 import Footer from './footer';
  import Nav from './navbar';
  import carddata from './student/carddata';
  import mentors from './student/mentor';
  import axios from 'axios';
+ import {Link,useNavigate}from "react-router-dom";
 
 //  function mentored(mentors){
 //   return(
@@ -77,8 +93,8 @@ function Landingpg() {
             <p className='registering'>Start learning by registerning for free</p>
           </div>
           <div className='signin'>
-             <p className='sign3'>Sign in as Student</p>
-            <p className='sign4'>Sign in as Mentor</p> 
+             <Link to='/signup'><button className='sign3'>Get Started</button></Link>
+            {/* <p className='sign4'>Sign in as Mentor</p>  */}
           </div>
       </div>
       <img src={landingimg} className="landing" alt='land'/>
@@ -95,24 +111,49 @@ function Landingpg() {
       <div className='topcategories'>
         <h3 id='topcat'>Top categories</h3>
         <div className='cat1'>
-          <div className='category1'>Design
-          <img src='' alt=''/></div>
-          <div className='category2'>Marketing
-          <img src='' alt=''/></div>
-          <div className='category3'>Finance
-          <img src='' alt=''/></div>
-          <div className='category4'>Data Science
-          <img src='' alt=''/></div>
+          <div className='category1'>
+          <img src={Nib} alt='' style={{height:"5vhh", width:"1.7vw"}}/>
+          <p>Design</p> 
+          <img src={arrow} className='bararr' alt='arrow'/>
+          {/* <img src={arrow} alt='' style={{height:"4vh", width:"1vw"}}/> */}
+          </div>
+          <div className='category2'>
+          <img src={Mike} alt='' style={{height:"5vh", width:"1.7vw"}}/>
+          <p>Marketing</p> 
+          <img src={arrow} className='bararr' alt='arrow'/>
+          </div>
+          <div className='category3'>
+          <img src={Graph} alt='' style={{height:"5vh", width:"1.7vw"}}/>
+          <p>Finance</p> 
+          <img src={arrow} className='bararr' alt='arrow'/>
+          </div>
+          <div className='category4'>
+          <img src={Arro} alt='' style={{height:"5vh", width:"1.7vw"}}/>
+          <p>Data Science</p> 
+          <img src={arrow} className='bararr' alt='arrow'/>
+          </div>
         </div>
         <div className='cat1'>
-          <div className='category5'>Department
-          <img src='' alt=''/></div>
-          <div className='category6'>Music 
-          <img src='' alt=''/></div>
-          <div className='category7'>Business
-          <img src='' alt=''/></div>
-          <div className='category8'>Photography
-          <img src='' alt=''/></div>
+          <div className='category5'>
+          <img src={File} alt='' style={{height:"5vh", width:"1.7vw"}}/>
+          <p>Development</p> 
+          <img src={arrow} className='bararr' alt='arrow'/>
+          </div>
+          <div className='category6'>
+          <img src={Music} alt='' style={{height:"5vh", width:"1.7vw"}}/>
+          <p>Music</p> 
+          <img src={arrow} className='bararr' alt='arrow'/>
+          </div>
+          <div className='category7'>
+          <img src={Brief} alt='' style={{height:"5vh", width:"1.7vw"}}/>
+          <p>Business</p> 
+          <img src={arrow} className='bararr' alt='arrow'/>
+          </div>
+          <div className='category8'>
+          <img src={Cam} alt='' style={{height:"5vh", width:"1.7vw"}}/>
+          <p>Photography</p> 
+          <img src={arrow} className='bararr' alt='arrow'/>
+          </div>
         </div>
      </div>
 
@@ -120,99 +161,8 @@ function Landingpg() {
           <h3 className='pop'>Popular Courses</h3>
           <div className='coursecard'>
           {popular.map(popularcourse)}; 
-          {/* {carddata.map(popularcourse)}; */}
-            {/* <Coursecard 
-              img={courseimage}
-              image={starimg}
-              rating="4.5"
-              name="Become a Certified HTML, CSS, JavaScript Web Developer"
-              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
-              price="499 $"
-              explore="Explore"
-            />
-            <Coursecard 
-              img={courseimage}
-              image={starimg}
-              rating="4.5"
-              name="Become a Certified HTML, CSS, JavaScript Web Developer"
-              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
-              price="499 $"
-              explore="Explore"
-            />
-            <Coursecard 
-              img={courseimage}
-              image={starimg}
-              rating="4.5"
-              name="Become a Certified HTML, CSS, JavaScript Web Developer"
-              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
-              price="499 $"
-              explore="Explore"
-            /> */}
-            {/* <Coursecard 
-              img={courseimage}
-              image={starimg}
-              rating="4.5"
-              name="Become a Certified HTML, CSS, JavaScript Web Developer"
-              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
-              price="499 $"
-              explore="Explore"
-            />
-            <Coursecard 
-              img={courseimage}
-              image={starimg}
-              rating="4.5"
-              name="Become a Certified HTML, CSS, JavaScript Web Developer"
-              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
-              price="499 $"
-              explore="Explore"
-            />
-            <Coursecard 
-              img={courseimage}
-              image={starimg}
-              rating="4.5"
-              name="Become a Certified HTML, CSS, JavaScript Web Developer"
-              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
-              price="499 $"
-              explore="Explore"
-            /> */}
           </div>
       </div>
-
-      {/* <div className='mentor'>
-      <div className='mentors'>
-          <h3 className='mentorhead'>Courses Taught by Real Mentors</h3>
-          <p className='instruct'>Instructors from around the world teach millions of Students</p>
-          <div className='mencards'> */}
-          {/* {mentors.map(mentored)}; */}
-
-          {/* <Mentors
-            img={mentorimg}
-            title="Title"
-            subhead="Subhead"
-          />
-           <Mentors
-            img={mentorimg}
-            title="Title"
-            subhead="Subhead"
-          />
-           <Mentors
-            img={mentorimg}
-            title="Title"
-            subhead="Subhead"
-          />
-           <Mentors
-            img={mentorimg}
-            title="Title"
-            subhead="Subhead"
-          />
-        <Mentors
-            img={mentorimg}
-            title="Title"
-            subhead="Subhead"
-          /> */}
-          {/* </div>
-      </div>
-      </div> */}
       <div className='landingfooter'>
       <Footer/>
       </div>

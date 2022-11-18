@@ -26,10 +26,10 @@ function Edunavbar() {
              <img src={logo} className="logo-icon" alt="logo"/>
              <h1 className="skillhead">Skill Edge</h1>
             </div>
-            <div className="searchbar">
+            {/* <div className="searchbar"> */}
              {/* <img src={Search} className="searchingicon" alt="search"/> */}
-             <input type="text" placeholder="search" id="loginsearches"/>
-            </div>
+             {/* <input type="text" placeholder="search" id="loginsearches"/> */}
+            {/* </div> */}
             <div className='buttonsbar'>
             <Link to='/home'><button className="homepg">Home</button></Link>
             <Link to='/mycourses'><button className="mycoursespg">Hostcourse</button></Link>

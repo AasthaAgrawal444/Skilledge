@@ -1,16 +1,18 @@
 .buyremovebuttons{
-    margin-left: -50vw;
+    margin-left: -3vw;
     display: flex;
-    gap: 10vw;
+    gap: 4vw;
+    margin-top: -1vh;
     /* width: vw; */
     /* background-color: blue; */
 
 }
 .coursedatas{
     margin-left: 10vw;
+    /* margin-top: 10vh; */
 }
 .stars{
-    margin-left: -65vw;
+    margin-left: -66vw;
     margin-top: -10vh;
     /* position: relative; */
      /* left: 100vw; */
@@ -19,25 +21,41 @@
     margin-left: -65vw;
 }
 .coursesnames{
-    margin-top: -5vh;
-    margin-left: -3vw;
+    margin-top: -7vh;
+    margin-left: -3.2vw;
 }
-.coursesdescript{
-    margin-top: 5vh;
-}
+/* .coursesdescript{ */
+    /* margin-top: 1vh; */
+/* } */
 .butbutton1{
     color: #fff;
-    background-color: blue;
-    border: 2px solid blue;
+    background-color: #293593;
+    border: 2px solid #293593;
+    width: 8vw;
+    height: 5.2vh;
+    border-radius: 6px;
 }
 .remove{
-    color: blue;
+    color: #293593;
     background-color: #fff;
-    border: 2px solid blue;
+    border: 2px solid #293593;
+    width: 8vw;
+    height: 5.2vh;
+    border-radius: 6px;
 }
 .course{
     margin-top: 10vh;
 }
 .courseimag{
     margin-top: 3vh;
+}
+.paise{
+    color: #F48C06;
+    font-size: 3vh;
+    font-weight: 500;
+    margin-left: -89.5vw;
+    margin-top: -2.5vh;
+}
+.coursescontent{
+    margin-top: -20vh;
 }

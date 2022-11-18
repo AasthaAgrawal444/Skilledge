@@ -80,7 +80,6 @@ const [views, setViews] = useState([]);
     const [rating, setRating]= useState("");
     
     const token = localStorage.getItem("jwtToken");
-    console.log("token");
     const config = {
       headers:{
         Authorization: `Bearer ${token}`
@@ -146,7 +145,7 @@ const [views, setViews] = useState([]);
           </div>
          </div>
          <div className='hostedcoursesinfo'>
-            <div>
+            <div style={{marginLeft:"10vw"}}>
                 <h2 className='hostcourseinfo'>Info</h2>
                 <h2 style={{marginLeft:"-78vw"}}>Description</h2>
                 <p style={{marginLeft:"-80vw"}}>{short_description}</p>
@@ -156,7 +155,7 @@ const [views, setViews] = useState([]);
                 {view.map(lesson)}
             </div>
             <div>
-                <h2 style={{marginLeft:"-78vw",  color: "#293593", marginTop:"8vh"}}>Student Feedback</h2>
+                <h2 style={{marginLeft:"-78vw",  color: "#293593", marginTop:"8vh", marginLeft:"-65vw"}}>Student Feedback</h2>
                 {views.map(userreview)}
             </div>
          </div>

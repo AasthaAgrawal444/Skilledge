@@ -37,7 +37,7 @@ function Mycourseinfo(){
  
     const [giverev, setGiverev] = useState("");
   
-     const [i, setI] = useState(1);
+     const [i, setI] = useState(0);
     const [vieww, setVieww] = useState([ ]);
 
     const [id, setId] = useState("");
@@ -96,6 +96,7 @@ const [rating, setRating]= useState("");
       console.log(i);
     }
 
+
     const token = localStorage.getItem("jwtToken");
     console.log("token");
     const config = {
@@ -134,9 +135,14 @@ useEffect(()=>{
 })
 },[])
 
+async function rate(){
+
+document.getElementById('commentrate').style.display="none";
+document.getElementById('commentrates').style.display="block";
+
 axios.post("https://skilledge.herokuapp.com/courses/rate_course/",{
   "course":myid,
-  "latest_review":{i},
+  "latest_review":i,
   "comment":giverev,
 },config).then((response)=>{
   console.log(response);
@@ -146,6 +152,7 @@ axios.post("https://skilledge.herokuapp.com/courses/rate_course/",{
 .catch(err=>{
 console.log(err);
 })
+}
 
 
 
@@ -158,6 +165,7 @@ console.log(myid);
 
 return(
         <>
+        <Loginnav/>
 <div className='courseinfohead'>
         <div className='courseinfo'>
         <img src={thumbnail} alt='' className='courseinfoimg'/>
@@ -182,7 +190,9 @@ return(
           <p className='alllcntent'>Reviews</p>
           <div className='rev'>
           <div className='aboutuser'>
-            {user}
+            {user} 
+            <button onClick={rate} id='commentrate' >Post</button>
+            <button onClick={rate} id='commentrates'>Edit</button>
           </div>
           <div className='ratin'>
           <p>Rate</p>

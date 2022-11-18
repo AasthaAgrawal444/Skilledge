@@ -2,6 +2,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    gap: 2vw;
 }
 .coursedata{
     display: flex;
@@ -12,4 +13,37 @@
 .course{
     height: 30vh;
     width: 20vw;
+}
+.cours{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.coursenamed{
+    color: #182062;
+    font-size: 22px;
+    font-weight: 500;
+    margin-left: -13vw;
+}
+.coursedesc{
+    color: #5E5F61;
+    font-size: 17px;
+    margin-left: -5vw;
+}
+.expbutt{
+    background: #293593;
+border-radius: 6px;
+color: #fff;
+border: 2px solid #293593;
+width: 8vw;
+height: 6vh;
+}
+.expbutton{
+    background: #fff;
+    border-radius: 6px;
+    color: #293593;
+    border: 2px solid #293593;
+    width: 8vw;
+    height: 6vh;  
 }

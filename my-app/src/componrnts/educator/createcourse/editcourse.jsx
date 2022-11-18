@@ -15,6 +15,7 @@ function Editcourse() {
 
   function handleData3(e){
       setTopic(e.target.value)
+      console.log(topic);
   }
   function handleData4(e){
       console.log(e.target.files); 
@@ -42,15 +43,7 @@ function Editcourse() {
       var object = {};
       fd.forEach((value,key)=> (object[key]=value));
       console.log(object);
-      const obje=
-      {
-          "topic":id,
-          // "description": 
-          // "lesson": 
-      }
-        console.log(obje);
-      //   console.log(value);
-      
+      console.log(fd);
     await axios.post("https://skilledge.herokuapp.com/courses/lesson/", fd,config).then(response=>{
       setMsg(response.data.msg);
       console.log(response); 

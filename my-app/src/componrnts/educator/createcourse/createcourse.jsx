@@ -34,18 +34,19 @@ function Createcourse() {
 
         console.log(id);
         fd.append("topic",id);
-        fd.append("description",topic);
-        fd.append("lesson",hostlesson);
+        fd.append("description", topic);
+        fd.append("lesson", hostlesson);
         var object = {};
         fd.forEach((value,key)=> (object[key]=value));
         console.log(object);
-        const obje=
-        {
-            "topic":id,
+        console.log(fd);
+        // const obje=
+        // {
+        //     "topic":id,
             // "description": 
             // "lesson": 
-        }
-          console.log(obje);
+        // }
+          // console.log(obje);
         //   console.log(value);
         
       await axios.post("https://skilledge.herokuapp.com/courses/lesson/", fd,config).then(response=>{
@@ -80,7 +81,7 @@ function Createcourse() {
                   <p>Upload Video</p>
                 </div>
                 {/* <p className='addlessons'>Add More Lesson</p> */}
-                <input type='file' className='addlesson' name='lesson' onChange={handleData4} ></input>
+                <input type='file' className='addlesson' name='hostlesson' value={hostlesson}  onChange={handleData4} ></input>
                 <button className='hostbutton' type='submit' onClick={submits}>Host Course</button>
             </div>
         </div>

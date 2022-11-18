@@ -43,7 +43,6 @@ setCoursecateg(e.target.value)
 const [hostedcourseid, setHostedcourseid] = useState("");
 const [resmsg, setMsg] =useState(null);
 const token = localStorage.getItem("jwtToken");
-console.log("token");
 const config = {
   headers:{
     Authorization: `Bearer ${token}`

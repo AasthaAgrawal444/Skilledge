@@ -3,6 +3,7 @@ import Sitting from '../images/sitting.png';
 import Hostcoursecard from './createcourse/hostedcoursecard';
 import './eduhome.css';
 import axios from 'axios';
+import Edunavbar from './edunavbar';
 
 function hosted(hoscourse){
     return(
@@ -44,6 +45,7 @@ const [resmsg, setMsg] =useState(null);
 
   return (
     <div>
+    <Edunavbar/>
       <div className='educatorhome'>
         <div className='hostmap'>
            {hoscourse.map(hosted)}
