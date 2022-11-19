@@ -8,7 +8,8 @@ var er;
 
 function Forgot(){
     const [Forgot,setForgot] = useState({
-      emailed:"" })
+      emailed:"" 
+    })
       const Navigate=useNavigate();
       const [value, isValue] = useState(false);
       const [resmsg, setMsg] =useState(null);
@@ -35,6 +36,7 @@ function Forgot(){
         .then(response=>{
           setMsg(response.data.msg);
           console.log(response);
+          console.log(Forgot.emailed);
           if(response.status===200){
             Navigate("/otpreset");}
             // setRequest(response.status);
@@ -80,7 +82,7 @@ function Forgot(){
           <p className='femail'>Email</p>
           <img src={Email} className="email-icon2" alt="lock"/>
           <input type='email' placeholder="example@gmail.com"
-          id='email' name='emailed'
+          id='emailed' name='emailed'
           value={Forgot.emailed}
           onChange={handleInputt}>
           </input>

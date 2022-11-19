@@ -30,20 +30,21 @@ function Edunavbar() {
              {/* <img src={Search} className="searchingicon" alt="search"/> */}
              {/* <input type="text" placeholder="search" id="loginsearches"/> */}
             {/* </div> */}
-            <div className='buttonsbar'>
-            <Link to='/home'><button className="homepg">Home</button></Link>
-            <Link to='/mycourses'><button className="mycoursespg">Hostcourse</button></Link>
+            <div className='buttonsbar' style={{marginLeft:"55vw"}}>
+            <Link to='/educatorhome'><button className="homepg">Home</button></Link>
+            <Link to='/hostcourse'><button className="mycoursespg">Hostcourse</button></Link>
+            </div>
+
             <div className="studentprofile">
             <img src={Profile} id="profilefornav" alt="profilefornav" onClick={dropdown}/>
             <div id="dropdown" style={{display:"none"}}>
               <div className="profiledropimage" id="drop_content"><img src={Profile} alt="" className="profiledropdownimage"/></div>
-              <div className="editprofiledrop" id="drop_content">Edit Profile</div>
-              <div className="switchtoedudrop" id="drop_content">Switch to Student</div>
+             <Link to='/editstudprofile'><div className="editprofiledrop" id="drop_content">Edit Profile</div></Link> 
+             <Link to='/home'> <div className="switchtoedudrop" id="drop_content">Switch to Student</div></Link>
               <div className="walletdrop" id="drop_content">Wallet</div>
               <div className="privacydrop" id="drop_content"> Privacy</div>
-              <div className="helpdrop" id="drop_content">Help</div>
+              {/* <div className="helpdrop" id="drop_content">Help</div> */}
               <div className="logoutdrop" id="drop_content">Logout</div>
-            </div>
             </div>
             </div>
         </div>

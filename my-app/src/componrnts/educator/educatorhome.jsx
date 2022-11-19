@@ -20,6 +20,40 @@ function hosted(hoscourse){
 
 function Educatorhome() {
 
+
+
+  const [is_educator, setIs_educator] = useState("");
+
+  // const [resmsg, setMsg] =useState(null);
+  const taketoken = localStorage.getItem("jwtToken");
+  console.log("taketoken");
+  const configuration = {
+    headers:{
+      Authorization: `Bearer ${taketoken}`
+    }
+  }
+
+ 
+
+  useEffect(()=> {
+     axios.put(
+     "https://skilledge.herokuapp.com/educator/become_educator/", (""), configuration)
+     .then(response=>{
+       // setRequest(response.status);
+       setIs_educator(response.data)
+       console.log(response);
+      //  if(response.status===200){
+      //   Navigate('/hostcourse');
+      //  }
+      //  setMsg(response.data.msg)
+       console.log(response.status);
+   })
+   .catch(e => {
+     console.log(e);
+     // setMsg(e.data.msg)
+  });
+ },[])
+
 const [hoscourse, setHoscourse] = useState([
 
 ]);
@@ -41,6 +75,11 @@ const [resmsg, setMsg] =useState(null);
         console.log(err);
     })
   },[])
+
+
+
+ 
+
 
 
   return (

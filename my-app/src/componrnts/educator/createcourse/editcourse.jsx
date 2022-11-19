@@ -38,7 +38,7 @@ function Editcourse() {
 
       console.log(id);
       fd.append("topic",id);
-      fd.append("description",topic);
+      fd.append("lessonName",topic);
       fd.append("lesson",hostlesson);
       var object = {};
       fd.forEach((value,key)=> (object[key]=value));

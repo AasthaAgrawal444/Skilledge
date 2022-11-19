@@ -5,6 +5,9 @@ import arrow from './images/Arrow.png';
 import mentorimg from './images/mentorimg.png';
 import Mentors from './student/mentors';
 import courseimage from './images/courseimg.png';
+import fwd from './images/fwd.png';
+import bwd from './images/bwd.png';
+
 import Coursecard from './student/coursecard';
 import starimg from './images/star.png';
 import Nib from './images/PenNib.png';
@@ -15,13 +18,6 @@ import File from './images/FileHtml.png';
 import Graph from './images/Graph.png';
 import Mike from './images/mike.png';
 import Music from './images/music.png';
-// import Nib from './images/PenNib.png';
-// import Nib from './images/PenNib.png';
-// import Nib from './images/PenNib.png';
-// import Nib from './images/PenNib.png';
-// import Nib from './images/PenNib.png';
-
-
 import Footer from './footer';
  import Nav from './navbar';
  import carddata from './student/carddata';
@@ -65,6 +61,21 @@ function Landingpg() {
   
   ]);
   
+  const [x, setX]= useState(0);
+  const [y, setY]= useState(4);
+  function inc(){
+      setX(x+1);
+      setY(y+1);
+  }
+  function dec(){
+    if(x>0&&y>4){
+      console.log(x,y);
+  
+    setX(x-1);
+    setY(y-1);
+    }
+  }
+
   const [resmsg, setMsg] =useState(null);
     const token = localStorage.getItem("jwtToken");
     console.log("token");
@@ -112,46 +123,46 @@ function Landingpg() {
         <h3 id='topcat'>Top categories</h3>
         <div className='cat1'>
           <div className='category1'>
-          <img src={Nib} alt='' style={{height:"5vhh", width:"1.7vw"}}/>
-          <p>Design</p> 
+          <img src={Nib} alt='' style={{height:"5vhh", width:"1.9vw"}}/>
+          <p style={{marginLeft:"2.5vw", marginTop:"1vh"}}>Design</p> 
           <img src={arrow} className='bararr' alt='arrow'/>
           {/* <img src={arrow} alt='' style={{height:"4vh", width:"1vw"}}/> */}
           </div>
           <div className='category2'>
-          <img src={Mike} alt='' style={{height:"5vh", width:"1.7vw"}}/>
-          <p>Marketing</p> 
+          <img src={Mike} alt='' style={{height:"5vh", width:"1.9vw"}}/>
+          <p style={{ marginTop:"1vh"}}>Marketing</p> 
           <img src={arrow} className='bararr' alt='arrow'/>
           </div>
           <div className='category3'>
-          <img src={Graph} alt='' style={{height:"5vh", width:"1.7vw"}}/>
-          <p>Finance</p> 
+          <img src={Graph} alt='' style={{height:"5vh", width:"1.9vw"}}/>
+          <p style={{ marginLeft:"1.5vw",marginTop:"1vh"}}>Finance</p> 
           <img src={arrow} className='bararr' alt='arrow'/>
           </div>
           <div className='category4'>
-          <img src={Arro} alt='' style={{height:"5vh", width:"1.7vw"}}/>
-          <p>Data Science</p> 
+          <img src={Arro} alt='' style={{height:"5vh", width:"1.9vw"}}/>
+          <p style={{ marginTop:"1vh"}}>Data Science</p> 
           <img src={arrow} className='bararr' alt='arrow'/>
           </div>
         </div>
         <div className='cat1'>
           <div className='category5'>
-          <img src={File} alt='' style={{height:"5vh", width:"1.7vw"}}/>
-          <p>Development</p> 
+          <img src={File} alt='' style={{height:"5vh", width:"1.9vw"}}/>
+          <p style={{ marginTop:"1vh"}}>Development</p> 
           <img src={arrow} className='bararr' alt='arrow'/>
           </div>
           <div className='category6'>
-          <img src={Music} alt='' style={{height:"5vh", width:"1.7vw"}}/>
-          <p>Music</p> 
+          <img src={Music} alt='' style={{height:"5vh", width:"2.1vw"}}/>
+          <p style={{ marginLeft:"1.8vw",marginTop:"1vh"}}>Music</p> 
           <img src={arrow} className='bararr' alt='arrow'/>
           </div>
           <div className='category7'>
-          <img src={Brief} alt='' style={{height:"5vh", width:"1.7vw"}}/>
-          <p>Business</p> 
+          <img src={Brief} alt='' style={{height:"5vh", width:"2.1vw"}}/>
+          <p style={{ marginLeft:"1.1vw",marginTop:"1vh"}}>Business</p> 
           <img src={arrow} className='bararr' alt='arrow'/>
           </div>
           <div className='category8'>
-          <img src={Cam} alt='' style={{height:"5vh", width:"1.7vw"}}/>
-          <p>Photography</p> 
+          <img src={Cam} alt='' style={{height:"5vh", width:"1.9vw"}}/>
+          <p style={{ marginTop:"1vh"}}>Photography</p> 
           <img src={arrow} className='bararr' alt='arrow'/>
           </div>
         </div>
@@ -159,8 +170,10 @@ function Landingpg() {
 
       <div className='popular'>
           <h3 className='pop'>Popular Courses</h3>
+          <img src={bwd} alt='' className='bwdbutt' onClick={dec}/>
+          <img src={fwd} alt='' className='fwdbutt' onClick={inc}/>
           <div className='coursecard'>
-          {popular.map(popularcourse)}; 
+          {popular.slice(x,y).map(popularcourse)}; 
           </div>
       </div>
       <div className='landingfooter'>

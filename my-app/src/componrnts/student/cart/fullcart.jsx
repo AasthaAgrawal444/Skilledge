@@ -39,7 +39,7 @@ function Fullcart() {
         const [rating, setRating] = useState("")
         const [eduname, setEduname] = useState("")
     
-    
+        const [resmsg, setMsg] = useState("")
         const token = localStorage.getItem("jwtToken");
         console.log("token");
         const config = {
@@ -51,6 +51,8 @@ function Fullcart() {
         useEffect(()=>{
           axios.get("https://skilledge.herokuapp.com/cart/cart/",config).then((response)=>{
            console.log(response);
+           setMsg(response.data.msg);
+
            setAddcart(response.data);
            setId(response.data.id);
            setCat(response.data.category);
@@ -61,13 +63,16 @@ function Fullcart() {
            setPrice(response.data.price);
            setRating(response.data.rating);
            setEduname(response.data.educator_name);
-           if(response.status===400){
-             Navigate("/emptycart");
-          }
+          //  if(response.status===400){
+          //   Navigate("/emptycart"); 
+          // }
     
           }).catch(err=>{
               console.log(err);
-              
+              setMsg(err.data);
+              if(err.status===400){
+                Navigate("/emptycart"); 
+              }
           })
         },[])
 
@@ -79,9 +84,7 @@ function Fullcart() {
               console.log(response);
               if(response.status===200){
                 Navigate("/confirmation");}
-              if(response.status===400){
-                  Navigate("/emptycart"); 
-                }
+             
             })
             .catch(err => {
               console.log(err);
@@ -99,6 +102,7 @@ function Fullcart() {
       <div className='cartmap'>
        {addcart.map(cart)}
        </div>
+       {resmsg}
        <button className='checkoutbut' onClick={buyapi}>Checkout</button>
        <div>
         <Footer/>

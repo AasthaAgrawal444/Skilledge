@@ -1,0 +1,81 @@
+#form20{
+    display: flex;
+    flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 4vh;
+}
+.editprof{
+    height: 16vh;
+    width: 8vw;
+}
+#fnames{
+    /* position: relative; */
+    border: 1px solid #EEF0FD;
+    background: #EEF0FD;
+    color: #979898;
+    padding: 20px 20px;
+    /* gap: 10px; */
+    width: 13.5vw;
+    height: 10px;
+    border-radius: 5px;
+    /* top: 13vh;
+    left: 26vw;  */
+}
+#lnames{
+    border: 1px solid #EEF0FD;
+    background: #EEF0FD;
+    color: #979898;
+    padding: 20px 20px;
+    /* gap: 10px; */
+    width: 13.5vw;
+    height: 10px;
+    border-radius: 5px;
+}
+#phnos{
+    border: 1px solid #EEF0FD;
+    background: #EEF0FD;
+    color: #979898;
+    padding: 20px 20px;
+    /* gap: 10px; */
+    width: 32vw;
+    height: 10px;
+    border-radius: 5px;
+}
+#dobs{
+    border: 1px solid #EEF0FD;
+    background: #EEF0FD;
+    color: #979898;
+    padding: 20px 20px;
+    /* gap: 10px; */
+    width: 31.5vw;
+    height: 10px;
+    border-radius: 5px;
+}
+.cities{
+    border: 1px solid #EEF0FD;
+    background: #EEF0FD;
+    color: #979898;
+    /* padding: 2px 2px; */
+    /* gap: 10px; */
+    width: 34vw;
+    height: 6.5vh;
+    border-radius: 5px;
+}
+.namesedit{
+    display: flex;
+    gap: 2vw;
+}
+.continuebuttonn{
+    background: #293593;
+border-radius: 5px;
+width: 34vw;
+height: 58px;
+padding: 15px 20px;
+/* gap: 10px; */
+color: #fff;
+/* margin-top: 40vh; */
+font-size: 20px;
+border: 2px solid #293593;
+/* margin-left: 34vw; */
+}

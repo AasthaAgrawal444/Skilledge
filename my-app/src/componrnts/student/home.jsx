@@ -137,140 +137,23 @@ const [resmsg, setMsg] =useState(null);
       <div className='coursesview'>
         <div className='recentcourses'>
           <h1 className='recent'>Recently Added Courses</h1>
-          <img src={fwd} alt='' style={{height:"7vh", width:"3vw"}} onClick={increase}/>
-          <img src={bwd} alt='' style={{height:"7vh", width:"3vw", marginTop:"-60vh"}} onClick={decrease}/>
+          <img src={bwd} alt='' className='bwdbutt' onClick={decrease}/>
+          <img src={fwd} alt='' className='fwdbutt' onClick={increase}/>
           <div className='coursecard'>
 
           {reccourse.slice(i,j).map((recentcourse))};
 
           </div>
       </div>
-
-            {/* {reccourse.map((Coursecard)=>(
-             
-            ))} */}
-             {/* {loading &&
-             ( reccourse.map(carddata) => (
-                   <C></>
-             )}; */}
-             {/* <Coursecard 
-              img={courseimage}
-              image={starimg}
-              rating="4.5"
-              name="Become a Certified HTML, CSS, JavaScript Web Developer"
-              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
-              price="499 $"
-              explore="Explore"
-            />
-            <Coursecard 
-              img={courseimage}
-              image={starimg}
-              rating="4.5"
-              name="Become a Certified HTML, CSS, JavaScript Web Developer"
-              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
-              price="499 $"
-              explore="Explore"
-            />
-            <Coursecard 
-              img={courseimage}
-              image={starimg}
-              rating="4.5"
-              name="Become a Certified HTML, CSS, JavaScript Web Developer"
-              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
-              price="499 $"
-              explore="Explore"
-            /> 
-            <Coursecard 
-              img={courseimage}
-              image={starimg}
-              rating="4.5"
-              name="Become a Certified HTML, CSS, JavaScript Web Developer"
-              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
-              price="499 $"
-              explore="Explore"
-            /> */}
-            {/* <Coursecard 
-              img={courseimage}
-              image={starimg}
-              rating="4.5"
-              name="Become a Certified HTML, CSS, JavaScript Web Developer"
-              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
-              price="499 $"
-              explore="Explore"
-            />
-            <Coursecard 
-              img={courseimage}
-              image={starimg}
-              rating="4.5"
-              name="Become a Certified HTML, CSS, JavaScript Web Developer"
-              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
-              price="499 $"
-              explore="Explore"
-            />  */}
           
-
        <div className='popularcourses'>
       <div className='popcourse'>
           <h1 className='courseheading'>Most Popular Courses</h1>
-          <img src={fwd} alt='' style={{height:"7vh", width:"3vw"}} onClick={inc}/>
-          <img src={bwd} alt='' style={{height:"7vh", width:"3vw", marginTop:"-60vh"}} onClick={dec}/>
+          <img src={bwd} alt='' className='bwdbutt' onClick={dec}/>
+          <img src={fwd} alt='' className='fwdbutt' onClick={inc}/>
           <div className='coursecards'>
           <div className='coursecard'>  
           {popular.slice(x,y).map((popularcourse))};
-
-           {/* <Coursecard 
-              img={courseimage}
-              image={starimg}
-              rating="4.5"
-              name="Become a Certified HTML, CSS, JavaScript Web Developer"
-              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
-              price="499 $"
-              explore="Explore"
-            />
-            <Coursecard 
-              img={courseimage}
-              image={starimg}
-              rating="4.5"
-              name="Become a Certified HTML, CSS, JavaScript Web Developer"
-              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
-              price="499 $"
-              explore="Explore"
-            />
-             <Coursecard 
-              img={courseimage}
-              image={starimg} 
-               rating="4.5"
-              name="Become a Certified HTML, CSS, JavaScript Web Developer"
-              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
-              price="499 $"
-              explore="Explore"
-            />
-            <Coursecard  
-               img={courseimage}
-              image={starimg}
-              rating="4.5"
-              name="Become a Certified HTML, CSS, JavaScript Web Developer"
-              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
-              price="499 $"
-              explore="Explore"
-            /> <Coursecard  
-               img={courseimage}
-              image={starimg}
-              rating="4.5"
-              name="Become a Certified HTML, CSS, JavaScript Web Developer"
-              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
-              price="499 $"
-              explore="Explore"
-            />
-            <Coursecard  
-               img={courseimage}
-              image={starimg}
-              rating="4.5"
-              name="Become a Certified HTML, CSS, JavaScript Web Developer"
-              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
-              price="499 $"
-              explore="Explore"
-            />  */}
                   </div>
                  </div> 
                       </div>

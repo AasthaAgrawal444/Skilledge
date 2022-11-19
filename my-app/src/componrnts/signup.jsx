@@ -4,6 +4,7 @@ import Axios from 'axios';
 import {Link,useNavigate}from "react-router-dom";
 import Signuptoken from './signuptoken';
 import Nav from './navbar';
+import Footer from './footer';
 var er;
 
 function Signup(){
@@ -33,9 +34,12 @@ function Signup(){
       if(!values.passwords){
         x.passwords = 'Password is necessary';
       }
-      else if(values.passwords.length<8){
-        x.passwords ='Password must be more than 8 characters!';
+      if(values.cpasswords!=values.passwords){
+        x.cpasswords= 'Passwords do not match';
       }
+      // else if(values.passwords.match(/^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+*!=]).*$)/)==null){
+      //   x.passwords ='Password must be more than 8 characters, contain 1 upper case 1 lower case char., 1 digit and 1 special character';
+      // }
       er=Object.keys(x).length;
     console.log(x);
     (er!==0)?isValue(false):isValue(true);
@@ -57,20 +61,23 @@ function Signup(){
         if(value){
         await Axios.post('https://skilledge.herokuapp.com/api/new_user_registration/',obj)
           .then(response=>{
-            localStorage.setItem("jwtToken",response.data.token.access);
-            console.log(localStorage);
-            setMsg(response.data.msg);
+            console.log("hi");
             console.log(response);
-            if(response.status===200){
-            Navigate("/otpcreate");}
-            // setRequest(response.status);
             console.log(response.status);
+            if(response.status===200){
+              Navigate("/otpcreate");
+              }
+            localStorage.setItem("jwtToken",response.data.token.access);
+            // console.log(response.status);
+            setMsg(response.data.msg);
+           
+            // setRequest(response.status);
+            // console.log(response.status);
 
         })
         .catch(err1 => {
-          console.log(err1);
-          // console.log(err1.response.data.msg);
-          // setMsg(err1.response.data.msg)
+          console.log(err1.data);
+          // setMsg(err1.data.msg)
         });
       }
     
@@ -151,6 +158,9 @@ function Signup(){
                
                {/* <Link to= '/otpcreate'><button className='createm' type="submit">Sign Up as Mentor</button></Link> */}
               </form>
+            </div>
+            <div className='signupfooter'>
+            <Footer/>
             </div>
        </div>
       );

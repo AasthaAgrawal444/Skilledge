@@ -32,6 +32,7 @@
     .cols{
         /* position: relative; */
         top: 295px;
+        margin-left: 10vw;
     }
     #col1{
         position: absolute;

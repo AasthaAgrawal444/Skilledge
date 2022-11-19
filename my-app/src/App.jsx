@@ -34,6 +34,7 @@ import Hostedcourseinfo from "./componrnts/educator/hostedcourseinfo";
 import Mycourseinfo from "./componrnts/student/mycourseinfo";
 import Editcourse from "./componrnts/educator/createcourse/editcourse";
 import Viewcourse from "./componrnts/courses/viewcourse";
+import Search from "./componrnts/student/search";
 
 function App() {
   return (
@@ -75,6 +76,7 @@ function App() {
             <Route path="/mycourseinfo" exact element={<Mycourseinfo/>}></Route>
             <Route path="/editcourse" exact element={<Editcourse/>}></Route>
             <Route path="/viewcourse" exact element={<Viewcourse/>}></Route>
+            <Route path="/search" exact element={<Search/>}></Route>
 
           </Routes>
           {/* <Footer/> */}

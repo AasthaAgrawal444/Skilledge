@@ -38,9 +38,9 @@ educator_name:props.educator_name} });
                 alt='stars'
             />
             <p style={{display:"none"}}>{props.id}</p>
-            <p className='rate'>{props.rating}</p>
+            <p className='rate'>{Math.floor(props.rating)}</p>
             <h2 className='coursename'>{props.topic}</h2>
-            <p className='coursedes'>{props.short_description}</p>
+            <p className='coursedes'>{props.short_description.slice(0,70)}...</p>
             <div className='pricedet'>
             <p className='price'>{props.price}</p>
           {/* <Link to='/courseinfo'> */}

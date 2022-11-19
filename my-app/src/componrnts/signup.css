@@ -11,6 +11,10 @@
   top: 100px;
 }
 
+.signupfooter{
+  margin-top: 90vh;
+}
+
 h3 {
   width: 241px;
   height: 39px;
@@ -233,7 +237,7 @@ top: 200px;
   position: absolute;
   left: 0;
   font-size: 15px;
-top: 400px;
+top: 420px;
   color: red;
 } 
 .backmsg{

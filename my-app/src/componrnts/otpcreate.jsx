@@ -86,7 +86,7 @@ function Otpc() {
     await Axios.post("https://skilledge.herokuapp.com/api/resend_otp/", obje).then(response=>{
     
       if(response.status===200){
-        Navigate("/profile");}
+        Navigate("/createprofile");}
         // setMsg(response.data.msg);
         console.log(response); 
         })

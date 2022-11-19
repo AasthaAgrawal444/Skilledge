@@ -6,6 +6,7 @@ import {useNavigate} from 'react-router-dom'
 // import CustomSelect from './dropdown';
 // import Nav from '../navbar';
 import Footer from '../footer';
+import Prof from '../images/profile.png';
 
 function Profile() {
   const Navigate=useNavigate();
@@ -175,8 +176,10 @@ useEffect(()=> {
     <div>
     
       <form id='form2'>
+      <img src={Prof} alt='' className='prof'/>
       <input type='file' className='proiimg' name='image' onChange={handleInput8}></input>
-
+              <div className='inputpro'>
+              
              <input type='text' placeholder='First Name' name='fname' id='fname' value={fname} onChange={handleInput1}>
                
               </input>
@@ -185,13 +188,13 @@ useEffect(()=> {
               
                </input>
                {/* <p id='error4'>{errors.lname}</p> */}
-               <input type='email' placeholder='Email' name='email' id='emails' value={email} onChange={handleInput3}>
+               {/* <input type='email' placeholder='Email' name='email' id='emails' value={email} onChange={handleInput3}>
               
-               </input>
+               </input> */}
                {/* <p id='error6'>{errors.emails}</p> */}
-               <input type='text' placeholder=' ' name='code' id='code' value={countrycode} onChange={handleInput4}>
+               {/* <input type='text' placeholder=' ' name='code' id='code' value={countrycode} onChange={handleInput4}>
                
-               </input>               
+               </input>                */}
                {/* <p id='error5'>{errors.code}</p> */}
                <input type='text' placeholder='Phone number' name='phno' id='phno' value={phno} onChange={handleInput5}>
               
@@ -237,9 +240,12 @@ useEffect(()=> {
                value={data.Gender}
                </input>*/}
                {/* <p id='error8'>{errors.gender}</p>  */}
+               </div>
                </form>
                <button type='submit' className='continuebutton' onClick={handlecontinue}>Continue</button>
+               <div className='proffooter'>
               <Footer/>
+              </div>
     </div>
   )
 }

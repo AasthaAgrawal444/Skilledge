@@ -6,6 +6,8 @@ import Courseimage from '../images/courseimg.png';
 import starimg from "../images/star.png";
 import axios from 'axios';
 // import Buycoursecard from './buycoursecard';
+import fwd from '../images/fwd.png';
+import  bwd from '../images/bwd.png';
 import { useLocation , useNavigate} from "react-router-dom";
 import Loginnav from '../student/loginnavbar';
 import Lessoncard from './lessoncard';
@@ -108,6 +110,22 @@ const [resmsg, setMsg] =useState(null);
 
   var ide= localStorage.getItem('courseid');
 
+  const [n, setN] = useState("");
+  const [x, setX]= useState(0);
+  const [y, setY]= useState(4);
+  function inc(){
+      setX(x+1);
+      setY(y+1);
+  }
+  function dec(){
+    if(x>0&&y>4){
+      console.log(x,y);
+  
+    setX(x-1);
+    setY(y-1);
+    }
+  }
+  
 
   const history=useLocation();
   useEffect(()=>{
@@ -185,11 +203,15 @@ const [resmsg, setMsg] =useState(null);
       `https://skilledge.herokuapp.com/wallet/buy_course/${ide}/`,{},config)
       .then(response=>{
         console.log(response);
+        setMsg(response.data.msg)
         if(response.status===200){
           Navigate("/confirmation");}
       })
       .catch(err => {
         console.log(err);
+        setMsg(err.response.data.msg);
+
+
         // console.log(err.response.data.msg);
       });
   }
@@ -209,6 +231,7 @@ const [resmsg, setMsg] =useState(null);
     axios.put("https://skilledge.herokuapp.com/cart/cart/",obj,config)
     .then(response=>{
       console.log(response);
+      setMsg(response.data.msg);
       if(response.status===200){
         Navigate("/fullcart");
       }
@@ -216,7 +239,9 @@ const [resmsg, setMsg] =useState(null);
     })
     .catch(err => {
       console.log(err);
-      // console.log(err.response.data.msg);
+      // setMsg(err.data.msg)
+
+      setMsg(err.response.data.msg);
     });
   }
   
@@ -243,6 +268,7 @@ const [resmsg, setMsg] =useState(null);
               <button className='buybutton' onClick={buyapi}>Buy Now</button>
               <button className='cartbutton' onClick={cartapi}>Add to Cart</button>
             </div>
+            {resmsg}
              {/* <div className='know'>
             <p style={{fontSize:"20px"}}> This course includes</p>
             <p> 9.5 hours on-demand video</p>
@@ -269,8 +295,9 @@ const [resmsg, setMsg] =useState(null);
             <div id='display3'>
               <div className='reviewbox'>
                 <h2>Students Feedback</h2>
+                <div className='revany'>
                 {views.map(userreview)}
-               
+                </div>
               </div>
             </div>
 
@@ -285,62 +312,11 @@ const [resmsg, setMsg] =useState(null);
 </div> */}
 
        <h1 className='recent'>Explore More</h1>
+          <img src={bwd} alt='' className='bwdbut' onClick={dec}/>
+          <img src={fwd} alt='' className='fwdbut' onClick={inc}/>
           <div className='coursecard'>
-          {explored.map((explore))}
-             {/* <Coursecard 
-              img={Courseimage}
-              image={starimg}
-              rating="4.5"
-              name="Become a Certified HTML, CSS, JavaScript Web Developer"
-              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
-              price="499 $"
-              explore="Explore"
-            />
-            <Coursecard 
-              img={Courseimage}
-              image={starimg}
-              rating="4.5"
-              name="Become a Certified HTML, CSS, JavaScript Web Developer"
-              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
-              price="499 $"
-              explore="Explore"
-            />
-            <Coursecard 
-              img={Courseimage}
-              image={starimg}
-              rating="4.5"
-              name="Become a Certified HTML, CSS, JavaScript Web Developer"
-              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
-              price="499 $"
-              explore="Explore"
-            />  */}
-            {/* <Coursecard 
-              img={Courseimage}
-              image={starimg}
-              rating="4.5"
-              name="Become a Certified HTML, CSS, JavaScript Web Developer"
-              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
-              price="499 $"
-              explore="Explore"
-            />
-            <Coursecard 
-              img={Courseimage}
-              image={starimg}
-              rating="4.5"
-              name="Become a Certified HTML, CSS, JavaScript Web Developer"
-              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
-              price="499 $"
-              explore="Explore"
-            />
-            <Coursecard 
-              img={Courseimage}
-              image={starimg}
-              rating="4.5"
-              name="Become a Certified HTML, CSS, JavaScript Web Developer"
-              description="Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications"
-              price="499 $"
-              explore="Explore"
-            />  */}
+
+          {explored.slice(x,y).map((explore))}
             </div>
             </div>
             <div className='infofooter'>

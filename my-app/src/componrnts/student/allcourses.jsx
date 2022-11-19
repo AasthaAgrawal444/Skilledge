@@ -69,7 +69,7 @@ function Allcourses(){
         {/* <Loginnav/> */}
         <Mycourses/>
 <div className='coursecard'>
-<div className='card1' style={{display:"flex", justifyContent:"flex-start", alignItems:"flex-start", flexWrap:"wrap", gap:"10vw"}}>
+<div className='card1' style={{display:"flex", justifyContent:"flex-start", alignItems:"flex-start", flexWrap:"wrap", gap:"10vw", marginTop:"10vh"}}>
       {course.map(Allcourse)}
   </div>
       </div>

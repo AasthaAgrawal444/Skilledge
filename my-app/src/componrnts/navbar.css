@@ -31,7 +31,7 @@
     position: absolute;
     width: 5vw;
     height: 4vh;
-    left: 80vw;
+    left: 75vw;
     top: 17px;
     background: #292B2F;
     border-radius: 6px;
@@ -44,12 +44,12 @@
     align-items: center;
     padding: 4px 8px;
     gap: 8px;
-    
+    text-decoration: none;
     position: relative;
     width: 5vw;
-    height: 3.8vh;
-    left: 15vw;
-    top: 18px;
+    height: 4vh;
+    left: 70vw;
+    top: 17px;
     
     border: 2px solid #000000;
     border-radius: 6px;
@@ -68,12 +68,18 @@
     width: 39vw;
     height: 34px;
     left: 50vw;
-    top: 48px;
+    top: 10px;
     background: #EEF0FD;
     border: 2px solid #EEF0FD;
     border-radius: 5px;
     padding: 0 40px;
+    z-index: 2;
 }
+
+.searchicoon{
+    z-index: 999;
+}
+
 .skillhead{
     position: relative;
     width: 8vw;
@@ -89,14 +95,14 @@
  color: #000000;
 }
 
-.searchicon{
+/* .searchicon{
     position: relative;
     /* left: 370px; */
-    height: 20px;
-    width: 20px;
-     z-index:2;
-    /* top: 19px; */
-}
+    /* height: 20px;
+    width: 20px; */
+     /* z-index:2; */
+    /* top: 1px; */
+/* } */ 
 
 @media (max-width:450px){
     .navbar{

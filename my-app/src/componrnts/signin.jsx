@@ -5,6 +5,7 @@ import { Link ,useNavigate} from "react-router-dom";
 import Lock from './images/lock.png';
 import Email from './images/email.png';
 import Nav from "./navbar";
+import Footer from "./footer";
 // import Home from "./student/home";
 var er;
 
@@ -131,6 +132,9 @@ function Signin() {
             Login
           </button>
         </form>
+      </div>
+      <div className="signfooter">
+      <Footer/>
       </div>
     </div>
   );

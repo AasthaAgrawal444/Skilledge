@@ -2,6 +2,17 @@
     position: relative;
     top: 6vh;
 }
+.fwdbutt{
+    height: 7vh;
+    width: 3.5vw;
+    margin-top: -40vh;
+    margin-left: 55vw;
+}
+.bwdbutt{
+    height: 7vh;
+    width: 3.5vw;
+    margin-top: -40vh;
+}
 #startlearn{
     position: relative;
     right: 31vw;
@@ -57,16 +68,20 @@ height: 30px;
     border-radius: 8px;
     top: -50vh;
     margin:2rem 0 ;
+    z-index: 1;
 }
 .homefooter{
     position: relative;
-    top: 38vh;
+    top: 20vh;
 }
 .coursesview{
     margin-top: -35vh;
 }
 .popularcourses{
-    margin-top: 40vh;
+    margin-top: 10vh;
+}
+.coursecard{
+    margin-top: 1.5vh;
 }
 @media(max-width:450){
     #startlearn{

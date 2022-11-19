@@ -22,52 +22,50 @@ function Loginnav() {
 
     //     }
     // ])
-const Navigate= useNavigate();
-  
-const [is_educator, setIs_educator] = useState("");
 
-    // const [resmsg, setMsg] =useState(null);
-    const taketoken = localStorage.getItem("jwtToken");
-    console.log("taketoken");
-    const configuration = {
-      headers:{
-        Authorization: `Bearer ${taketoken}`
-      }
+    function subsearch(){
+      Navigate('/search');
     }
 
-    // React.useEffect(() => {
-    //   axios.get("https://skilledge.herokuapp.com/educator/become_educator/", configuration)
-    //   .then(response=>{
-    //     setIs_educator(response.data)
-    //   })
-    // },[]);
-
-    async function handleinterestapi(){
+const Navigate= useNavigate();
   
-      // const object = {
-      //  "is_educator":is_educator
-      // };
-      // console.log(object);
-      // setIs_educator("")
-      await axios.put(
-       "https://skilledge.herokuapp.com/educator/become_educator/", (""), configuration)
-       .then(response=>{
-         // setRequest(response.status);
-         setIs_educator(response.data)
-         console.log(response);
-         if(response.status===200){
-          Navigate('/hostcourse');
-         }
-        //  setMsg(response.data.msg)
-         console.log(response.status);
-     })
-     .catch(e => {
-       console.log(e);
-       // setMsg(e.data.msg)
-    });
-   }
+// const [is_educator, setIs_educator] = useState("");
+
+//     // const [resmsg, setMsg] =useState(null);
+//     const taketoken = localStorage.getItem("jwtToken");
+//     console.log("taketoken");
+//     const configuration = {
+//       headers:{
+//         Authorization: `Bearer ${taketoken}`
+//       }
+//     }
+
+   
+
+  //   async function handleinterestapi(){
+  //     await axios.put(
+  //      "https://skilledge.herokuapp.com/educator/become_educator/", (""), configuration)
+  //      .then(response=>{
+  //        // setRequest(response.status);
+  //        setIs_educator(response.data)
+  //        console.log(response);
+  //        if(response.status===200){
+  //         Navigate('/hostcourse');
+  //        }
+  //       //  setMsg(response.data.msg)
+  //        console.log(response.status);
+  //    })
+  //    .catch(e => {
+  //      console.log(e);
+  //      // setMsg(e.data.msg)
+  //   });
+  //  }
 
   
+    function logout (){
+      localStorage.removeItem('Token');
+    }
+
     const [visdropdown, setVisdropdown] =useState(false);
     function dropdown(){
       if(!visdropdown){
@@ -89,7 +87,7 @@ const [is_educator, setIs_educator] = useState("");
             </div>
             <div className="searchbar">
              <img src={Search} className="searchingicon" alt="search"/>
-             <input type="text" placeholder="search" id="loginsearches"/>
+             <input type="text" placeholder="search" id="loginsearches" onClick={subsearch}/>
             </div>
             <Link to='/fullcart'><img src={cart} className="carticon" alt="icon"/></Link>
             <Link to='/home'><button className="homepg">Home</button></Link>
@@ -100,12 +98,12 @@ const [is_educator, setIs_educator] = useState("");
               <div className="profiledropimage" id="drop_content"><img src={Profile} alt="" className="profiledropdownimage"/></div>
             <Link to='/editstudprofile'>  <div className="editprofiledrop" id="drop_content">Edit Profile</div></Link>
              {/* <Link to='/hostcourse'>  */}
-             <p className="switchtoedudrop" id="drop_content" onClick={handleinterestapi}>Switch to Educator</p>
+             <Link to='/educatorhome'><p className="switchtoedudrop" id="drop_content" >Switch to Educator</p></Link>
              {/* </Link> */}
               <div className="walletdrop" id="drop_content">Wallet</div>
               <div className="privacydrop" id="drop_content"> Privacy</div>
               {/* <div className="helpdrop" id="drop_content">Help</div> */}
-              <div className="logoutdrop" id="drop_content">Logout</div>
+             <Link to='/landingpg'> <div className="logoutdrop" id="drop_content" onClick={logout}>Logout</div></Link>
             </div>
             </div>
         </div>

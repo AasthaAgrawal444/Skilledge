@@ -22,7 +22,7 @@ function Viewcourse() {
     {lessonName}
       {/* {file} */}
       <iframe className='less3'
-       src={file} style={{height:"50vh", width:"50vw"}}
+       src={file} style={{height:"100vh", width:"100vw"}}
       ></iframe>
 
     </div>

@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from 'react';
-import '../profile.css';
+import './studprofile.css';
 // import courseimage from '../images/courseimg.png';
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom'
@@ -20,6 +20,8 @@ function Studprofile() {
   const [phno,setPhno] = useState("");
   const [dob, setDob] = useState("");
   const [gender,setGender] = useState("");
+  const [profimg,setProfimg] = useState("");
+
 
 //   const [editable, setEditable] = useState("");
 //   const[show, setShow] = useState("");
@@ -73,7 +75,7 @@ function handleInput8(e){
      setFname(response.data.name);
      setLname(response.data.name);
      setPhno(response.data.mobile);
-     fd(response.data.picture);
+     setProfimg(response.data.picture);
      setDob(response.data.dateOfBirth);
      setGender(response.data.gender);
     }).catch(err=>{
@@ -108,10 +110,10 @@ function handleInput8(e){
     .then(response=>{
 console.log("jsdkjbv")
 console.log(response.data)
-        setFname(response.data.user_name);
-        setLname(response.data.name);
+        setFname(response.data.split(" ").name);
+        setLname(response.data.split(" ").name);
         setPhno(response.data.mobile);
-        // fd(response.data.picture);
+        fd(response.data.picture);
         setDob(response.data.dateOfBirth);
         setGender(response.data.gender);
     //   console.log(response);
@@ -129,34 +131,35 @@ console.log(response.data)
   return (
     <div>
     {/* <Loginnav/> */}
-      <form id='form2'>
-      <img src={Profile} className='' style={{height:"10vh", marginLeft:"80vw"}} />
-      <input type='file' className='proiimg' name='image' onChange={handleInput8}></input>
+      <form id='form20'>
+      <img src={profimg} className='editprof'/>
+      <input type='file' className='proimgg' name='image' onChange={handleInput8}></input>
             <img src={Edit} alt='' className='editimg' style={{height:"30px", width:"30px"}} />
-
-             <input type='text' placeholder='First Name' name='fname' id='fname' value={fname} onChange={handleInput1}>
+              <div className='namesedit'>
+             <input type='text' placeholder='First Name' name='fname' id='fnames' value={fname} onChange={handleInput1}>
                
               </input>
                {/* <p id='error3'>{errors.fname}</p> */}
-               <input type='text' placeholder='Last Name' name='lname' id='lname' value={lname} onChange={handleInput2}>
+               <input type='text' placeholder='Last Name' name='lname' id='lnames' value={lname} onChange={handleInput2}>
               
                </input>
+               </div>
                {/* <p id='error4'>{errors.lname}</p> */}
-               <input type='email' placeholder='Email' name='email' id='emails' value={email} onChange={handleInput3}>
+               {/* <input type='email' placeholder='Email' name='email' id='emails' value={email} onChange={handleInput3}>
               
-               </input>
+               </input> */}
                {/* <p id='error6'>{errors.emails}</p> */}
-               <input type='text' placeholder=' ' name='code' id='code' value={countrycode} onChange={handleInput4}>
+               {/* <input type='text' placeholder=' ' name='code' id='code' value={countrycode} onChange={handleInput4}>
                
-               </input>               
+               </input>                */}
                {/* <p id='error5'>{errors.code}</p> */}
-               <input type='text' placeholder='Phone number' name='phno' id='phno' value={phno} onChange={handleInput5}>
+               <input type='text' placeholder='Phone number' name='phno' id='phnos' value={phno} onChange={handleInput5}>
               
                </input>
-               <input type='text' placeholder='dob' name='dob' id='dob' value={dob} onChange={handleInput7}>
+               <input type='text' placeholder='dob' name='dob' id='dobs' value={dob} onChange={handleInput7}>
                </input>
 
-               <select className='city'   onChange={handleInput6}> 
+               <select className='cities'   onChange={handleInput6}> 
                 <option value={'M'}  className='opt1'
               
                 >Male</option>
@@ -167,10 +170,10 @@ console.log(response.data)
               
                 >Others</option>
                </select>
-               
+               <button type='submit' className='continuebuttonn' onClick={handlecontinue}>Continue</button>
+
                </form>
-               <button type='submit' className='continuebutton' onClick={handlecontinue}>Continue</button>
-               <div className='editfooter' style={{marginTop:"20vh"}}>
+               <div className='editfooter' style={{marginTop:"10vh"}}>
             <Footer/> 
             </div> 
     </div>
