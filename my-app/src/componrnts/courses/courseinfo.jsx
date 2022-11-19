@@ -14,6 +14,7 @@ import Lessoncard from './lessoncard';
 import Feedbackcard from './feedbackcard';
 import Footer from '../footer';
 import Viewcourse from './viewcourse';
+import Bg from '../images/bgnd.png';
 
 function explore(explored){
   return(
@@ -251,7 +252,7 @@ const [resmsg, setMsg] =useState(null);
     <Loginnav/>
        <div className='courseinfohead'>
         <div className='courseinfo'>
-        <img src={thumbnail} alt='' className='courseinfoimg'/>
+        <img src={Bg} alt='' className='courseinfoimg'/>
           <div className='coursedescriptioninfo'>
          <h4 className='topicname'>{topic}</h4>
           <p className='descriptofcourse'>{short_description}</p>

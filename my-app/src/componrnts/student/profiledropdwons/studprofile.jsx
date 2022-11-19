@@ -97,7 +97,6 @@ function handleInput8(e){
     // event.preventDefault();
      console.log(dob);
      console.log(gender);
-     console.log("fjdkhfnj");
 //     setFname("")
 //     setLname("")
 //     setEmail("")
@@ -116,6 +115,7 @@ console.log(response.data)
         fd(response.data.picture);
         setDob(response.data.dateOfBirth);
         setGender(response.data.gender);
+        localStorage.setItem("profile", response.data.picture);
     //   console.log(response);
     //   if(response.status===200){
     //     Navigate("/interest");}

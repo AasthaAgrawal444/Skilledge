@@ -84,7 +84,7 @@ useEffect(()=> {
    
     //  // setImage(e.target.files);
      fd.append("picture",proimg);
-     fd.append("name",fname+lname);
+     fd.append("name",fname+(" ")+lname);
     //  fd.append("lname",lname);
      fd.append("user_name",user);
      fd.append("gender",gender);

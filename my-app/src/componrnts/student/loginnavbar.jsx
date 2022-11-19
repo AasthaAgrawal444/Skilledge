@@ -28,6 +28,8 @@ function Loginnav() {
     }
 
 const Navigate= useNavigate();
+
+var pro = localStorage.getItem("profile")
   
 // const [is_educator, setIs_educator] = useState("");
 
@@ -93,9 +95,9 @@ const Navigate= useNavigate();
             <Link to='/home'><button className="homepg">Home</button></Link>
             <Link to='/allcourses'><button className="mycoursespg">My courses</button></Link>
             <div className="studentprofile">
-            <img src={Profile} id="profilefornav" alt="profilefornav" onClick={dropdown}/>
+            <img src={pro} id="profilefornav" alt="profilefornav" onClick={dropdown}/>
             <div id="dropdown" style={{display:"none"}}>
-              <div className="profiledropimage" id="drop_content"><img src={Profile} alt="" className="profiledropdownimage"/></div>
+              <div className="profiledropimage" id="drop_content"><img src={pro} alt="" className="profiledropdownimage"/></div>
             <Link to='/editstudprofile'>  <div className="editprofiledrop" id="drop_content">Edit Profile</div></Link>
              {/* <Link to='/hostcourse'>  */}
              <Link to='/educatorhome'><p className="switchtoedudrop" id="drop_content" >Switch to Educator</p></Link>
