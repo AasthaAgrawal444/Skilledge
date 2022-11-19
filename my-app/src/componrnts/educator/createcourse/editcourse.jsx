@@ -39,7 +39,7 @@ function Editcourse() {
       console.log(id);
       fd.append("topic",id);
       fd.append("lessonName",topic);
-      fd.append("lesson",hostlesson);
+      fd.append("file",hostlesson);
       var object = {};
       fd.forEach((value,key)=> (object[key]=value));
       console.log(object);
@@ -74,7 +74,7 @@ function Editcourse() {
                   <p>Upload Video</p>
                 </div>
                 {/* <p className='addlessons'>Add More Lesson</p> */}
-                <input type='file' className='addlesson' name='lesson' onChange={handleData4} ></input>
+                <input type='file' className='addlesson' name='file' onChange={handleData4} ></input>
                 <button className='hostbutton' type='submit' onClick={submits}>Host Course</button>
             </div>
         </div>

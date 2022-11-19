@@ -16,6 +16,8 @@ function Signup(){
       passwords:"",
       cpasswords:""
     })
+
+
     const Navigate=useNavigate();
     function validated(values){
       const x={};

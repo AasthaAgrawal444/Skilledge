@@ -1,6 +1,8 @@
 import React from 'react';
 import './coursecard.css';
 import starimg from '../images/star.png';
+import Bg from '../images/bgnd.png';
+
 import { Link, useNavigate } from 'react-router-dom';
 
 function Coursecard(props){
